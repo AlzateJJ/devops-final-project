@@ -6,3 +6,4 @@ node_modules/
 pres*.pdf
 __pycache__/
 test-results/
+entrega/

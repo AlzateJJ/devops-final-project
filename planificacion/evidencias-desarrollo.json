@@ -1,0 +1,170 @@
+[
+  {
+    "id": "DEVOPS-001",
+    "evidencia": "Requisitos y diseño documentados en docs/diseno.md y docs/matriz-requisitos.md."
+  },
+  {
+    "id": "DEVOPS-002",
+    "evidencia": "Inventario revisado en inventario/inventario.json: 144 herramientas del alcance exigido, 14 prácticas y 19 diagramas únicos."
+  },
+  {
+    "id": "DEVOPS-003",
+    "evidencia": "42 tarjetas creadas mediante MCP y verificadas por lectura en Backlog. Registro de URLs e IDs: planificacion/trello-publicacion.json. El responsable figura en las descripciones; la herramienta disponible no permite asignación nativa de miembros a tarjetas."
+  },
+  {
+    "id": "DEVOPS-004",
+    "evidencia": "Contrato implementado en app/js/store.js y app/data/database.json. Las pruebas de datos validan campos, claves y referencias."
+  },
+  {
+    "id": "DEVOPS-005",
+    "evidencia": "Esquema implementado en app/js/app.js; conceptos, atributos, leyenda y seis relaciones dinámicas. Diseño documentado en docs/diseno.md."
+  },
+  {
+    "id": "DEVOPS-006",
+    "evidencia": "Pantallas y recorridos implementados en app/index.html, app/styles.css y los módulos de formularios. Evidencias visuales en evidencias/."
+  },
+  {
+    "id": "DEVOPS-007",
+    "evidencia": "Arranque local sin instalar paquetes mediante Iniciar.cmd o node scripts/serve.cjs. Verificado desde un ZIP extraído."
+  },
+  {
+    "id": "DEVOPS-008",
+    "evidencia": "Persistencia implementada en app/js/store.js. Se verificó recarga, cierre/reapertura, error de cuota, corrupción y cambios de otra pestaña."
+  },
+  {
+    "id": "DEVOPS-009",
+    "evidencia": "Respaldo y recuperación implementados en app/js/backup.js. Se comprobó exportación/restauración exacta, validación y confirmación de reemplazo."
+  },
+  {
+    "id": "DEVOPS-010",
+    "evidencia": "Fichas de las 8 herramientas enumeradas completadas en app/data/database.json, con logos locales, descripción específica, categoría y modelo de precio trazable. Origen de imágenes: app/data/logo-sources.json."
+  },
+  {
+    "id": "DEVOPS-011",
+    "evidencia": "Fichas de las 5 herramientas enumeradas completadas en app/data/database.json, con logos locales, descripción específica, categoría y modelo de precio trazable. Origen de imágenes: app/data/logo-sources.json."
+  },
+  {
+    "id": "DEVOPS-012",
+    "evidencia": "Fichas de las 15 herramientas enumeradas completadas en app/data/database.json, con logos locales, descripción específica, categoría y modelo de precio trazable. Origen de imágenes: app/data/logo-sources.json."
+  },
+  {
+    "id": "DEVOPS-013",
+    "evidencia": "Fichas de las 23 herramientas enumeradas completadas en app/data/database.json, con logos locales, descripción específica, categoría y modelo de precio trazable. Origen de imágenes: app/data/logo-sources.json."
+  },
+  {
+    "id": "DEVOPS-014",
+    "evidencia": "Fichas de las 11 herramientas enumeradas completadas en app/data/database.json, con logos locales, descripción específica, categoría y modelo de precio trazable. Origen de imágenes: app/data/logo-sources.json."
+  },
+  {
+    "id": "DEVOPS-015",
+    "evidencia": "Fichas de las 8 herramientas enumeradas completadas en app/data/database.json, con logos locales, descripción específica, categoría y modelo de precio trazable. Origen de imágenes: app/data/logo-sources.json."
+  },
+  {
+    "id": "DEVOPS-016",
+    "evidencia": "Fichas de las 13 herramientas enumeradas completadas en app/data/database.json, con logos locales, descripción específica, categoría y modelo de precio trazable. Origen de imágenes: app/data/logo-sources.json."
+  },
+  {
+    "id": "DEVOPS-017",
+    "evidencia": "Fichas de las 7 herramientas enumeradas completadas en app/data/database.json, con logos locales, descripción específica, categoría y modelo de precio trazable. Origen de imágenes: app/data/logo-sources.json."
+  },
+  {
+    "id": "DEVOPS-018",
+    "evidencia": "Fichas de las 12 herramientas enumeradas completadas en app/data/database.json, con logos locales, descripción específica, categoría y modelo de precio trazable. Origen de imágenes: app/data/logo-sources.json."
+  },
+  {
+    "id": "DEVOPS-019",
+    "evidencia": "Fichas de las 7 herramientas enumeradas completadas en app/data/database.json, con logos locales, descripción específica, categoría y modelo de precio trazable. Origen de imágenes: app/data/logo-sources.json."
+  },
+  {
+    "id": "DEVOPS-020",
+    "evidencia": "Fichas de las 10 herramientas enumeradas completadas en app/data/database.json, con logos locales, descripción específica, categoría y modelo de precio trazable. Origen de imágenes: app/data/logo-sources.json."
+  },
+  {
+    "id": "DEVOPS-021",
+    "evidencia": "Fichas de las 5 herramientas enumeradas completadas en app/data/database.json, con logos locales, descripción específica, categoría y modelo de precio trazable. Origen de imágenes: app/data/logo-sources.json."
+  },
+  {
+    "id": "DEVOPS-022",
+    "evidencia": "Fichas de las 10 herramientas enumeradas completadas en app/data/database.json, con logos locales, descripción específica, categoría y modelo de precio trazable. Origen de imágenes: app/data/logo-sources.json."
+  },
+  {
+    "id": "DEVOPS-023",
+    "evidencia": "Fichas de las 10 herramientas enumeradas completadas en app/data/database.json, con logos locales, descripción específica, categoría y modelo de precio trazable. Origen de imágenes: app/data/logo-sources.json."
+  },
+  {
+    "id": "DEVOPS-024",
+    "evidencia": "14 fichas de prácticas y sus referencias cargadas en app/data/database.json. Contenido consultable y editable."
+  },
+  {
+    "id": "DEVOPS-025",
+    "evidencia": "19 diagramas únicos cargados en app/assets/diagramas y catalogados en la base; 21 referencias a apariciones en las diapositivas. Galería con ampliación."
+  },
+  {
+    "id": "DEVOPS-026",
+    "evidencia": "42 ejemplos específicos de uso, con tres relaciones por cada una de las 14 prácticas. Fuente editorial: scripts/usage_content.py."
+  },
+  {
+    "id": "DEVOPS-027",
+    "evidencia": "app/data/database.json contiene 144 herramientas, 14 prácticas, 19 diagramas y 42 usos; integridad comprobada con tests/store.test.mjs."
+  },
+  {
+    "id": "DEVOPS-028",
+    "evidencia": "El index presenta el esquema del sistema. Los seis enlaces dinámicos y sus destinos se verificaron en Chrome."
+  },
+  {
+    "id": "DEVOPS-029",
+    "evidencia": "Registro de herramientas implementado en app/js/tools.js y probado con nombre, descripción, categoría, precio e imagen."
+  },
+  {
+    "id": "DEVOPS-030",
+    "evidencia": "Consulta, filtros y actualización de herramientas implementados. Las pruebas verifican cancelación, duplicados e ID persistente."
+  },
+  {
+    "id": "DEVOPS-031",
+    "evidencia": "Registro de prácticas implementado en app/js/practices.js. Se crea una entrada de diagrama sincronizada con la práctica."
+  },
+  {
+    "id": "DEVOPS-032",
+    "evidencia": "Edición de prácticas y biblioteca Essence implementadas, con filtros, fuentes y ampliación de imagen. Escape cierra el diálogo."
+  },
+  {
+    "id": "DEVOPS-033",
+    "evidencia": "Registro de relaciones implementado en app/js/usages.js. Los selectores utilizan IDs válidos y se rechazan parejas duplicadas."
+  },
+  {
+    "id": "DEVOPS-034",
+    "evidencia": "Consulta, filtros y edición de usos probados; se conserva el ID y se persisten los cambios."
+  },
+  {
+    "id": "DEVOPS-035",
+    "evidencia": "Verificados seis recorridos de pantalla a 375, 768 y 1440 px sin desbordamiento. Corregido el foco inicial para permitir saltar al contenido."
+  },
+  {
+    "id": "DEVOPS-036",
+    "evidencia": "24 pruebas de datos/persistencia aprobadas. El inventario obligatorio coincide exactamente con los 144 IDs de la base; se verificaron imágenes y referencias."
+  },
+  {
+    "id": "DEVOPS-037",
+    "evidencia": "53 comprobaciones en Google Chrome 157 aprobadas: seis operaciones, persistencia, reapertura y restauración. Reporte: evidencias/pruebas-navegador.json."
+  },
+  {
+    "id": "DEVOPS-038",
+    "evidencia": "Validaciones probadas: duplicados, referencias inválidas, imágenes no admitidas, JSON inválido, texto HTML, corrupción y errores de escritura. Reportes en evidencias/."
+  },
+  {
+    "id": "DEVOPS-039",
+    "evidencia": "Copia extraída verificada con servidor Node y perfil Chrome limpio; 171 recursos respondieron correctamente. Reporte: evidencias/entrega-limpia.json."
+  },
+  {
+    "id": "DEVOPS-040",
+    "evidencia": "Guías completadas en README.md y docs/guia.md. Incluyen arranque, seis operaciones, respaldo, recuperación y límites del almacenamiento."
+  },
+  {
+    "id": "DEVOPS-041",
+    "evidencia": "Paquete preparado en entrega/devops-atlas-entrega.zip. El generador incluye manifiesto SHA-256 e historial y excluye dependencias instaladas y perfiles de pruebas."
+  },
+  {
+    "id": "DEVOPS-042",
+    "evidencia": "Aplicación y paquete verificados; matriz de cumplimiento en docs/matriz-requisitos.md y guía de entrega en docs/entrega.md. Pendiente del estudiante: revisar la actividad y realizar el envío a MinasLap. No se ha enviado automáticamente."
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "date": "2026-11-18T23:35:35.571Z",
+  "browser": "157.0.8103.79",
+  "filesVerified": 249,
+  "resourceResponses": 171,
+  "checks": [
+    "SHA-256 de cada archivo extraído coincide",
+    "Arranque con Node.js sin instalar dependencias",
+    "Base inicial 144/14/19/42",
+    "Recursos locales responden HTTP 200",
+    "Backlog contiene 42 enlaces reales; búsqueda y filtro funcionan",
+    "Sin errores de JavaScript",
+    "Directorio .git no se sirve"
+  ],
+  "note": "Verificación de ejecución desde copia extraída. El manifiesto externo identifica el commit final de la entrega."
+}

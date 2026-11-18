@@ -1,0 +1,314 @@
+{
+  "status": "verified",
+  "boardURL": "https://trello.com/b/5CSrY3pF/devops-tools-project",
+  "boardId": "ari:cloud:trello::board/workspace/6afe2aacdd9c624573b5dc10/6afe2aacdd9c624573b5dcf0",
+  "listName": "Backlog",
+  "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2",
+  "verifiedAt": "2026-11-18",
+  "count": 42,
+  "developmentEvidenceVerified": true,
+  "checks": [
+    "42 IDs de planificación únicos",
+    "Títulos y descripciones coinciden con el contenido preparado",
+    "Todas las tarjetas están en Backlog",
+    "Sin paginación pendiente"
+  ],
+  "responsible": "Juan José Alzate",
+  "assignment": "Responsable indicado en cada descripción. No se asignó un miembro nativo de Trello; esta versión del MCP no expone esa acción para tarjetas.",
+  "cards": [
+    {
+      "planningId": "DEVOPS-001",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34679ceefacf718947a6",
+      "url": "https://trello.com/c/VEQPZKQd/1-devops-001-consolidar-requisitos-y-alcance",
+      "name": "[DEVOPS-001] Consolidar requisitos y alcance",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-002",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe3475c9a43443d64fa209",
+      "url": "https://trello.com/c/Wy0g9wTV/2-devops-002-revisar-y-cerrar-el-inventario-existente",
+      "name": "[DEVOPS-002] Revisar y cerrar el inventario existente",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-003",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34772e1569bb20f42b61",
+      "url": "https://trello.com/c/KoT76XZf/3-devops-003-mantener-planificaci%C3%B3n-y-evidencias-en-trello",
+      "name": "[DEVOPS-003] Mantener planificación y evidencias en Trello",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-004",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34789fe74f2ed09d63b1",
+      "url": "https://trello.com/c/137bQfji/4-devops-004-definir-modelo-de-datos-y-contratos-json",
+      "name": "[DEVOPS-004] Definir modelo de datos y contratos JSON",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-005",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe3479c15a7f8d153afd5a",
+      "url": "https://trello.com/c/cVKfYG4Z/5-devops-005-dise%C3%B1ar-el-esquema-preconceptual-del-sistema",
+      "name": "[DEVOPS-005] Diseñar el esquema preconceptual del sistema",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-006",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe347aaca4ec840088c08b",
+      "url": "https://trello.com/c/Pvlt8ZZj/6-devops-006-dise%C3%B1ar-pantallas-y-recorridos",
+      "name": "[DEVOPS-006] Diseñar pantallas y recorridos",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-007",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe347bb28d29e05042f5ee",
+      "url": "https://trello.com/c/TvmXxeJE/7-devops-007-preparar-estructura-y-ejecuci%C3%B3n-local",
+      "name": "[DEVOPS-007] Preparar estructura y ejecución local",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-008",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe347c2fb8a2d3e419449b",
+      "url": "https://trello.com/c/OBcSffPt/8-devops-008-implementar-persistencia-en-chrome",
+      "name": "[DEVOPS-008] Implementar persistencia en Chrome",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-009",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe347df05d23abcac324e7",
+      "url": "https://trello.com/c/p9AKKQ47/9-devops-009-implementar-respaldo-y-restauraci%C3%B3n-json",
+      "name": "[DEVOPS-009] Implementar respaldo y restauración JSON",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-010",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe347e2d101f22afeff5e6",
+      "url": "https://trello.com/c/dQb6XHXa/10-devops-010-completar-fichas-gesti%C3%B3n-del-c%C3%B3digo-fuente",
+      "name": "[DEVOPS-010] Completar fichas: Gestión del código fuente",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-011",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe347f00470407e26d4132",
+      "url": "https://trello.com/c/A4YoRlUS/11-devops-011-completar-fichas-automatizaci%C3%B3n-de-bases-de-datos",
+      "name": "[DEVOPS-011] Completar fichas: Automatización de bases de datos",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-012",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe3480c0151eaa5340fb73",
+      "url": "https://trello.com/c/ppsO4mru/12-devops-012-completar-fichas-integraci%C3%B3n-continua",
+      "name": "[DEVOPS-012] Completar fichas: Integración continua",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-013",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe348152d9a8cc724feeb0",
+      "url": "https://trello.com/c/UroQM492/13-devops-013-completar-fichas-pruebas",
+      "name": "[DEVOPS-013] Completar fichas: Pruebas",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-014",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34829f5d23380f775c05",
+      "url": "https://trello.com/c/guw1lNlI/14-devops-014-completar-fichas-configuraci%C3%B3n",
+      "name": "[DEVOPS-014] Completar fichas: Configuración",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-015",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe3483264d880f15ff805c",
+      "url": "https://trello.com/c/TySwU7sz/15-devops-015-completar-fichas-despliegue",
+      "name": "[DEVOPS-015] Completar fichas: Despliegue",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-016",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe3484dbe933da0197f0ec",
+      "url": "https://trello.com/c/zeIQqK91/16-devops-016-completar-fichas-contenedores",
+      "name": "[DEVOPS-016] Completar fichas: Contenedores",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-017",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe3485dab63b6d6b053baa",
+      "url": "https://trello.com/c/6rEARJ9V/17-devops-017-completar-fichas-orquestaci%C3%B3n-de-entregas",
+      "name": "[DEVOPS-017] Completar fichas: Orquestación de entregas",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-018",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34862e46ba0dcdc36006",
+      "url": "https://trello.com/c/7uNHeNFr/18-devops-018-completar-fichas-nube",
+      "name": "[DEVOPS-018] Completar fichas: Nube",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-019",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe348788a7948cbce14e42",
+      "url": "https://trello.com/c/jrFaAzTT/19-devops-019-completar-fichas-aiops",
+      "name": "[DEVOPS-019] Completar fichas: AIOps",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-020",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe348888a7948cbce14ec5",
+      "url": "https://trello.com/c/dDcCWzYx/20-devops-020-completar-fichas-anal%C3%ADtica",
+      "name": "[DEVOPS-020] Completar fichas: Analítica",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-021",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe3496a5fc30ad5dad4953",
+      "url": "https://trello.com/c/Evppu1nf/21-devops-021-completar-fichas-monitoreo",
+      "name": "[DEVOPS-021] Completar fichas: Monitoreo",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-022",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe3497b9ea75bb76979f55",
+      "url": "https://trello.com/c/0JrTwaU0/22-devops-022-completar-fichas-seguridad",
+      "name": "[DEVOPS-022] Completar fichas: Seguridad",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-023",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe3498caa33a55048608d0",
+      "url": "https://trello.com/c/u1MK521w/23-devops-023-completar-fichas-colaboraci%C3%B3n",
+      "name": "[DEVOPS-023] Completar fichas: Colaboración",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-024",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34991ef53cad7738492a",
+      "url": "https://trello.com/c/QJtdOk5d/24-devops-024-preparar-las-14-fichas-de-pr%C3%A1cticas-essence",
+      "name": "[DEVOPS-024] Preparar las 14 fichas de prácticas Essence",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-025",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe349a1705b5d17a60a897",
+      "url": "https://trello.com/c/zw4QTccq/25-devops-025-preparar-cat%C3%A1logo-e-im%C3%A1genes-de-los-19-diagramas",
+      "name": "[DEVOPS-025] Preparar catálogo e imágenes de los 19 diagramas",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-026",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe349da86ba122e2bd76a4",
+      "url": "https://trello.com/c/LEkfKjyC/26-devops-026-redactar-relaciones-de-uso-herramientas-pr%C3%A1cticas",
+      "name": "[DEVOPS-026] Redactar relaciones de uso herramientas-prácticas",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-027",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe349f42bac24f464b44e4",
+      "url": "https://trello.com/c/xMAPD7RI/27-devops-027-consolidar-los-json-iniciales",
+      "name": "[DEVOPS-027] Consolidar los JSON iniciales",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-028",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34a0cbdebecd45c22e8d",
+      "url": "https://trello.com/c/3E5dCs9L/28-devops-028-implementar-el-index-como-esquema-navegable",
+      "name": "[DEVOPS-028] Implementar el index como esquema navegable",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-029",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34a1f252e6b30d899834",
+      "url": "https://trello.com/c/wlsG1yyt/29-devops-029-implementar-registro-de-herramientas",
+      "name": "[DEVOPS-029] Implementar registro de herramientas",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-030",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34a26c46c0ac702c4423",
+      "url": "https://trello.com/c/W2QH3F4A/30-devops-030-implementar-consulta-y-actualizaci%C3%B3n-de-herramientas",
+      "name": "[DEVOPS-030] Implementar consulta y actualización de herramientas",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-031",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34a38bc97fe68b74e93c",
+      "url": "https://trello.com/c/wGQZmZJ6/31-devops-031-implementar-registro-de-pr%C3%A1cticas",
+      "name": "[DEVOPS-031] Implementar registro de prácticas",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-032",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34a4a02540e9e5bd4e4f",
+      "url": "https://trello.com/c/46yjHh3z/32-devops-032-implementar-actualizaci%C3%B3n-de-pr%C3%A1cticas-y-galer%C3%ADa-essence",
+      "name": "[DEVOPS-032] Implementar actualización de prácticas y galería Essence",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-033",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34a58a6492538aae79c7",
+      "url": "https://trello.com/c/O1eck25p/33-devops-033-implementar-registro-de-usos",
+      "name": "[DEVOPS-033] Implementar registro de usos",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-034",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34a685da8f9216b36e1c",
+      "url": "https://trello.com/c/LD0MYoCL/34-devops-034-implementar-consulta-y-actualizaci%C3%B3n-de-usos",
+      "name": "[DEVOPS-034] Implementar consulta y actualización de usos",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-035",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34a7ec1d7701548ebde0",
+      "url": "https://trello.com/c/sPqAExto/35-devops-035-ajustar-dise%C3%B1o-adaptable-accesibilidad-y-mensajes",
+      "name": "[DEVOPS-035] Ajustar diseño adaptable, accesibilidad y mensajes",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-036",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34a823b10badf51507aa",
+      "url": "https://trello.com/c/DnHwyQXE/36-devops-036-auditar-exactitud-y-cobertura-de-contenidos",
+      "name": "[DEVOPS-036] Auditar exactitud y cobertura de contenidos",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-037",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34a9269de79f862852ca",
+      "url": "https://trello.com/c/gs2K4EHH/37-devops-037-probar-los-seis-flujos-y-la-persistencia",
+      "name": "[DEVOPS-037] Probar los seis flujos y la persistencia",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-038",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34aaf3ae1bad3932978a",
+      "url": "https://trello.com/c/0UVP5OGh/38-devops-038-probar-validaciones-y-recuperaci%C3%B3n-de-errores",
+      "name": "[DEVOPS-038] Probar validaciones y recuperación de errores",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-039",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34ab003a9e05a8cd97bb",
+      "url": "https://trello.com/c/Kvl8wD0y/39-devops-039-verificar-ejecuci%C3%B3n-limpia-en-navegador-chromium",
+      "name": "[DEVOPS-039] Verificar ejecución limpia en navegador Chromium",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-040",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34ad53b657a531db0961",
+      "url": "https://trello.com/c/lyVXe4m9/40-devops-040-redactar-gu%C3%ADa-de-ejecuci%C3%B3n-y-uso",
+      "name": "[DEVOPS-040] Redactar guía de ejecución y uso",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-041",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34ae42d06ce191dd7926",
+      "url": "https://trello.com/c/EWi8gBGY/41-devops-041-empaquetar-la-entrega-del-proyecto",
+      "name": "[DEVOPS-041] Empaquetar la entrega del proyecto",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    },
+    {
+      "planningId": "DEVOPS-042",
+      "id": "ari:cloud:trello::card/workspace/6afe2aacdd9c624573b5dc10/6afe34afb8e888742b2fc51b",
+      "url": "https://trello.com/c/nrW6Z5I4/42-devops-042-revisar-entrega-final-y-preparar-env%C3%ADo-a-minaslap",
+      "name": "[DEVOPS-042] Revisar entrega final y preparar envío a MinasLap",
+      "listId": "ari:cloud:trello::list/workspace/6afe2aacdd9c624573b5dc10/6afe2b14a69793ceec7be1c2"
+    }
+  ]
+}
