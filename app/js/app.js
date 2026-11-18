@@ -2,6 +2,7 @@ import {$,escape,intro,link,notify} from './ui.js';
 import {Database,STORAGE_KEY} from './store.js';
 import {renderTools} from './tools.js';
 import {renderPractices,renderDiagrams} from './practices.js';
+import {renderUsages} from './usages.js';
 const store=new Database();
 
 const titles={home:'Esquema del sistema',tools:'Herramientas',practices:'Prácticas',usages:'Relaciones de uso',diagrams:'Diagramas Essence',backup:'Respaldo de datos'};
@@ -22,6 +23,7 @@ function route(){
  else if(section==='tools')renderTools(store,mode,id);
  else if(section==='practices')renderPractices(store,mode,id);
  else if(section==='diagrams')renderDiagrams(store);
+ else if(section==='usages')renderUsages(store,mode,id);
  else $('#main').innerHTML=intro(titles[section]||'Página','Esta sección se está preparando.');
  window.scrollTo(0,0);$('#main').focus({preventScroll:true});
 }
