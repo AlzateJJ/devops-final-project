@@ -2,6 +2,7 @@ from pathlib import Path
 import json, sys, shutil
 from tool_content import TOOLS
 from price_content import PRICES
+from usage_content import USAGES
 
 ROOT=Path(__file__).resolve().parents[1]
 INV=json.loads((ROOT/'inventario/inventario.json').read_text(encoding='utf-8'))
@@ -25,6 +26,16 @@ for t in required:
         price=t['precio_curso'] or price['model'],category=category,aliases=t['alias'],sourceCategory=t['categoria_curso'],
         sourcePrice=t['precio_curso'],references=refs(t['referencias']),notes=notes,logoSource=LOGOS[ident]['source'],
         officialURL=enrichment['officialURL'],priceVerification=price))
+diagram_dir=ROOT/'app/assets/diagramas';diagram_dir.mkdir(exist_ok=True)
+for d in INV['diagramas']:
+    shutil.copy2(ROOT/'inventario'/d['imagen'],diagram_dir/Path(d['imagen']).name)
+db['diagrams']=[dict(id=d['id'],name=d['nombre'],type=d['tipo'],practiceId=d['practica_id'],image='assets/diagramas/'+Path(d['imagen']).name,references=refs(d['referencias'])) for d in INV['diagramas']]
+diagram_lookup={d['id']:d for d in db['diagrams']}
+db['practices']=[dict(id=p['id'],name=p['nombre_es'],originalName=p['nombre_original'],description=p['descripcion'],
+    diagramId=p['diagrama_id'],image=diagram_lookup[p['diagrama_id']]['image'],references=refs(p['referencias']),imageSource='Diagrama original del curso; las fuentes por página aparecen debajo de la imagen.') for p in INV['practicas']]
+db['practices'][1]['description']='Organiza pruebas y despliegues automatizados para mantener el sistema preparado para una entrega. El diagrama del curso incluye probar el sistema y desplegar el código automáticamente, con el objetivo de mejorar el software. En entrega continua, la decisión de liberarlo a producción puede conservar una aprobación.'
+db['practices'][2]['description']='Lleva los cambios que superan las verificaciones hasta su liberación automática. El diagrama del curso incluye probar el sistema y liberar el código automáticamente. La práctica requiere observar el resultado y mantener criterios de calidad que permitan automatizar la liberación.'
+db['usages']=USAGES
 db['meta'].update(contentVersion='1.0.0',author='Juan José Alzate',sourceDate='2026-11-18',
     scope='144 herramientas del bloque exigido; el inventario conserva por separado 55 menciones complementarias o contextuales.',
     pricePolicy='Los 120 modelos de la tabla se conservan como referencia histórica. Los 24 adicionales usan una clasificación editorial respaldada por fuentes oficiales y fechada; no se cotizan importes.')

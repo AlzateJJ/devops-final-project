@@ -5516,9 +5516,779 @@
       }
     }
   ],
-  "practices": [],
-  "diagrams": [],
-  "usages": [],
+  "practices": [
+    {
+      "id": "PR01",
+      "name": "Integración continua del sistema de software",
+      "originalName": "Continuous integration of the software system",
+      "description": "Integrar cambios, construir el código y ejecutar pruebas unitarias para reducir defectos y automatizar el proceso.",
+      "diagramId": "D01",
+      "image": "assets/diagramas/P02-02.png",
+      "references": [
+        {
+          "source": "P02",
+          "page": 2
+        },
+        {
+          "source": "P03",
+          "page": 2
+        }
+      ],
+      "imageSource": "Diagrama original del curso; las fuentes por página aparecen debajo de la imagen."
+    },
+    {
+      "id": "PR02",
+      "name": "Entrega continua del sistema de software",
+      "originalName": "Continuous delivery of the software system",
+      "description": "Organiza pruebas y despliegues automatizados para mantener el sistema preparado para una entrega. El diagrama del curso incluye probar el sistema y desplegar el código automáticamente, con el objetivo de mejorar el software. En entrega continua, la decisión de liberarlo a producción puede conservar una aprobación.",
+      "diagramId": "D02",
+      "image": "assets/diagramas/P02-03.png",
+      "references": [
+        {
+          "source": "P02",
+          "page": 3
+        }
+      ],
+      "imageSource": "Diagrama original del curso; las fuentes por página aparecen debajo de la imagen."
+    },
+    {
+      "id": "PR03",
+      "name": "Despliegue continuo del sistema de software",
+      "originalName": "Continuous deployment of the software system",
+      "description": "Lleva los cambios que superan las verificaciones hasta su liberación automática. El diagrama del curso incluye probar el sistema y liberar el código automáticamente. La práctica requiere observar el resultado y mantener criterios de calidad que permitan automatizar la liberación.",
+      "diagramId": "D03",
+      "image": "assets/diagramas/P02-04.png",
+      "references": [
+        {
+          "source": "P02",
+          "page": 4
+        }
+      ],
+      "imageSource": "Diagrama original del curso; las fuentes por página aparecen debajo de la imagen."
+    },
+    {
+      "id": "PR04",
+      "name": "Monitoreo continuo del esfuerzo de trabajo",
+      "originalName": "Continuous monitoring of the endeavor",
+      "description": "Revisar infraestructura, analizar métricas, disparar alertas y generar registros de auditoría para mejorar el proceso.",
+      "diagramId": "D04",
+      "image": "assets/diagramas/P02-05.png",
+      "references": [
+        {
+          "source": "P02",
+          "page": 5
+        },
+        {
+          "source": "P06I",
+          "page": 2
+        }
+      ],
+      "imageSource": "Diagrama original del curso; las fuentes por página aparecen debajo de la imagen."
+    },
+    {
+      "id": "PR05",
+      "name": "Comunicación colaborativa del trabajo",
+      "originalName": "Collaborative communication of the work",
+      "description": "Organizar la comunicación del equipo mediante tableros, tarjetas, canales y mensajes.",
+      "diagramId": "D05",
+      "image": "assets/diagramas/P02-06.png",
+      "references": [
+        {
+          "source": "P02",
+          "page": 6
+        }
+      ],
+      "imageSource": "Diagrama original del curso; las fuentes por página aparecen debajo de la imagen."
+    },
+    {
+      "id": "PR06",
+      "name": "Planificación estratégica del proyecto de software",
+      "originalName": "Strategic planning of the software project",
+      "description": "Planificar el aseguramiento de calidad y producir su plan dentro de la fase de planificación.",
+      "diagramId": "D06",
+      "image": "assets/diagramas/P04-02.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 2
+        }
+      ],
+      "imageSource": "Diagrama original del curso; las fuentes por página aparecen debajo de la imagen."
+    },
+    {
+      "id": "PR07",
+      "name": "Conceptualización de la calidad de software basada en actividades",
+      "originalName": "Activity-based conceptualization of software quality",
+      "description": "Elaborar la conceptualización de la calidad de software como actividad de seguimiento del progreso.",
+      "diagramId": "D07",
+      "image": "assets/diagramas/P04-03.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 3
+        }
+      ],
+      "imageSource": "Diagrama original del curso; las fuentes por página aparecen debajo de la imagen."
+    },
+    {
+      "id": "PR08",
+      "name": "Certificación simulada de calidad de software",
+      "originalName": "Simulated certification of software quality",
+      "description": "Presentar una prueba de certificación simulada como parte del seguimiento del progreso.",
+      "diagramId": "D08",
+      "image": "assets/diagramas/P04-04.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 4
+        }
+      ],
+      "imageSource": "Diagrama original del curso; las fuentes por página aparecen debajo de la imagen."
+    },
+    {
+      "id": "PR09",
+      "name": "Diseño simulado del sistema de software",
+      "originalName": "Simulated design of the software system",
+      "description": "Especificar la funcionalidad mediante casos de uso y sus especificaciones textuales.",
+      "diagramId": "D09",
+      "image": "assets/diagramas/P04-05.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 5
+        }
+      ],
+      "imageSource": "Diagrama original del curso; las fuentes por página aparecen debajo de la imagen."
+    },
+    {
+      "id": "PR10",
+      "name": "Pruebas automatizadas del sistema de software",
+      "originalName": "Automated testing of the software system",
+      "description": "Ejecutar pruebas automatizadas y obtener retroalimentación inmediata del sistema bajo prueba.",
+      "diagramId": "D10",
+      "image": "assets/diagramas/P04-06.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 6
+        }
+      ],
+      "imageSource": "Diagrama original del curso; las fuentes por página aparecen debajo de la imagen."
+    },
+    {
+      "id": "PR11",
+      "name": "Desarrollo guiado por pruebas (TDD)",
+      "originalName": "Test-driven development of the software system",
+      "description": "Escribir una prueba que falla, implementar el código que la supera y refactorizar el código fuente.",
+      "diagramId": "D11",
+      "image": "assets/diagramas/P04-08.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 8
+        }
+      ],
+      "imageSource": "Diagrama original del curso; las fuentes por página aparecen debajo de la imagen."
+    },
+    {
+      "id": "PR12",
+      "name": "Desarrollo guiado por pruebas de aceptación (ATDD)",
+      "originalName": "Acceptance Test-driven development of the software system",
+      "description": "Definir criterios de aceptación, automatizar sus pruebas y controlar su integración y despliegue continuos.",
+      "diagramId": "D12",
+      "image": "assets/diagramas/P04-09.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 9
+        }
+      ],
+      "imageSource": "Diagrama original del curso; las fuentes por página aparecen debajo de la imagen."
+    },
+    {
+      "id": "PR13",
+      "name": "Desarrollo guiado por comportamiento (BDD)",
+      "originalName": "Behavior-driven development of the software system",
+      "description": "Definir y refinar escenarios, y automatizar los criterios de aceptación para asegurar el comportamiento del sistema.",
+      "diagramId": "D13",
+      "image": "assets/diagramas/P04-10.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 10
+        }
+      ],
+      "imageSource": "Diagrama original del curso; las fuentes por página aparecen debajo de la imagen."
+    },
+    {
+      "id": "PR14",
+      "name": "Desarrollo basado en modelos de sistemas de software",
+      "originalName": "Model-based development of software systems",
+      "description": "Crear y validar modelos de prueba, generar y ejecutar casos, y evaluar resultados y trazabilidad.",
+      "diagramId": "D14",
+      "image": "assets/diagramas/P04-12.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 12
+        }
+      ],
+      "imageSource": "Diagrama original del curso; las fuentes por página aparecen debajo de la imagen."
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "D01",
+      "name": "Integración continua del sistema de software",
+      "type": "practica",
+      "practiceId": "PR01",
+      "image": "assets/diagramas/P02-02.png",
+      "references": [
+        {
+          "source": "P02",
+          "page": 2
+        },
+        {
+          "source": "P03",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "name": "Entrega continua del sistema de software",
+      "type": "practica",
+      "practiceId": "PR02",
+      "image": "assets/diagramas/P02-03.png",
+      "references": [
+        {
+          "source": "P02",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "D03",
+      "name": "Despliegue continuo del sistema de software",
+      "type": "practica",
+      "practiceId": "PR03",
+      "image": "assets/diagramas/P02-04.png",
+      "references": [
+        {
+          "source": "P02",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "D04",
+      "name": "Monitoreo continuo del esfuerzo de trabajo",
+      "type": "practica",
+      "practiceId": "PR04",
+      "image": "assets/diagramas/P02-05.png",
+      "references": [
+        {
+          "source": "P02",
+          "page": 5
+        },
+        {
+          "source": "P06I",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "D05",
+      "name": "Comunicación colaborativa del trabajo",
+      "type": "practica",
+      "practiceId": "PR05",
+      "image": "assets/diagramas/P02-06.png",
+      "references": [
+        {
+          "source": "P02",
+          "page": 6
+        }
+      ]
+    },
+    {
+      "id": "D06",
+      "name": "Planificación estratégica del proyecto de software",
+      "type": "practica",
+      "practiceId": "PR06",
+      "image": "assets/diagramas/P04-02.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "D07",
+      "name": "Conceptualización de la calidad de software basada en actividades",
+      "type": "practica",
+      "practiceId": "PR07",
+      "image": "assets/diagramas/P04-03.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "D08",
+      "name": "Certificación simulada de calidad de software",
+      "type": "practica",
+      "practiceId": "PR08",
+      "image": "assets/diagramas/P04-04.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "D09",
+      "name": "Diseño simulado del sistema de software",
+      "type": "practica",
+      "practiceId": "PR09",
+      "image": "assets/diagramas/P04-05.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "id": "D10",
+      "name": "Pruebas automatizadas del sistema de software",
+      "type": "practica",
+      "practiceId": "PR10",
+      "image": "assets/diagramas/P04-06.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 6
+        }
+      ]
+    },
+    {
+      "id": "D11",
+      "name": "Desarrollo guiado por pruebas (TDD)",
+      "type": "practica",
+      "practiceId": "PR11",
+      "image": "assets/diagramas/P04-08.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "id": "D12",
+      "name": "Desarrollo guiado por pruebas de aceptación (ATDD)",
+      "type": "practica",
+      "practiceId": "PR12",
+      "image": "assets/diagramas/P04-09.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 9
+        }
+      ]
+    },
+    {
+      "id": "D13",
+      "name": "Desarrollo guiado por comportamiento (BDD)",
+      "type": "practica",
+      "practiceId": "PR13",
+      "image": "assets/diagramas/P04-10.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 10
+        }
+      ]
+    },
+    {
+      "id": "D14",
+      "name": "Desarrollo basado en modelos de sistemas de software",
+      "type": "practica",
+      "practiceId": "PR14",
+      "image": "assets/diagramas/P04-12.png",
+      "references": [
+        {
+          "source": "P04",
+          "page": 12
+        }
+      ]
+    },
+    {
+      "id": "D15",
+      "name": "Proceso de pruebas detallado",
+      "type": "proceso",
+      "practiceId": null,
+      "image": "assets/diagramas/P05-04.png",
+      "references": [
+        {
+          "source": "P05",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "D16",
+      "name": "Núcleo de Essence: alfas y relaciones",
+      "type": "nucleo",
+      "practiceId": null,
+      "image": "assets/diagramas/P01-02.png",
+      "references": [
+        {
+          "source": "P01",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "D17",
+      "name": "Núcleo de Essence: espacios de actividad",
+      "type": "nucleo",
+      "practiceId": null,
+      "image": "assets/diagramas/P01-03.png",
+      "references": [
+        {
+          "source": "P01",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "D18",
+      "name": "Núcleo de Essence: competencias",
+      "type": "nucleo",
+      "practiceId": null,
+      "image": "assets/diagramas/P01-04.png",
+      "references": [
+        {
+          "source": "P01",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "D19",
+      "name": "Elementos y notación de Essence",
+      "type": "notacion",
+      "practiceId": null,
+      "image": "assets/diagramas/P01-05.png",
+      "references": [
+        {
+          "source": "P01",
+          "page": 5
+        }
+      ]
+    }
+  ],
+  "usages": [
+    {
+      "id": "U001",
+      "toolId": "H001",
+      "practiceId": "PR01",
+      "description": "El equipo propone cambios mediante solicitudes de incorporación y los revisa antes de integrarlos. El historial de GitHub relaciona decisiones con código y favorece la responsabilidad compartida sobre la versión común.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U002",
+      "toolId": "H022",
+      "practiceId": "PR01",
+      "description": "Jenkins ejecuta construcción y pruebas al recibir cambios del repositorio. Publicar el resultado del pipeline permite que desarrollo y pruebas detecten pronto una integración fallida y la corrijan juntos.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U003",
+      "toolId": "H135",
+      "practiceId": "PR01",
+      "description": "Un flujo de GitHub Actions construye el proyecto y ejecuta pruebas en cada solicitud de incorporación. Sus resultados dan retroalimentación visible al equipo antes de integrar código y reducen verificaciones manuales repetidas.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U004",
+      "toolId": "H073",
+      "practiceId": "PR02",
+      "description": "Artifactory conserva los artefactos que superaron las pruebas. Promover la misma versión entre entornos evita reconstrucciones distintas y permite a desarrollo y operaciones hablar de una entrega identificable y trazable.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U005",
+      "toolId": "H005",
+      "practiceId": "PR02",
+      "description": "CodePipeline coordina construcción, pruebas y preparación de una entrega con una aprobación cuando corresponda. Mantener el pipeline y sus resultados visibles ayuda al equipo a conocer si una versión está lista para liberarse.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U006",
+      "toolId": "H064",
+      "practiceId": "PR02",
+      "description": "El equipo versiona playbooks de Ansible para preparar entornos y ejecutar despliegues repetibles. Revisarlos conjuntamente reduce diferencias de configuración y permite compartir conocimiento operativo antes de liberar una versión.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U007",
+      "toolId": "H051",
+      "practiceId": "PR03",
+      "description": "Spinnaker coordina un pipeline de pruebas y despliegue de una versión que supera los controles. El equipo define la estrategia de liberación y observa sus resultados, reduciendo pasos manuales sin delegar la responsabilidad por el servicio.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U008",
+      "toolId": "H085",
+      "practiceId": "PR03",
+      "description": "Un pipeline aplica manifiestos versionados a Kubernetes para actualizar la aplicación. Declarar el estado esperado y revisar salud y disponibilidad hace que desarrollo y operaciones compartan criterios de éxito del despliegue.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U009",
+      "toolId": "H084",
+      "practiceId": "PR03",
+      "description": "CodeDeploy instala una revisión aprobada por las verificaciones del pipeline y registra su ejecución. El historial permite correlacionar una incidencia con el cambio desplegado y coordinar acciones de recuperación.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U010",
+      "toolId": "H090",
+      "practiceId": "PR04",
+      "description": "Prometheus recopila métricas y evalúa reglas de alerta sobre el servicio. El equipo acuerda indicadores y umbrales para recibir retroalimentación operativa y priorizar mejoras con datos compartidos.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U011",
+      "toolId": "H131",
+      "practiceId": "PR04",
+      "description": "Grafana presenta tableros con señales de salud y rendimiento procedentes de las fuentes configuradas. Compartir estas vistas facilita que desarrollo y operaciones investiguen el mismo comportamiento en lugar de trabajar con información aislada.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U012",
+      "toolId": "H128",
+      "practiceId": "PR04",
+      "description": "Sentry reúne errores y contexto de ejecución de una aplicación desplegada. Relacionar los fallos con versiones permite priorizar correcciones y cerrar el ciclo de retroalimentación entre operación y desarrollo.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U013",
+      "toolId": "H110",
+      "practiceId": "PR05",
+      "description": "Trello organiza el trabajo en tarjetas con responsables, criterios de aceptación y evidencias. Revisar el tablero de forma compartida hace visibles las dependencias, los bloqueos y el estado real del proyecto.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U014",
+      "toolId": "H114",
+      "practiceId": "PR05",
+      "description": "Slack organiza conversaciones por canales del proyecto y recibe notificaciones relevantes de otras herramientas. El equipo acuerda dónde discutir incidentes y decisiones para mantener comunicación accesible y evitar información dispersa.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U015",
+      "toolId": "H109",
+      "practiceId": "PR05",
+      "description": "Jira registra incidencias y tareas con estados y comentarios. Vincular el trabajo con decisiones y resultados permite coordinar desarrollo, pruebas y operaciones sobre un seguimiento común.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U016",
+      "toolId": "H110",
+      "practiceId": "PR06",
+      "description": "El plan de aseguramiento de calidad se divide en tarjetas Trello con actividades, responsables y criterios verificables. El equipo revisa prioridades y dependencias antes de ejecutar las tareas, haciendo explícitos los acuerdos de calidad.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U017",
+      "toolId": "H109",
+      "practiceId": "PR06",
+      "description": "Jira permite organizar actividades de calidad dentro de la planificación del proyecto. Registrar riesgos, revisiones y criterios de aceptación da trazabilidad a los compromisos y facilita negociar el trabajo entre participantes.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U018",
+      "toolId": "H011",
+      "practiceId": "PR06",
+      "description": "El equipo mantiene el plan de aseguramiento de calidad en un repositorio GitLab y lo revisa mediante cambios versionados. El historial permite conocer por qué se ajustó una decisión y compartir la evolución del plan.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U019",
+      "toolId": "H001",
+      "practiceId": "PR07",
+      "description": "La conceptualización de calidad se escribe como documentación versionada en GitHub. Revisar sus cambios permite discutir conceptos, ejemplos y criterios de evaluación y construir un entendimiento común; la herramienta no define por sí sola el modelo de calidad.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U020",
+      "toolId": "H110",
+      "practiceId": "PR07",
+      "description": "Una tarjeta Trello registra la actividad de conceptualización, sus entregables y observaciones. El seguimiento visible ayuda a coordinar la revisión del ejercicio académico y a documentar acuerdos sobre su terminación.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U021",
+      "toolId": "H114",
+      "practiceId": "PR07",
+      "description": "Un canal de Slack sirve para discutir ejemplos y dudas sobre las actividades de calidad. Las conclusiones se incorporan a la documentación del proyecto para que la conversación produzca conocimiento compartido y revisable.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U022",
+      "toolId": "H110",
+      "practiceId": "PR08",
+      "description": "Trello organiza la preparación y presentación de la prueba de certificación simulada, con una lista de actividades y evidencia del ejercicio. Apoya la coordinación académica; no emite ni valida una certificación profesional.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U023",
+      "toolId": "H001",
+      "practiceId": "PR08",
+      "description": "GitHub conserva materiales de preparación y la revisión de resultados del ejercicio simulado sin exponer datos sensibles. Versionar esas evidencias permite aprender de errores y compartir mejoras; no convierte el repositorio en una entidad certificadora.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U024",
+      "toolId": "H114",
+      "practiceId": "PR08",
+      "description": "Slack permite acordar sesiones de preparación y comentar dudas después de la prueba simulada. Esta comunicación favorece el aprendizaje colectivo; la evaluación sigue dependiendo del instrumento y de quien la administra.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U025",
+      "toolId": "H001",
+      "practiceId": "PR09",
+      "description": "El equipo almacena casos de uso y especificaciones textuales como documentación en GitHub. Las revisiones de cambios permiten acordar el comportamiento esperado antes de implementarlo y conservan trazabilidad de decisiones de diseño.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U026",
+      "toolId": "H110",
+      "practiceId": "PR09",
+      "description": "Trello vincula cada funcionalidad simulada con una tarjeta que contiene su especificación y criterios de aceptación. Esto facilita revisar alcance y mantener la conversación entre quienes diseñan, implementan y prueban.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U027",
+      "toolId": "H125",
+      "practiceId": "PR09",
+      "description": "Postman permite compartir ejemplos de solicitudes y respuestas cuando una funcionalidad involucra una API. Estos ejemplos complementan la especificación textual y ayudan a detectar desacuerdos sobre contratos; no sustituyen el diagrama de casos de uso.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U028",
+      "toolId": "H122",
+      "practiceId": "PR10",
+      "description": "Playwright ejecuta recorridos de interfaz y aserciones sobre el sistema bajo prueba. Publicar resultados y evidencias en el pipeline da retroalimentación rápida a todo el equipo y facilita reproducir un defecto.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U029",
+      "toolId": "H123",
+      "practiceId": "PR10",
+      "description": "Newman ejecuta colecciones Postman de forma automatizada en un pipeline. Compartir las colecciones y resultados permite validar contratos de API repetidamente y detectar regresiones antes de entregar cambios.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U030",
+      "toolId": "H060",
+      "practiceId": "PR10",
+      "description": "JMeter ejecuta escenarios de carga y registra tiempos y fallos. Comparar los resultados con criterios acordados permite que desarrollo y operaciones discutan el rendimiento con evidencia y planifiquen mejoras.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U031",
+      "toolId": "H062",
+      "practiceId": "PR11",
+      "description": "Con JUnit se escribe primero una prueba que falla, después el código mínimo que la hace pasar y finalmente se refactoriza. Ejecutar la suite en cada cambio aporta retroalimentación y protege el comportamiento durante la mejora del diseño.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U032",
+      "toolId": "H126",
+      "practiceId": "PR11",
+      "description": "Jest permite expresar la prueba fallida y comprobar el ciclo de implementación y refactorización en JavaScript. Compartir una suite rápida hace visible el comportamiento esperado y favorece cambios pequeños y verificables.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U033",
+      "toolId": "H059",
+      "practiceId": "PR11",
+      "description": "Mocha organiza pruebas que se escriben antes de implementar una unidad de código. Ejecutarlas durante el ciclo de refactorización ayuda a detectar regresiones y mantener una comprensión compartida de las responsabilidades del código.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U034",
+      "toolId": "H077",
+      "practiceId": "PR12",
+      "description": "FitNesse representa ejemplos de aceptación en tablas ejecutables acordadas entre participantes. Mantener ejemplos y resultados juntos permite validar criterios del negocio y compartir retroalimentación antes de aceptar una funcionalidad.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U035",
+      "toolId": "H080",
+      "practiceId": "PR12",
+      "description": "Cucumber conecta criterios de aceptación expresados como escenarios con pasos de prueba automatizados. Negocio, desarrollo y pruebas pueden revisar los mismos ejemplos para acordar cuándo una funcionalidad satisface la necesidad.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U036",
+      "toolId": "H022",
+      "practiceId": "PR12",
+      "description": "Jenkins ejecuta la suite de aceptación como etapa de integración y entrega. Mostrar qué criterios pasan o fallan ayuda al equipo a decidir si una versión está preparada sin depender de comprobaciones aisladas.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U037",
+      "toolId": "H080",
+      "practiceId": "PR13",
+      "description": "Cucumber permite escribir escenarios de comportamiento en Gherkin y conectarlos con automatización. Refinar ejemplos junto con las personas del negocio reduce ambigüedades y mantiene una especificación ejecutable compartida.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U038",
+      "toolId": "H001",
+      "practiceId": "PR13",
+      "description": "Los escenarios de comportamiento se versionan en GitHub y se revisan junto al código. Las solicitudes de incorporación permiten discutir cambios en expectativas y conservar el motivo de cada decisión funcional.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U039",
+      "toolId": "H122",
+      "practiceId": "PR13",
+      "description": "Playwright puede implementar las interacciones de navegador usadas por pasos de escenarios de comportamiento. La definición colaborativa del escenario se mantiene aparte; la automatización verifica sus ejemplos y aporta evidencia sobre el comportamiento observado.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U040",
+      "toolId": "H042",
+      "practiceId": "PR14",
+      "description": "Tosca permite trabajar con modelos y casos de prueba reutilizables. Validar esos modelos y relacionarlos con requisitos ayuda a coordinar cobertura y resultados entre quienes especifican y quienes prueban el sistema.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U041",
+      "toolId": "H001",
+      "practiceId": "PR14",
+      "description": "GitHub versiona modelos de prueba, criterios de cobertura y casos derivados. Las revisiones permiten discutir cambios del modelo y conservar trazabilidad entre requisitos y artefactos de prueba; el repositorio no genera casos por sí solo.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    },
+    {
+      "id": "U042",
+      "toolId": "H022",
+      "practiceId": "PR14",
+      "description": "Jenkins ejecuta los casos derivados de los modelos y publica sus resultados dentro del pipeline. La generación depende del proceso o herramienta de modelado seleccionada; el pipeline aporta repetibilidad y retroalimentación compartida sobre los casos ejecutados.",
+      "provenance": "Ejemplo de aplicación elaborado para el proyecto a partir de las actividades de la práctica; no es una integración ejecutada."
+    }
+  ],
   "sources": [
     {
       "id": "P00",
