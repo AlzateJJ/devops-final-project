@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "meta": {
+    "name": "DevOps Atlas",
+    "author": "Juan José Alzate",
+    "contentVersion": "initial-skeleton"
+  },
+  "categories": [
+    {
+      "id": "SCM",
+      "name": "Gestión del código fuente"
+    },
+    {
+      "id": "DB",
+      "name": "Automatización de bases de datos"
+    },
+    {
+      "id": "CI",
+      "name": "Integración continua"
+    },
+    {
+      "id": "TEST",
+      "name": "Pruebas"
+    },
+    {
+      "id": "CONFIG",
+      "name": "Configuración"
+    },
+    {
+      "id": "DEPLOY",
+      "name": "Despliegue"
+    },
+    {
+      "id": "CONT",
+      "name": "Contenedores"
+    },
+    {
+      "id": "RELEASE",
+      "name": "Orquestación de entregas"
+    },
+    {
+      "id": "CLOUD",
+      "name": "Nube"
+    },
+    {
+      "id": "AIOPS",
+      "name": "AIOps"
+    },
+    {
+      "id": "ANALYTICS",
+      "name": "Analítica"
+    },
+    {
+      "id": "MONITOR",
+      "name": "Monitoreo"
+    },
+    {
+      "id": "SEC",
+      "name": "Seguridad"
+    },
+    {
+      "id": "COLLAB",
+      "name": "Colaboración"
+    }
+  ],
+  "prices": [
+    {
+      "id": "OS",
+      "name": "Open Source"
+    },
+    {
+      "id": "FR",
+      "name": "Free"
+    },
+    {
+      "id": "FM",
+      "name": "Freemium"
+    },
+    {
+      "id": "PA",
+      "name": "Paid"
+    },
+    {
+      "id": "EN",
+      "name": "Enterprise"
+    },
+    {
+      "id": "NS",
+      "name": "No especificado en la fuente"
+    }
+  ],
+  "tools": [],
+  "practices": [],
+  "diagrams": [],
+  "usages": [],
+  "sources": [
+    {
+      "id": "P00",
+      "name": "pres00 CICD 2026-2s.pptx.pdf",
+      "file": "../inventario/fuentes/P00.pdf"
+    },
+    {
+      "id": "P01",
+      "name": "pres01 CICD 2026-2s.pptx (1).pdf",
+      "file": "../inventario/fuentes/P01.pdf"
+    },
+    {
+      "id": "P02",
+      "name": "pres02 CICD 2026-2s.pptx (1).pdf",
+      "file": "../inventario/fuentes/P02.pdf"
+    },
+    {
+      "id": "P03",
+      "name": "pres03 CICD 2026-2s.pptx.pdf",
+      "file": "../inventario/fuentes/P03.pdf"
+    },
+    {
+      "id": "P04",
+      "name": "pres04 CICD 2026-2s.pptx.pdf",
+      "file": "../inventario/fuentes/P04.pdf"
+    },
+    {
+      "id": "P05",
+      "name": "pres05 CICD 2026-2s.pptx.pdf",
+      "file": "../inventario/fuentes/P05.pdf"
+    },
+    {
+      "id": "P06I",
+      "name": "pres06 CICD 2026-2s initial part.pptx.pdf",
+      "file": "../inventario/fuentes/P06I.pdf"
+    },
+    {
+      "id": "P06F",
+      "name": "pres06 CICD 2026-2s final part.pptx.pdf",
+      "file": "../inventario/fuentes/P06F.pdf"
+    }
+  ]
+}
