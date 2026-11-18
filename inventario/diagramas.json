@@ -1,0 +1,315 @@
+[
+  {
+    "id": "D01",
+    "nombre": "Integración continua del sistema de software",
+    "tipo": "practica",
+    "practica_id": "PR01",
+    "referencias": [
+      {
+        "fuente": "P02",
+        "pagina": 2,
+        "tipo": "diagrama_essence"
+      },
+      {
+        "fuente": "P03",
+        "pagina": 2,
+        "tipo": "repeticion_diagrama"
+      }
+    ],
+    "imagen": "diagramas/P02-02.png",
+    "nota": "Imagen de la diapositiva original; la síntesis no cambia los rótulos del curso."
+  },
+  {
+    "id": "D02",
+    "nombre": "Entrega continua del sistema de software",
+    "tipo": "practica",
+    "practica_id": "PR02",
+    "referencias": [
+      {
+        "fuente": "P02",
+        "pagina": 3,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P02-03.png",
+    "nota": "Imagen de la diapositiva original; la síntesis no cambia los rótulos del curso."
+  },
+  {
+    "id": "D03",
+    "nombre": "Despliegue continuo del sistema de software",
+    "tipo": "practica",
+    "practica_id": "PR03",
+    "referencias": [
+      {
+        "fuente": "P02",
+        "pagina": 4,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P02-04.png",
+    "nota": "Imagen de la diapositiva original; la síntesis no cambia los rótulos del curso."
+  },
+  {
+    "id": "D04",
+    "nombre": "Monitoreo continuo del esfuerzo de trabajo",
+    "tipo": "practica",
+    "practica_id": "PR04",
+    "referencias": [
+      {
+        "fuente": "P02",
+        "pagina": 5,
+        "tipo": "diagrama_essence"
+      },
+      {
+        "fuente": "P06I",
+        "pagina": 2,
+        "tipo": "repeticion_diagrama"
+      }
+    ],
+    "imagen": "diagramas/P02-05.png",
+    "nota": "Imagen de la diapositiva original; la síntesis no cambia los rótulos del curso."
+  },
+  {
+    "id": "D05",
+    "nombre": "Comunicación colaborativa del trabajo",
+    "tipo": "practica",
+    "practica_id": "PR05",
+    "referencias": [
+      {
+        "fuente": "P02",
+        "pagina": 6,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P02-06.png",
+    "nota": "Imagen de la diapositiva original; la síntesis no cambia los rótulos del curso."
+  },
+  {
+    "id": "D06",
+    "nombre": "Planificación estratégica del proyecto de software",
+    "tipo": "practica",
+    "practica_id": "PR06",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 2,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P04-02.png",
+    "nota": "Imagen de la diapositiva original; la síntesis no cambia los rótulos del curso."
+  },
+  {
+    "id": "D07",
+    "nombre": "Conceptualización de la calidad de software basada en actividades",
+    "tipo": "practica",
+    "practica_id": "PR07",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 3,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P04-03.png",
+    "nota": "Imagen de la diapositiva original; la síntesis no cambia los rótulos del curso."
+  },
+  {
+    "id": "D08",
+    "nombre": "Certificación simulada de calidad de software",
+    "tipo": "practica",
+    "practica_id": "PR08",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 4,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P04-04.png",
+    "nota": "Imagen de la diapositiva original; la síntesis no cambia los rótulos del curso."
+  },
+  {
+    "id": "D09",
+    "nombre": "Diseño simulado del sistema de software",
+    "tipo": "practica",
+    "practica_id": "PR09",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 5,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P04-05.png",
+    "nota": "Imagen de la diapositiva original; la síntesis no cambia los rótulos del curso."
+  },
+  {
+    "id": "D10",
+    "nombre": "Pruebas automatizadas del sistema de software",
+    "tipo": "practica",
+    "practica_id": "PR10",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 6,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P04-06.png",
+    "nota": "Imagen de la diapositiva original; la síntesis no cambia los rótulos del curso."
+  },
+  {
+    "id": "D11",
+    "nombre": "Desarrollo guiado por pruebas (TDD)",
+    "tipo": "practica",
+    "practica_id": "PR11",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 8,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P04-08.png",
+    "nota": "Imagen de la diapositiva original; la síntesis no cambia los rótulos del curso."
+  },
+  {
+    "id": "D12",
+    "nombre": "Desarrollo guiado por pruebas de aceptación (ATDD)",
+    "tipo": "practica",
+    "practica_id": "PR12",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 9,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P04-09.png",
+    "nota": "Imagen de la diapositiva original; la síntesis no cambia los rótulos del curso."
+  },
+  {
+    "id": "D13",
+    "nombre": "Desarrollo guiado por comportamiento (BDD)",
+    "tipo": "practica",
+    "practica_id": "PR13",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 10,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P04-10.png",
+    "nota": "Imagen de la diapositiva original; la síntesis no cambia los rótulos del curso."
+  },
+  {
+    "id": "D14",
+    "nombre": "Desarrollo basado en modelos de sistemas de software",
+    "tipo": "practica",
+    "practica_id": "PR14",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 12,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P04-12.png",
+    "nota": "Imagen de la diapositiva original; la síntesis no cambia los rótulos del curso."
+  },
+  {
+    "id": "D15",
+    "nombre": "Proceso de pruebas detallado",
+    "tipo": "proceso",
+    "practica_id": null,
+    "referencias": [
+      {
+        "fuente": "P05",
+        "pagina": 4,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P05-04.png",
+    "nota": "Usa símbolos de actividades y productos de trabajo de Essence. No presenta un hexágono que nombre una práctica independiente.",
+    "actividades": [
+      "Plans the test",
+      "Monitors the test",
+      "Analyzes the test",
+      "Designs the test",
+      "Executes the test"
+    ],
+    "productos_trabajo": [
+      "Test plan",
+      "Test progress report",
+      "Test completion report",
+      "Test basis",
+      "Test condition",
+      "Test case",
+      "Test data",
+      "Test object",
+      "Test suite"
+    ]
+  },
+  {
+    "id": "D16",
+    "nombre": "Núcleo de Essence: alfas y relaciones",
+    "tipo": "nucleo",
+    "practica_id": null,
+    "referencias": [
+      {
+        "fuente": "P01",
+        "pagina": 2,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P01-02.png",
+    "nota": "Opportunity, Stakeholder, Requirements, Software System, Work, Team y Way of Working."
+  },
+  {
+    "id": "D17",
+    "nombre": "Núcleo de Essence: espacios de actividad",
+    "tipo": "nucleo",
+    "practica_id": null,
+    "referencias": [
+      {
+        "fuente": "P01",
+        "pagina": 3,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P01-03.png",
+    "nota": "Quince espacios de actividad agrupados en Customer, Solution y Endeavor."
+  },
+  {
+    "id": "D18",
+    "nombre": "Núcleo de Essence: competencias",
+    "tipo": "nucleo",
+    "practica_id": null,
+    "referencias": [
+      {
+        "fuente": "P01",
+        "pagina": 4,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P01-04.png",
+    "nota": "Stakeholder representation, Analysis, Development, Testing, Leadership y Management."
+  },
+  {
+    "id": "D19",
+    "nombre": "Elementos y notación de Essence",
+    "tipo": "notacion",
+    "practica_id": null,
+    "referencias": [
+      {
+        "fuente": "P01",
+        "pagina": 5,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "imagen": "diagramas/P01-05.png",
+    "nota": "Leyenda del lenguaje: práctica, alfa, espacio de actividad, actividad, competencia, recurso, patrón, producto de trabajo y área de interés."
+  }
+]

@@ -1,0 +1,495 @@
+[
+  {
+    "id": "PR01",
+    "nombre_original": "Continuous integration of the software system",
+    "nombre_es": "Integración continua del sistema de software",
+    "descripcion": "Integrar cambios, construir el código y ejecutar pruebas unitarias para reducir defectos y automatizar el proceso.",
+    "descripcion_tipo": "sintesis_del_diagrama",
+    "diagrama_id": "D01",
+    "referencias": [
+      {
+        "fuente": "P02",
+        "pagina": 2,
+        "tipo": "diagrama_essence"
+      },
+      {
+        "fuente": "P03",
+        "pagina": 2,
+        "tipo": "repeticion_diagrama"
+      }
+    ],
+    "actividades": [
+      "Write code",
+      "Check-out code",
+      "Check-in code",
+      "Merge version",
+      "Solve conflict",
+      "Build code",
+      "Run unit tests"
+    ],
+    "productos_trabajo": [
+      "Repository",
+      "Version",
+      "Branch",
+      "Test suite"
+    ],
+    "roles": [
+      "Development team member",
+      "DevOps Engineer"
+    ],
+    "competencias": [
+      "Development",
+      "Testing"
+    ],
+    "objetivos": [
+      "Reducing defects",
+      "Automating process"
+    ]
+  },
+  {
+    "id": "PR02",
+    "nombre_original": "Continuous delivery of the software system",
+    "nombre_es": "Entrega continua del sistema de software",
+    "descripcion": "Probar el sistema y desplegar el código automáticamente; el diagrama lo vincula con mejorar el sistema de software.",
+    "descripcion_tipo": "sintesis_del_diagrama",
+    "diagrama_id": "D02",
+    "referencias": [
+      {
+        "fuente": "P02",
+        "pagina": 3,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "actividades": [
+      "Test the software system automatically",
+      "Deploy the code automatically"
+    ],
+    "productos_trabajo": [
+      "Repository",
+      "Version",
+      "Branch",
+      "Test suite"
+    ],
+    "roles": [
+      "Development team member",
+      "DevOps Engineer"
+    ],
+    "competencias": [
+      "Testing",
+      "Development"
+    ],
+    "objetivos": [
+      "Improving software systems"
+    ]
+  },
+  {
+    "id": "PR03",
+    "nombre_original": "Continuous deployment of the software system",
+    "nombre_es": "Despliegue continuo del sistema de software",
+    "descripcion": "Probar el sistema y liberar el código automáticamente, según la distinción utilizada en el diagrama del curso.",
+    "descripcion_tipo": "sintesis_del_diagrama",
+    "diagrama_id": "D03",
+    "referencias": [
+      {
+        "fuente": "P02",
+        "pagina": 4,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "actividades": [
+      "Test the software system automatically",
+      "Release the code automatically"
+    ],
+    "productos_trabajo": [
+      "Repository",
+      "Version",
+      "Branch",
+      "Test suite"
+    ],
+    "roles": [
+      "Development team member",
+      "DevOps Engineer"
+    ],
+    "competencias": [
+      "Testing",
+      "Development"
+    ],
+    "objetivos": [
+      "Guaranteeing software systems"
+    ]
+  },
+  {
+    "id": "PR04",
+    "nombre_original": "Continuous monitoring of the endeavor",
+    "nombre_es": "Monitoreo continuo del esfuerzo de trabajo",
+    "descripcion": "Revisar infraestructura, analizar métricas, disparar alertas y generar registros de auditoría para mejorar el proceso.",
+    "descripcion_tipo": "sintesis_del_diagrama",
+    "diagrama_id": "D04",
+    "referencias": [
+      {
+        "fuente": "P02",
+        "pagina": 5,
+        "tipo": "diagrama_essence"
+      },
+      {
+        "fuente": "P06I",
+        "pagina": 2,
+        "tipo": "repeticion_diagrama"
+      }
+    ],
+    "actividades": [
+      "Check the infrastructure automatically",
+      "Analyze performance metrics",
+      "Trigger instant alerts",
+      "Generate audit logs"
+    ],
+    "productos_trabajo": [
+      "Performance metrics",
+      "Instant alerts",
+      "Audit logs"
+    ],
+    "roles": [
+      "DevOps Engineer"
+    ],
+    "competencias": [
+      "Management"
+    ],
+    "objetivos": [
+      "Improving process"
+    ]
+  },
+  {
+    "id": "PR05",
+    "nombre_original": "Collaborative communication of the work",
+    "nombre_es": "Comunicación colaborativa del trabajo",
+    "descripcion": "Organizar la comunicación del equipo mediante tableros, tarjetas, canales y mensajes.",
+    "descripcion_tipo": "sintesis_del_diagrama",
+    "diagrama_id": "D05",
+    "referencias": [
+      {
+        "fuente": "P02",
+        "pagina": 6,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "actividades": [
+      "Set up the integration",
+      "Create the main board of the project",
+      "Invite the development team",
+      "Create cards",
+      "Review cards",
+      "Create messages",
+      "Reply messages"
+    ],
+    "productos_trabajo": [
+      "Board",
+      "Card",
+      "Channel",
+      "Message"
+    ],
+    "roles": [
+      "Development team member",
+      "DevOps Engineer"
+    ],
+    "competencias": [
+      "Management"
+    ],
+    "objetivos": [
+      "Improving communication"
+    ]
+  },
+  {
+    "id": "PR06",
+    "nombre_original": "Strategic planning of the software project",
+    "nombre_es": "Planificación estratégica del proyecto de software",
+    "descripcion": "Planificar el aseguramiento de calidad y producir su plan dentro de la fase de planificación.",
+    "descripcion_tipo": "sintesis_del_diagrama",
+    "diagrama_id": "D06",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 2,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "actividades": [
+      "Plan quality assurance"
+    ],
+    "productos_trabajo": [
+      "Software Quality Assurance Plan"
+    ],
+    "roles": [
+      "Software Quality Assurance Engineer"
+    ],
+    "competencias": [
+      "Management"
+    ],
+    "objetivos": []
+  },
+  {
+    "id": "PR07",
+    "nombre_original": "Activity-based conceptualization of software quality",
+    "nombre_es": "Conceptualización de la calidad de software basada en actividades",
+    "descripcion": "Elaborar la conceptualización de la calidad de software como actividad de seguimiento del progreso.",
+    "descripcion_tipo": "sintesis_del_diagrama",
+    "diagrama_id": "D07",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 3,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "actividades": [
+      "Elaborate conceptual activity"
+    ],
+    "productos_trabajo": [
+      "Conceptualization"
+    ],
+    "roles": [
+      "Software Quality Assurance Engineer"
+    ],
+    "competencias": [
+      "Management"
+    ],
+    "objetivos": []
+  },
+  {
+    "id": "PR08",
+    "nombre_original": "Simulated certification of software quality",
+    "nombre_es": "Certificación simulada de calidad de software",
+    "descripcion": "Presentar una prueba de certificación simulada como parte del seguimiento del progreso.",
+    "descripcion_tipo": "sintesis_del_diagrama",
+    "diagrama_id": "D08",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 4,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "actividades": [
+      "Present certification test"
+    ],
+    "productos_trabajo": [
+      "Simulated certification test"
+    ],
+    "roles": [
+      "Software Quality Assurance Engineer"
+    ],
+    "competencias": [
+      "Management"
+    ],
+    "objetivos": []
+  },
+  {
+    "id": "PR09",
+    "nombre_original": "Simulated design of the software system",
+    "nombre_es": "Diseño simulado del sistema de software",
+    "descripcion": "Especificar la funcionalidad mediante casos de uso y sus especificaciones textuales.",
+    "descripcion_tipo": "sintesis_del_diagrama",
+    "diagrama_id": "D09",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 5,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "actividades": [
+      "Specify the functionality of the software system"
+    ],
+    "productos_trabajo": [
+      "Use Cases",
+      "Textual Specification of Use Cases"
+    ],
+    "roles": [
+      "Software Engineer"
+    ],
+    "competencias": [
+      "Analysis"
+    ],
+    "objetivos": []
+  },
+  {
+    "id": "PR10",
+    "nombre_original": "Automated testing of the software system",
+    "nombre_es": "Pruebas automatizadas del sistema de software",
+    "descripcion": "Ejecutar pruebas automatizadas y obtener retroalimentación inmediata del sistema bajo prueba.",
+    "descripcion_tipo": "sintesis_del_diagrama",
+    "diagrama_id": "D10",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 6,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "actividades": [
+      "Execute automated tests",
+      "Gain immediate feedback of the system under test"
+    ],
+    "productos_trabajo": [
+      "Test",
+      "Release"
+    ],
+    "roles": [
+      "Development team member"
+    ],
+    "competencias": [
+      "Testing",
+      "Stakeholder representation"
+    ],
+    "objetivos": [
+      "Speeding up tests"
+    ]
+  },
+  {
+    "id": "PR11",
+    "nombre_original": "Test-driven development of the software system",
+    "nombre_es": "Desarrollo guiado por pruebas (TDD)",
+    "descripcion": "Escribir una prueba que falla, implementar el código que la supera y refactorizar el código fuente.",
+    "descripcion_tipo": "sintesis_del_diagrama",
+    "diagrama_id": "D11",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 8,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "actividades": [
+      "Write a failing test",
+      "Write the source code to pass the test",
+      "Refactor the source code"
+    ],
+    "productos_trabajo": [
+      "Test",
+      "Source code"
+    ],
+    "roles": [
+      "Development team member"
+    ],
+    "competencias": [
+      "Testing",
+      "Development"
+    ],
+    "objetivos": [
+      "Reducing development time"
+    ]
+  },
+  {
+    "id": "PR12",
+    "nombre_original": "Acceptance Test-driven development of the software system",
+    "nombre_es": "Desarrollo guiado por pruebas de aceptación (ATDD)",
+    "descripcion": "Definir criterios de aceptación, automatizar sus pruebas y controlar su integración y despliegue continuos.",
+    "descripcion_tipo": "sintesis_del_diagrama",
+    "diagrama_id": "D12",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 9,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "actividades": [
+      "Define acceptance criteria",
+      "Automate acceptance tests",
+      "Control continuous integration and deployment of the acceptance tests"
+    ],
+    "productos_trabajo": [
+      "Test",
+      "Source code"
+    ],
+    "roles": [
+      "Quality assurance engineer"
+    ],
+    "competencias": [
+      "Testing"
+    ],
+    "objetivos": [
+      "Validating acceptance criteria"
+    ]
+  },
+  {
+    "id": "PR13",
+    "nombre_original": "Behavior-driven development of the software system",
+    "nombre_es": "Desarrollo guiado por comportamiento (BDD)",
+    "descripcion": "Definir y refinar escenarios, y automatizar los criterios de aceptación para asegurar el comportamiento del sistema.",
+    "descripcion_tipo": "sintesis_del_diagrama",
+    "diagrama_id": "D13",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 10,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "actividades": [
+      "Define scenarios",
+      "Automate acceptance criteria",
+      "Refine scenarios"
+    ],
+    "productos_trabajo": [
+      "Test",
+      "Source code"
+    ],
+    "roles": [
+      "Development team member",
+      "Business Analyst"
+    ],
+    "competencias": [
+      "Analysis",
+      "Development"
+    ],
+    "objetivos": [
+      "Ensuring the behavior of the software system"
+    ]
+  },
+  {
+    "id": "PR14",
+    "nombre_original": "Model-based development of software systems",
+    "nombre_es": "Desarrollo basado en modelos de sistemas de software",
+    "descripcion": "Crear y validar modelos de prueba, generar y ejecutar casos, y evaluar resultados y trazabilidad.",
+    "descripcion_tipo": "sintesis_del_diagrama",
+    "diagrama_id": "D14",
+    "referencias": [
+      {
+        "fuente": "P04",
+        "pagina": 12,
+        "tipo": "diagrama_essence"
+      }
+    ],
+    "actividades": [
+      "Create test models",
+      "Validate test models",
+      "Define test coverage criteria",
+      "Generate test cases",
+      "Minimize test suite",
+      "Generate test data",
+      "Execute test cases",
+      "Trace requirements specification",
+      "Evaluate test verdict"
+    ],
+    "productos_trabajo": [
+      "Requirements specification",
+      "Test coverage criteria",
+      "Test model",
+      "System under test",
+      "Test case",
+      "Test suite",
+      "Traceability matrix",
+      "Test verdict"
+    ],
+    "roles": [
+      "Software development engineer in test"
+    ],
+    "competencias": [
+      "Analysis",
+      "Development",
+      "Testing"
+    ],
+    "objetivos": [],
+    "nota": "Se conserva el título Model-based development del hexágono. El contenido trata de modelos y generación de pruebas; no renombrar automáticamente como Model-based testing."
+  }
+]
