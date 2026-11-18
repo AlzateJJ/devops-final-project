@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#112e37">
+  <title>DevOps Atlas · Esquema del sistema</title>
+  <link rel="icon" href="assets/atlas.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+  <aside class="sidebar" aria-label="Navegación principal">
+    <a class="brand" href="#/home"><img src="assets/atlas.svg" alt="" width="38" height="38"><span>DevOps <b>Atlas</b><small>Herramientas y prácticas</small></span></a>
+    <span class="nav-label">EXPLORAR EL SISTEMA</span>
+    <nav>
+      <a data-nav="home" href="#/home"><span aria-hidden="true">◇</span> Esquema del sistema</a>
+      <a data-nav="tools" href="#/tools"><span aria-hidden="true">▦</span> Herramientas <small id="nav-tools"></small></a>
+      <a data-nav="practices" href="#/practices"><span aria-hidden="true">⬡</span> Prácticas <small id="nav-practices"></small></a>
+      <a data-nav="usages" href="#/usages"><span aria-hidden="true">⤬</span> Relaciones de uso</a>
+      <a data-nav="diagrams" href="#/diagrams"><span aria-hidden="true">▧</span> Diagramas Essence</a>
+      <a data-nav="backup" href="#/backup"><span aria-hidden="true">⇩</span> Respaldo de datos</a>
+    </nav>
+    <div class="sidebar-foot"><span class="course-pill">INTEGRACIÓN Y DESPLIEGUE</span><p>Del conocimiento<br>a la práctica.</p><small>Proyecto de Juan José Alzate</small></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span>Mi espacio de trabajo <span aria-hidden="true">/</span> <b id="breadcrumb">Esquema del sistema</b></span><span class="local-badge">Datos en este navegador</span></header>
+    <main id="main" tabindex="-1"><p role="status">Cargando el catálogo del curso…</p></main>
+    <footer>DevOps Atlas <span>HTML5 · JSON · Almacenamiento local</span><a href="../inventario/inventario.html" target="_blank" rel="noopener">Inventario y fuentes</a></footer>
+  </div>
+  <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+  <dialog id="image-dialog" aria-labelledby="image-title"><div class="dialog-top"><h2 id="image-title">Diagrama Essence</h2><button id="close-image" type="button">Cerrar</button></div><img id="large-image" alt=""><p id="image-caption"></p></dialog>
+</body>
+</html>
