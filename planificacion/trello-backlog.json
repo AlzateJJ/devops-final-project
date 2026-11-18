@@ -1,0 +1,1862 @@
+{
+  "version": 1,
+  "fecha": "2026-11-18",
+  "tablero_url": "https://trello.com/b/5CSrY3pF/devops-tools-project",
+  "tablero_shortlink": "5CSrY3pF",
+  "tablero_id": null,
+  "lista_destino": "Backlog",
+  "lista_id": null,
+  "responsable_principal": "Juan José Alzate",
+  "miembro_trello_id": null,
+  "estado_publicacion": "pendiente_mcp",
+  "nota": "Archivo de preparación; no es una confirmación de creación ni un formato nativo de importación de Trello.",
+  "fases": {
+    "1": "Inventario",
+    "2": "Planificación",
+    "3": "Diseño",
+    "4": "Implementación",
+    "5": "Contenido y carga inicial",
+    "6": "Verificación",
+    "7": "Entrega"
+  },
+  "tarjetas": [
+    {
+      "id": "DEVOPS-001",
+      "orden": 1,
+      "fase": 2,
+      "titulo": "Consolidar requisitos y alcance",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Convertir el enunciado en una matriz verificable que guíe diseño, implementación y entrega.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "La matriz incluye registrar y actualizar herramientas, prácticas y usos; documenta todos los campos requeridos.",
+        "El index es un esquema preconceptual navegable; JSON y almacenamiento Chrome comparten estructura.",
+        "Se documenta el alcance conservador de 144 herramientas, 14 prácticas y 19 diagramas; las 55 menciones secundarias permanecen trazables en el inventario.",
+        "Se identifican los entregables: tarjetas Trello, HTML, CSS, JSON y recursos adicionales."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [],
+      "referencias": [
+        "supletorio 1.pdf, página 1"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-001] Consolidar requisitos y alcance",
+        "desc": "**Consolidar requisitos y alcance**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nConvertir el enunciado en una matriz verificable que guíe diseño, implementación y entrega.\n\n**Criterios de aceptación:**\n- La matriz incluye registrar y actualizar herramientas, prácticas y usos; documenta todos los campos requeridos.\n- El index es un esquema preconceptual navegable; JSON y almacenamiento Chrome comparten estructura.\n- Se documenta el alcance conservador de 144 herramientas, 14 prácticas y 19 diagramas; las 55 menciones secundarias permanecen trazables en el inventario.\n- Se identifican los entregables: tarjetas Trello, HTML, CSS, JSON y recursos adicionales.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** Sin dependencias.\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- supletorio 1.pdf, página 1",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-002",
+      "orden": 2,
+      "fase": 1,
+      "titulo": "Revisar y cerrar el inventario existente",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Revisar el inventario ya preparado y cerrar las discrepancias sin repetir la extracción.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Se cotejan 8 presentaciones y las referencias por página del inventario.",
+        "Los alias VSTS/Azure DevOps y uDeploy/UrbanCode no crean duplicados; los símbolos repetidos no se usan como identificadores.",
+        "Se distinguen 19 diagramas únicos de 21 apariciones y 14 prácticas nombradas.",
+        "Se registran datos faltantes y categorías que requieren explicación, incluidos Vite y webpack."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-001"
+      ],
+      "referencias": [
+        "inventario/inventario.json",
+        "inventario/inventario.html"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-002] Revisar y cerrar el inventario existente",
+        "desc": "**Revisar y cerrar el inventario existente**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nRevisar el inventario ya preparado y cerrar las discrepancias sin repetir la extracción.\n\n**Criterios de aceptación:**\n- Se cotejan 8 presentaciones y las referencias por página del inventario.\n- Los alias VSTS/Azure DevOps y uDeploy/UrbanCode no crean duplicados; los símbolos repetidos no se usan como identificadores.\n- Se distinguen 19 diagramas únicos de 21 apariciones y 14 prácticas nombradas.\n- Se registran datos faltantes y categorías que requieren explicación, incluidos Vite y webpack.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-001\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/inventario.json\n- inventario/inventario.html",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-003",
+      "orden": 3,
+      "fase": 2,
+      "titulo": "Mantener planificación y evidencias en Trello",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar y cargar las tarjetas del proyecto mediante el MCP de Trello; conservar evidencia de los avances reales.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Se verifica el tablero 5CSrY3pF y se identifica la lista Backlog antes de escribir.",
+        "Se cargan las 42 tarjetas sin duplicar sus IDs DEVOPS; todas quedan inicialmente en Backlog y con el responsable escrito en la descripción.",
+        "La asignación de miembro usa una cuenta verificada; no se inventa un ID de usuario ni se invita a terceros.",
+        "Se guardan IDs/URLs de tarjetas y evidencia de carga; se enlazan los commits y pruebas ejecutados sin afirmar trabajo pendiente como completado."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-001"
+      ],
+      "referencias": [
+        "https://trello.com/b/5CSrY3pF/devops-tools-project"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-003] Mantener planificación y evidencias en Trello",
+        "desc": "**Mantener planificación y evidencias en Trello**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar y cargar las tarjetas del proyecto mediante el MCP de Trello; conservar evidencia de los avances reales.\n\n**Criterios de aceptación:**\n- Se verifica el tablero 5CSrY3pF y se identifica la lista Backlog antes de escribir.\n- Se cargan las 42 tarjetas sin duplicar sus IDs DEVOPS; todas quedan inicialmente en Backlog y con el responsable escrito en la descripción.\n- La asignación de miembro usa una cuenta verificada; no se inventa un ID de usuario ni se invita a terceros.\n- Se guardan IDs/URLs de tarjetas y evidencia de carga; se enlazan los commits y pruebas ejecutados sin afirmar trabajo pendiente como completado.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-001\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- https://trello.com/b/5CSrY3pF/devops-tools-project",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-004",
+      "orden": 4,
+      "fase": 3,
+      "titulo": "Definir modelo de datos y contratos JSON",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Definir herramientas, prácticas, diagramas y relaciones de uso con claves estables e integridad referencial.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Herramienta contiene ID, nombre, descripción, logo, modelo de precio y categoría; práctica contiene ID, nombre, descripción e imagen Essence.",
+        "Uso enlaza una herramienta y una práctica mediante IDs y contiene una descripción en términos de cultura DevOps.",
+        "Se separan los diagramas de apoyo de las prácticas y se conservan fuentes, alias y datos históricos del curso.",
+        "El JSON de carga, los respaldos y el estado persistido tienen el mismo contrato versionado."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-001",
+        "DEVOPS-002"
+      ],
+      "referencias": [],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-004] Definir modelo de datos y contratos JSON",
+        "desc": "**Definir modelo de datos y contratos JSON**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nDefinir herramientas, prácticas, diagramas y relaciones de uso con claves estables e integridad referencial.\n\n**Criterios de aceptación:**\n- Herramienta contiene ID, nombre, descripción, logo, modelo de precio y categoría; práctica contiene ID, nombre, descripción e imagen Essence.\n- Uso enlaza una herramienta y una práctica mediante IDs y contiene una descripción en términos de cultura DevOps.\n- Se separan los diagramas de apoyo de las prácticas y se conservan fuentes, alias y datos históricos del curso.\n- El JSON de carga, los respaldos y el estado persistido tienen el mismo contrato versionado.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-001, DEVOPS-002\n\n**Origen:** Requisito del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-005",
+      "orden": 5,
+      "fase": 3,
+      "titulo": "Diseñar el esquema preconceptual del sistema",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Representar el ingeniero DevOps, los conceptos, sus atributos y las relaciones estáticas y dinámicas.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "El esquema incluye los conceptos Herramienta, Práctica, Uso, Categoría, Modelo de precio y Diagrama, con sus atributos relevantes.",
+        "Las seis relaciones dinámicas de registro y actualización tienen un destino de interfaz definido.",
+        "Se distinguen visualmente conceptos, relaciones estáticas y relaciones dinámicas y se explica la notación."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-004"
+      ],
+      "referencias": [],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-005] Diseñar el esquema preconceptual del sistema",
+        "desc": "**Diseñar el esquema preconceptual del sistema**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nRepresentar el ingeniero DevOps, los conceptos, sus atributos y las relaciones estáticas y dinámicas.\n\n**Criterios de aceptación:**\n- El esquema incluye los conceptos Herramienta, Práctica, Uso, Categoría, Modelo de precio y Diagrama, con sus atributos relevantes.\n- Las seis relaciones dinámicas de registro y actualización tienen un destino de interfaz definido.\n- Se distinguen visualmente conceptos, relaciones estáticas y relaciones dinámicas y se explica la notación.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-004\n\n**Origen:** Requisito del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-006",
+      "orden": 6,
+      "fase": 3,
+      "titulo": "Diseñar pantallas y recorridos",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Definir la navegación desde el esquema hasta formularios, catálogos y consulta de diagramas.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Cada uno de los seis recorridos tiene entrada, campos, validación, guardado, confirmación y regreso.",
+        "Los catálogos permiten localizar registros antes de actualizarlos; los formularios muestran los valores existentes.",
+        "Se prevén estados vacíos, errores, vista previa de imágenes y uso por teclado en móvil y escritorio."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-005"
+      ],
+      "referencias": [],
+      "origen": "Diseño necesario para implementar el taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-006] Diseñar pantallas y recorridos",
+        "desc": "**Diseñar pantallas y recorridos**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nDefinir la navegación desde el esquema hasta formularios, catálogos y consulta de diagramas.\n\n**Criterios de aceptación:**\n- Cada uno de los seis recorridos tiene entrada, campos, validación, guardado, confirmación y regreso.\n- Los catálogos permiten localizar registros antes de actualizarlos; los formularios muestran los valores existentes.\n- Se prevén estados vacíos, errores, vista previa de imágenes y uso por teclado en móvil y escritorio.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-005\n\n**Origen:** Diseño necesario para implementar el taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-007",
+      "orden": 7,
+      "fase": 4,
+      "titulo": "Preparar estructura y ejecución local",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Crear una aplicación HTML5, CSS y JavaScript sin servidor de base de datos.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Los archivos de interfaz, código, datos y recursos tienen rutas relativas y responsabilidades separadas.",
+        "Existe un comando documentado para servir la aplicación localmente y abrirla en Chrome.",
+        "La página inicial carga correctamente y no necesita credenciales ni servicios de terceros para consultar los datos."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-004",
+        "DEVOPS-006"
+      ],
+      "referencias": [],
+      "origen": "Implementación del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-007] Preparar estructura y ejecución local",
+        "desc": "**Preparar estructura y ejecución local**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nCrear una aplicación HTML5, CSS y JavaScript sin servidor de base de datos.\n\n**Criterios de aceptación:**\n- Los archivos de interfaz, código, datos y recursos tienen rutas relativas y responsabilidades separadas.\n- Existe un comando documentado para servir la aplicación localmente y abrirla en Chrome.\n- La página inicial carga correctamente y no necesita credenciales ni servicios de terceros para consultar los datos.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-004, DEVOPS-006\n\n**Origen:** Implementación del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-008",
+      "orden": 8,
+      "fase": 4,
+      "titulo": "Implementar persistencia en Chrome",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Guardar el estado de la aplicación en el almacenamiento del navegador con carga inicial desde JSON.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Los datos iniciales se importan una sola vez cuando no existe una base local válida.",
+        "Registrar y actualizar persiste después de recargar y reabrir el navegador con el mismo origen y perfil.",
+        "Un error de cuota, almacenamiento bloqueado o datos corruptos se informa sin borrar ni sustituir silenciosamente datos existentes.",
+        "Se usan IDs estables y una clave propia de la aplicación; no se modifica almacenamiento ajeno."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-004",
+        "DEVOPS-007"
+      ],
+      "referencias": [],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-008] Implementar persistencia en Chrome",
+        "desc": "**Implementar persistencia en Chrome**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nGuardar el estado de la aplicación en el almacenamiento del navegador con carga inicial desde JSON.\n\n**Criterios de aceptación:**\n- Los datos iniciales se importan una sola vez cuando no existe una base local válida.\n- Registrar y actualizar persiste después de recargar y reabrir el navegador con el mismo origen y perfil.\n- Un error de cuota, almacenamiento bloqueado o datos corruptos se informa sin borrar ni sustituir silenciosamente datos existentes.\n- Se usan IDs estables y una clave propia de la aplicación; no se modifica almacenamiento ajeno.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-004, DEVOPS-007\n\n**Origen:** Requisito del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-009",
+      "orden": 9,
+      "fase": 4,
+      "titulo": "Implementar respaldo y restauración JSON",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Permitir transportar y recuperar la base simulada mediante un archivo JSON.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "La exportación incluye el estado completo y una versión de formato.",
+        "La restauración valida estructura, valores e IDs relacionados antes de escribir.",
+        "El reemplazo requiere una acción deliberada; un archivo inválido deja intactos los datos existentes.",
+        "Exportar y restaurar conserva registros y sus imágenes cargadas por el usuario."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-008"
+      ],
+      "referencias": [],
+      "origen": "Apoyo propuesto para reproducibilidad y respaldo",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-009] Implementar respaldo y restauración JSON",
+        "desc": "**Implementar respaldo y restauración JSON**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPermitir transportar y recuperar la base simulada mediante un archivo JSON.\n\n**Criterios de aceptación:**\n- La exportación incluye el estado completo y una versión de formato.\n- La restauración valida estructura, valores e IDs relacionados antes de escribir.\n- El reemplazo requiere una acción deliberada; un archivo inválido deja intactos los datos existentes.\n- Exportar y restaurar conserva registros y sus imágenes cargadas por el usuario.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-008\n\n**Origen:** Apoyo propuesto para reproducibilidad y respaldo",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-010",
+      "orden": 10,
+      "fase": 5,
+      "titulo": "Completar fichas: Gestión del código fuente",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar las fichas del grupo Source Control Management para cargar el catálogo de la aplicación.",
+      "alcance": [
+        "H001 · GitHub",
+        "H003 · Subversion",
+        "H011 · GitLab",
+        "H019 · Compuware ISPW",
+        "H037 · Perforce HelixCore",
+        "H055 · Bitbucket",
+        "H073 · JFrog Artifactory",
+        "H074 · Sonatype Nexus"
+      ],
+      "criterios_aceptacion": [
+        "Las 8 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.",
+        "Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.",
+        "La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.",
+        "El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.",
+        "No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/herramientas.json; referencias por herramienta",
+        "P05, página 10; P06I, página 6; láminas específicas del inventario"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [
+        "H001",
+        "H003",
+        "H011",
+        "H019",
+        "H037",
+        "H055",
+        "H073",
+        "H074"
+      ],
+      "trello": {
+        "name": "[DEVOPS-010] Completar fichas: Gestión del código fuente",
+        "desc": "**Completar fichas: Gestión del código fuente**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar las fichas del grupo Source Control Management para cargar el catálogo de la aplicación.\n\n**Alcance:**\n- H001 · GitHub\n- H003 · Subversion\n- H011 · GitLab\n- H019 · Compuware ISPW\n- H037 · Perforce HelixCore\n- H055 · Bitbucket\n- H073 · JFrog Artifactory\n- H074 · Sonatype Nexus\n\n**Criterios de aceptación:**\n- Las 8 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.\n- Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.\n- La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.\n- El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.\n- No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/herramientas.json; referencias por herramienta\n- P05, página 10; P06I, página 6; láminas específicas del inventario",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-011",
+      "orden": 11,
+      "fase": 5,
+      "titulo": "Completar fichas: Automatización de bases de datos",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar las fichas del grupo Database Automation para cargar el catálogo de la aplicación.",
+      "alcance": [
+        "H004 · Flyway",
+        "H012 · Delphix",
+        "H020 · Redgate",
+        "H038 · Datical",
+        "H056 · DBmaestro"
+      ],
+      "criterios_aceptacion": [
+        "Las 5 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.",
+        "Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.",
+        "La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.",
+        "El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.",
+        "No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/herramientas.json; referencias por herramienta",
+        "P05, página 10; P06I, página 6; láminas específicas del inventario"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [
+        "H004",
+        "H012",
+        "H020",
+        "H038",
+        "H056"
+      ],
+      "trello": {
+        "name": "[DEVOPS-011] Completar fichas: Automatización de bases de datos",
+        "desc": "**Completar fichas: Automatización de bases de datos**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar las fichas del grupo Database Automation para cargar el catálogo de la aplicación.\n\n**Alcance:**\n- H004 · Flyway\n- H012 · Delphix\n- H020 · Redgate\n- H038 · Datical\n- H056 · DBmaestro\n\n**Criterios de aceptación:**\n- Las 5 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.\n- Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.\n- La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.\n- El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.\n- No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/herramientas.json; referencias por herramienta\n- P05, página 10; P06I, página 6; láminas específicas del inventario",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-012",
+      "orden": 12,
+      "fase": 5,
+      "titulo": "Completar fichas: Integración continua",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar las fichas del grupo Continuous Integration para cargar el catálogo de la aplicación.",
+      "alcance": [
+        "H021 · AWS CodeBuild",
+        "H022 · Jenkins",
+        "H039 · VSTS",
+        "H040 · Bamboo",
+        "H057 · TeamCity",
+        "H058 · CircleCI",
+        "H075 · CodeShip",
+        "H076 · Travis CI",
+        "H133 · npm",
+        "H134 · Bitbucket Pipelines",
+        "H135 · GitHub Actions",
+        "H136 · GitLab CI/CD",
+        "H137 · Gradle",
+        "H138 · Yarn",
+        "H139 · Maven"
+      ],
+      "criterios_aceptacion": [
+        "Las 15 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.",
+        "Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.",
+        "La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.",
+        "El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.",
+        "No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/herramientas.json; referencias por herramienta",
+        "P05, página 10; P06I, página 6; láminas específicas del inventario"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [
+        "H021",
+        "H022",
+        "H039",
+        "H040",
+        "H057",
+        "H058",
+        "H075",
+        "H076",
+        "H133",
+        "H134",
+        "H135",
+        "H136",
+        "H137",
+        "H138",
+        "H139"
+      ],
+      "trello": {
+        "name": "[DEVOPS-012] Completar fichas: Integración continua",
+        "desc": "**Completar fichas: Integración continua**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar las fichas del grupo Continuous Integration para cargar el catálogo de la aplicación.\n\n**Alcance:**\n- H021 · AWS CodeBuild\n- H022 · Jenkins\n- H039 · VSTS\n- H040 · Bamboo\n- H057 · TeamCity\n- H058 · CircleCI\n- H075 · CodeShip\n- H076 · Travis CI\n- H133 · npm\n- H134 · Bitbucket Pipelines\n- H135 · GitHub Actions\n- H136 · GitLab CI/CD\n- H137 · Gradle\n- H138 · Yarn\n- H139 · Maven\n\n**Criterios de aceptación:**\n- Las 15 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.\n- Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.\n- La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.\n- El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.\n- No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/herramientas.json; referencias por herramienta\n- P05, página 10; P06I, página 6; láminas específicas del inventario",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-013",
+      "orden": 13,
+      "fase": 5,
+      "titulo": "Completar fichas: Pruebas",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar las fichas del grupo Testing para cargar el catálogo de la aplicación.",
+      "alcance": [
+        "H023 · Micro Focus UFT",
+        "H024 · Sauce Labs",
+        "H025 · Perfecto",
+        "H026 · SoapUI",
+        "H041 · Karma",
+        "H042 · Tricentis Tosca",
+        "H043 · Jasmine",
+        "H044 · Locust.io",
+        "H059 · Mocha",
+        "H060 · JMeter",
+        "H061 · TestNG",
+        "H062 · JUnit",
+        "H077 · FitNesse",
+        "H078 · Gatling",
+        "H079 · Selenium",
+        "H080 · Cucumber",
+        "H121 · Cypress",
+        "H122 · Playwright",
+        "H123 · Newman",
+        "H124 · mabl",
+        "H125 · Postman",
+        "H126 · Jest",
+        "H127 · TestCafe"
+      ],
+      "criterios_aceptacion": [
+        "Las 23 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.",
+        "Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.",
+        "La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.",
+        "El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.",
+        "No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/herramientas.json; referencias por herramienta",
+        "P05, página 10; P06I, página 6; láminas específicas del inventario"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [
+        "H023",
+        "H024",
+        "H025",
+        "H026",
+        "H041",
+        "H042",
+        "H043",
+        "H044",
+        "H059",
+        "H060",
+        "H061",
+        "H062",
+        "H077",
+        "H078",
+        "H079",
+        "H080",
+        "H121",
+        "H122",
+        "H123",
+        "H124",
+        "H125",
+        "H126",
+        "H127"
+      ],
+      "trello": {
+        "name": "[DEVOPS-013] Completar fichas: Pruebas",
+        "desc": "**Completar fichas: Pruebas**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar las fichas del grupo Testing para cargar el catálogo de la aplicación.\n\n**Alcance:**\n- H023 · Micro Focus UFT\n- H024 · Sauce Labs\n- H025 · Perfecto\n- H026 · SoapUI\n- H041 · Karma\n- H042 · Tricentis Tosca\n- H043 · Jasmine\n- H044 · Locust.io\n- H059 · Mocha\n- H060 · JMeter\n- H061 · TestNG\n- H062 · JUnit\n- H077 · FitNesse\n- H078 · Gatling\n- H079 · Selenium\n- H080 · Cucumber\n- H121 · Cypress\n- H122 · Playwright\n- H123 · Newman\n- H124 · mabl\n- H125 · Postman\n- H126 · Jest\n- H127 · TestCafe\n\n**Criterios de aceptación:**\n- Las 23 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.\n- Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.\n- La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.\n- El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.\n- No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/herramientas.json; referencias por herramienta\n- P05, página 10; P06I, página 6; láminas específicas del inventario",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-014",
+      "orden": 14,
+      "fase": 5,
+      "titulo": "Completar fichas: Configuración",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar las fichas del grupo Configuration para cargar el catálogo de la aplicación.",
+      "alcance": [
+        "H027 · CFEngine",
+        "H028 · Puppet",
+        "H045 · Rudder",
+        "H046 · Chef",
+        "H063 · Terraform",
+        "H064 · Ansible",
+        "H081 · Packer",
+        "H082 · Salt / SaltStack",
+        "H142 · Juju",
+        "H143 · AWS CloudFormation",
+        "H144 · Pulumi"
+      ],
+      "criterios_aceptacion": [
+        "Las 11 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.",
+        "Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.",
+        "La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.",
+        "El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.",
+        "No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/herramientas.json; referencias por herramienta",
+        "P05, página 10; P06I, página 6; láminas específicas del inventario"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [
+        "H027",
+        "H028",
+        "H045",
+        "H046",
+        "H063",
+        "H064",
+        "H081",
+        "H082",
+        "H142",
+        "H143",
+        "H144"
+      ],
+      "trello": {
+        "name": "[DEVOPS-014] Completar fichas: Configuración",
+        "desc": "**Completar fichas: Configuración**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar las fichas del grupo Configuration para cargar el catálogo de la aplicación.\n\n**Alcance:**\n- H027 · CFEngine\n- H028 · Puppet\n- H045 · Rudder\n- H046 · Chef\n- H063 · Terraform\n- H064 · Ansible\n- H081 · Packer\n- H082 · Salt / SaltStack\n- H142 · Juju\n- H143 · AWS CloudFormation\n- H144 · Pulumi\n\n**Criterios de aceptación:**\n- Las 11 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.\n- Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.\n- La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.\n- El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.\n- No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/herramientas.json; referencias por herramienta\n- P05, página 10; P06I, página 6; láminas específicas del inventario",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-015",
+      "orden": 15,
+      "fase": 5,
+      "titulo": "Completar fichas: Despliegue",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar las fichas del grupo Deployment para cargar el catálogo de la aplicación.",
+      "alcance": [
+        "H029 · CA Automic",
+        "H030 · ElasticBox",
+        "H047 · ElectricCloud",
+        "H048 · XebiaLabs XL Deploy",
+        "H065 · GoCD",
+        "H066 · Octopus Deploy",
+        "H083 · UrbanCode Deploy",
+        "H084 · AWS CodeDeploy"
+      ],
+      "criterios_aceptacion": [
+        "Las 8 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.",
+        "Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.",
+        "La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.",
+        "El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.",
+        "No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/herramientas.json; referencias por herramienta",
+        "P05, página 10; P06I, página 6; láminas específicas del inventario"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [
+        "H029",
+        "H030",
+        "H047",
+        "H048",
+        "H065",
+        "H066",
+        "H083",
+        "H084"
+      ],
+      "trello": {
+        "name": "[DEVOPS-015] Completar fichas: Despliegue",
+        "desc": "**Completar fichas: Despliegue**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar las fichas del grupo Deployment para cargar el catálogo de la aplicación.\n\n**Alcance:**\n- H029 · CA Automic\n- H030 · ElasticBox\n- H047 · ElectricCloud\n- H048 · XebiaLabs XL Deploy\n- H065 · GoCD\n- H066 · Octopus Deploy\n- H083 · UrbanCode Deploy\n- H084 · AWS CodeDeploy\n\n**Criterios de aceptación:**\n- Las 8 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.\n- Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.\n- La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.\n- El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.\n- No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/herramientas.json; referencias por herramienta\n- P05, página 10; P06I, página 6; láminas específicas del inventario",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-016",
+      "orden": 16,
+      "fase": 5,
+      "titulo": "Completar fichas: Contenedores",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar las fichas del grupo Containers para cargar el catálogo de la aplicación.",
+      "alcance": [
+        "H013 · Helm",
+        "H031 · AWS ECS",
+        "H049 · Google Kubernetes Engine (GKE)",
+        "H050 · Rancher",
+        "H067 · Codefresh",
+        "H068 · Mesos",
+        "H069 · Azure Kubernetes Service (AKS)",
+        "H085 · Kubernetes",
+        "H086 · rkt (Rocket)",
+        "H087 · Docker",
+        "H088 · Docker Enterprise",
+        "H140 · Vite",
+        "H141 · webpack"
+      ],
+      "criterios_aceptacion": [
+        "Las 13 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.",
+        "Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.",
+        "La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.",
+        "El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.",
+        "No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.",
+        "Vite y webpack se describen como herramientas de construcción y se explica por qué aparecen bajo Containers en la presentación."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/herramientas.json; referencias por herramienta",
+        "P05, página 10; P06I, página 6; láminas específicas del inventario"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [
+        "H013",
+        "H031",
+        "H049",
+        "H050",
+        "H067",
+        "H068",
+        "H069",
+        "H085",
+        "H086",
+        "H087",
+        "H088",
+        "H140",
+        "H141"
+      ],
+      "trello": {
+        "name": "[DEVOPS-016] Completar fichas: Contenedores",
+        "desc": "**Completar fichas: Contenedores**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar las fichas del grupo Containers para cargar el catálogo de la aplicación.\n\n**Alcance:**\n- H013 · Helm\n- H031 · AWS ECS\n- H049 · Google Kubernetes Engine (GKE)\n- H050 · Rancher\n- H067 · Codefresh\n- H068 · Mesos\n- H069 · Azure Kubernetes Service (AKS)\n- H085 · Kubernetes\n- H086 · rkt (Rocket)\n- H087 · Docker\n- H088 · Docker Enterprise\n- H140 · Vite\n- H141 · webpack\n\n**Criterios de aceptación:**\n- Las 13 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.\n- Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.\n- La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.\n- El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.\n- No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.\n- Vite y webpack se describen como herramientas de construcción y se explica por qué aparecen bajo Containers en la presentación.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/herramientas.json; referencias por herramienta\n- P05, página 10; P06I, página 6; láminas específicas del inventario",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-017",
+      "orden": 17,
+      "fase": 5,
+      "titulo": "Completar fichas: Orquestación de entregas",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar las fichas del grupo Release Orchestration para cargar el catálogo de la aplicación.",
+      "alcance": [
+        "H005 · AWS CodePipeline",
+        "H014 · Plutora Release",
+        "H032 · CA Continuous Delivery Director",
+        "H033 · OpenMake",
+        "H051 · Spinnaker",
+        "H052 · UrbanCode Release",
+        "H070 · XebiaLabs XL Release"
+      ],
+      "criterios_aceptacion": [
+        "Las 7 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.",
+        "Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.",
+        "La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.",
+        "El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.",
+        "No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/herramientas.json; referencias por herramienta",
+        "P05, página 10; P06I, página 6; láminas específicas del inventario"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [
+        "H005",
+        "H014",
+        "H032",
+        "H033",
+        "H051",
+        "H052",
+        "H070"
+      ],
+      "trello": {
+        "name": "[DEVOPS-017] Completar fichas: Orquestación de entregas",
+        "desc": "**Completar fichas: Orquestación de entregas**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar las fichas del grupo Release Orchestration para cargar el catálogo de la aplicación.\n\n**Alcance:**\n- H005 · AWS CodePipeline\n- H014 · Plutora Release\n- H032 · CA Continuous Delivery Director\n- H033 · OpenMake\n- H051 · Spinnaker\n- H052 · UrbanCode Release\n- H070 · XebiaLabs XL Release\n\n**Criterios de aceptación:**\n- Las 7 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.\n- Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.\n- La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.\n- El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.\n- No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/herramientas.json; referencias por herramienta\n- P05, página 10; P06I, página 6; láminas específicas del inventario",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-018",
+      "orden": 18,
+      "fase": 5,
+      "titulo": "Completar fichas: Nube",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar las fichas del grupo Cloud para cargar el catálogo de la aplicación.",
+      "alcance": [
+        "H006 · Apache OpenWhisk",
+        "H007 · Alibaba Cloud",
+        "H008 · Cloud Foundry",
+        "H009 · Microsoft Azure",
+        "H015 · Google Cloud",
+        "H016 · Amazon Web Services (AWS)",
+        "H017 · AWS Lambda",
+        "H034 · Azure Functions",
+        "H035 · OpenShift",
+        "H053 · IBM Cloud",
+        "H071 · OpenStack",
+        "H089 · Iron.io"
+      ],
+      "criterios_aceptacion": [
+        "Las 12 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.",
+        "Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.",
+        "La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.",
+        "El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.",
+        "No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/herramientas.json; referencias por herramienta",
+        "P05, página 10; P06I, página 6; láminas específicas del inventario"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [
+        "H006",
+        "H007",
+        "H008",
+        "H009",
+        "H015",
+        "H016",
+        "H017",
+        "H034",
+        "H035",
+        "H053",
+        "H071",
+        "H089"
+      ],
+      "trello": {
+        "name": "[DEVOPS-018] Completar fichas: Nube",
+        "desc": "**Completar fichas: Nube**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar las fichas del grupo Cloud para cargar el catálogo de la aplicación.\n\n**Alcance:**\n- H006 · Apache OpenWhisk\n- H007 · Alibaba Cloud\n- H008 · Cloud Foundry\n- H009 · Microsoft Azure\n- H015 · Google Cloud\n- H016 · Amazon Web Services (AWS)\n- H017 · AWS Lambda\n- H034 · Azure Functions\n- H035 · OpenShift\n- H053 · IBM Cloud\n- H071 · OpenStack\n- H089 · Iron.io\n\n**Criterios de aceptación:**\n- Las 12 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.\n- Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.\n- La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.\n- El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.\n- No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/herramientas.json; referencias por herramienta\n- P05, página 10; P06I, página 6; láminas específicas del inventario",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-019",
+      "orden": 19,
+      "fase": 5,
+      "titulo": "Completar fichas: AIOps",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar las fichas del grupo AIOps para cargar el catálogo de la aplicación.",
+      "alcance": [
+        "H002 · ITRS",
+        "H010 · Logstash",
+        "H018 · Fluentd",
+        "H036 · Splunk",
+        "H054 · Sumo Logic",
+        "H072 · Moogsoft",
+        "H090 · Prometheus"
+      ],
+      "criterios_aceptacion": [
+        "Las 7 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.",
+        "Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.",
+        "La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.",
+        "El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.",
+        "No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/herramientas.json; referencias por herramienta",
+        "P05, página 10; P06I, página 6; láminas específicas del inventario"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [
+        "H002",
+        "H010",
+        "H018",
+        "H036",
+        "H054",
+        "H072",
+        "H090"
+      ],
+      "trello": {
+        "name": "[DEVOPS-019] Completar fichas: AIOps",
+        "desc": "**Completar fichas: AIOps**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar las fichas del grupo AIOps para cargar el catálogo de la aplicación.\n\n**Alcance:**\n- H002 · ITRS\n- H010 · Logstash\n- H018 · Fluentd\n- H036 · Splunk\n- H054 · Sumo Logic\n- H072 · Moogsoft\n- H090 · Prometheus\n\n**Criterios de aceptación:**\n- Las 7 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.\n- Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.\n- La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.\n- El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.\n- No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/herramientas.json; referencias por herramienta\n- P05, página 10; P06I, página 6; láminas específicas del inventario",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-020",
+      "orden": 20,
+      "fase": 5,
+      "titulo": "Completar fichas: Analítica",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar las fichas del grupo Analytics para cargar el catálogo de la aplicación.",
+      "alcance": [
+        "H091 · Dynatrace",
+        "H092 · New Relic",
+        "H093 · Kibana",
+        "H094 · AppDynamics",
+        "H095 · Elasticsearch",
+        "H096 · XebiaLabs XL Impact",
+        "H097 · Datadog",
+        "H130 · Amazon CloudWatch",
+        "H131 · Grafana",
+        "H132 · Elastic Stack (ELK)"
+      ],
+      "criterios_aceptacion": [
+        "Las 10 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.",
+        "Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.",
+        "La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.",
+        "El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.",
+        "No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/herramientas.json; referencias por herramienta",
+        "P05, página 10; P06I, página 6; láminas específicas del inventario"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [
+        "H091",
+        "H092",
+        "H093",
+        "H094",
+        "H095",
+        "H096",
+        "H097",
+        "H130",
+        "H131",
+        "H132"
+      ],
+      "trello": {
+        "name": "[DEVOPS-020] Completar fichas: Analítica",
+        "desc": "**Completar fichas: Analítica**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar las fichas del grupo Analytics para cargar el catálogo de la aplicación.\n\n**Alcance:**\n- H091 · Dynatrace\n- H092 · New Relic\n- H093 · Kibana\n- H094 · AppDynamics\n- H095 · Elasticsearch\n- H096 · XebiaLabs XL Impact\n- H097 · Datadog\n- H130 · Amazon CloudWatch\n- H131 · Grafana\n- H132 · Elastic Stack (ELK)\n\n**Criterios de aceptación:**\n- Las 10 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.\n- Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.\n- La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.\n- El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.\n- No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/herramientas.json; referencias por herramienta\n- P05, página 10; P06I, página 6; láminas específicas del inventario",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-021",
+      "orden": 21,
+      "fase": 5,
+      "titulo": "Completar fichas: Monitoreo",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar las fichas del grupo Monitoring para cargar el catálogo de la aplicación.",
+      "alcance": [
+        "H098 · Zenoss",
+        "H099 · Nagios",
+        "H100 · Zabbix",
+        "H128 · Sentry",
+        "H129 · Bugsnag"
+      ],
+      "criterios_aceptacion": [
+        "Las 5 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.",
+        "Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.",
+        "La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.",
+        "El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.",
+        "No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/herramientas.json; referencias por herramienta",
+        "P05, página 10; P06I, página 6; láminas específicas del inventario"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [
+        "H098",
+        "H099",
+        "H100",
+        "H128",
+        "H129"
+      ],
+      "trello": {
+        "name": "[DEVOPS-021] Completar fichas: Monitoreo",
+        "desc": "**Completar fichas: Monitoreo**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar las fichas del grupo Monitoring para cargar el catálogo de la aplicación.\n\n**Alcance:**\n- H098 · Zenoss\n- H099 · Nagios\n- H100 · Zabbix\n- H128 · Sentry\n- H129 · Bugsnag\n\n**Criterios de aceptación:**\n- Las 5 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.\n- Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.\n- La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.\n- El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.\n- No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/herramientas.json; referencias por herramienta\n- P05, página 10; P06I, página 6; láminas específicas del inventario",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-022",
+      "orden": 22,
+      "fase": 5,
+      "titulo": "Completar fichas: Seguridad",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar las fichas del grupo Security para cargar el catálogo de la aplicación.",
+      "alcance": [
+        "H101 · Fortify SCA",
+        "H102 · HashiCorp Vault",
+        "H103 · SonarQube",
+        "H104 · Black Duck",
+        "H105 · CyberArk Conjur",
+        "H116 · Tripwire",
+        "H117 · Signal Sciences",
+        "H118 · Veracode",
+        "H119 · Snort",
+        "H120 · Checkmarx SAST"
+      ],
+      "criterios_aceptacion": [
+        "Las 10 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.",
+        "Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.",
+        "La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.",
+        "El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.",
+        "No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/herramientas.json; referencias por herramienta",
+        "P05, página 10; P06I, página 6; láminas específicas del inventario"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [
+        "H101",
+        "H102",
+        "H103",
+        "H104",
+        "H105",
+        "H116",
+        "H117",
+        "H118",
+        "H119",
+        "H120"
+      ],
+      "trello": {
+        "name": "[DEVOPS-022] Completar fichas: Seguridad",
+        "desc": "**Completar fichas: Seguridad**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar las fichas del grupo Security para cargar el catálogo de la aplicación.\n\n**Alcance:**\n- H101 · Fortify SCA\n- H102 · HashiCorp Vault\n- H103 · SonarQube\n- H104 · Black Duck\n- H105 · CyberArk Conjur\n- H116 · Tripwire\n- H117 · Signal Sciences\n- H118 · Veracode\n- H119 · Snort\n- H120 · Checkmarx SAST\n\n**Criterios de aceptación:**\n- Las 10 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.\n- Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.\n- La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.\n- El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.\n- No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/herramientas.json; referencias por herramienta\n- P05, página 10; P06I, página 6; láminas específicas del inventario",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-023",
+      "orden": 23,
+      "fase": 5,
+      "titulo": "Completar fichas: Colaboración",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar las fichas del grupo Collaboration para cargar el catálogo de la aplicación.",
+      "alcance": [
+        "H106 · ServiceNow",
+        "H107 · OpsGenie",
+        "H108 · CollabNet VersionOne",
+        "H109 · Jira",
+        "H110 · Trello",
+        "H111 · CA Agile Central",
+        "H112 · Stride",
+        "H113 · PagerDuty",
+        "H114 · Slack",
+        "H115 · BMC Remedy"
+      ],
+      "criterios_aceptacion": [
+        "Las 10 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.",
+        "Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.",
+        "La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.",
+        "El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.",
+        "No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/herramientas.json; referencias por herramienta",
+        "P05, página 10; P06I, página 6; láminas específicas del inventario"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [
+        "H106",
+        "H107",
+        "H108",
+        "H109",
+        "H110",
+        "H111",
+        "H112",
+        "H113",
+        "H114",
+        "H115"
+      ],
+      "trello": {
+        "name": "[DEVOPS-023] Completar fichas: Colaboración",
+        "desc": "**Completar fichas: Colaboración**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar las fichas del grupo Collaboration para cargar el catálogo de la aplicación.\n\n**Alcance:**\n- H106 · ServiceNow\n- H107 · OpsGenie\n- H108 · CollabNet VersionOne\n- H109 · Jira\n- H110 · Trello\n- H111 · CA Agile Central\n- H112 · Stride\n- H113 · PagerDuty\n- H114 · Slack\n- H115 · BMC Remedy\n\n**Criterios de aceptación:**\n- Las 10 herramientas enumeradas tienen una descripción funcional específica en español y mantienen sus IDs y alias.\n- Cada herramienta tiene un logo local legible y una referencia que permite rastrear su origen.\n- La categoría sigue la tabla del curso o explica una corrección; se conserva por separado la clasificación original.\n- El modelo de precio del curso se presenta como histórico. Si la fuente no lo indica, se documenta esa ausencia o se verifica una fuente oficial con fecha, sin inventar gratuidad.\n- No quedan referencias a imágenes inexistentes ni descripciones vacías o idénticas para todo el grupo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/herramientas.json; referencias por herramienta\n- P05, página 10; P06I, página 6; láminas específicas del inventario",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-024",
+      "orden": 24,
+      "fase": 5,
+      "titulo": "Preparar las 14 fichas de prácticas Essence",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Revisar y completar las prácticas identificadas en los diagramas del curso.",
+      "alcance": [
+        "PR01 · Integración continua del sistema de software",
+        "PR02 · Entrega continua del sistema de software",
+        "PR03 · Despliegue continuo del sistema de software",
+        "PR04 · Monitoreo continuo del esfuerzo de trabajo",
+        "PR05 · Comunicación colaborativa del trabajo",
+        "PR06 · Planificación estratégica del proyecto de software",
+        "PR07 · Conceptualización de la calidad de software basada en actividades",
+        "PR08 · Certificación simulada de calidad de software",
+        "PR09 · Diseño simulado del sistema de software",
+        "PR10 · Pruebas automatizadas del sistema de software",
+        "PR11 · Desarrollo guiado por pruebas (TDD)",
+        "PR12 · Desarrollo guiado por pruebas de aceptación (ATDD)",
+        "PR13 · Desarrollo guiado por comportamiento (BDD)",
+        "PR14 · Desarrollo basado en modelos de sistemas de software"
+      ],
+      "criterios_aceptacion": [
+        "Las 14 prácticas tienen nombre, descripción específica y vínculo al diagrama correcto.",
+        "Se conserva el título original y la referencia de presentación/página.",
+        "Las descripciones distinguen CI, entrega continua, despliegue continuo, TDD, ATDD, BDD y desarrollo basado en modelos.",
+        "El núcleo, la leyenda y el proceso detallado de pruebas no se convierten en prácticas inventadas."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002",
+        "DEVOPS-004"
+      ],
+      "referencias": [
+        "inventario/practicas.json"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-024] Preparar las 14 fichas de prácticas Essence",
+        "desc": "**Preparar las 14 fichas de prácticas Essence**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nRevisar y completar las prácticas identificadas en los diagramas del curso.\n\n**Alcance:**\n- PR01 · Integración continua del sistema de software\n- PR02 · Entrega continua del sistema de software\n- PR03 · Despliegue continuo del sistema de software\n- PR04 · Monitoreo continuo del esfuerzo de trabajo\n- PR05 · Comunicación colaborativa del trabajo\n- PR06 · Planificación estratégica del proyecto de software\n- PR07 · Conceptualización de la calidad de software basada en actividades\n- PR08 · Certificación simulada de calidad de software\n- PR09 · Diseño simulado del sistema de software\n- PR10 · Pruebas automatizadas del sistema de software\n- PR11 · Desarrollo guiado por pruebas (TDD)\n- PR12 · Desarrollo guiado por pruebas de aceptación (ATDD)\n- PR13 · Desarrollo guiado por comportamiento (BDD)\n- PR14 · Desarrollo basado en modelos de sistemas de software\n\n**Criterios de aceptación:**\n- Las 14 prácticas tienen nombre, descripción específica y vínculo al diagrama correcto.\n- Se conserva el título original y la referencia de presentación/página.\n- Las descripciones distinguen CI, entrega continua, despliegue continuo, TDD, ATDD, BDD y desarrollo basado en modelos.\n- El núcleo, la leyenda y el proceso detallado de pruebas no se convierten en prácticas inventadas.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002, DEVOPS-004\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/practicas.json",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-025",
+      "orden": 25,
+      "fase": 5,
+      "titulo": "Preparar catálogo e imágenes de los 19 diagramas",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Incorporar los diagramas Essence de prácticas y apoyo con imágenes locales ampliables.",
+      "alcance": [
+        "D01 · Integración continua del sistema de software",
+        "D02 · Entrega continua del sistema de software",
+        "D03 · Despliegue continuo del sistema de software",
+        "D04 · Monitoreo continuo del esfuerzo de trabajo",
+        "D05 · Comunicación colaborativa del trabajo",
+        "D06 · Planificación estratégica del proyecto de software",
+        "D07 · Conceptualización de la calidad de software basada en actividades",
+        "D08 · Certificación simulada de calidad de software",
+        "D09 · Diseño simulado del sistema de software",
+        "D10 · Pruebas automatizadas del sistema de software",
+        "D11 · Desarrollo guiado por pruebas (TDD)",
+        "D12 · Desarrollo guiado por pruebas de aceptación (ATDD)",
+        "D13 · Desarrollo guiado por comportamiento (BDD)",
+        "D14 · Desarrollo basado en modelos de sistemas de software",
+        "D15 · Proceso de pruebas detallado",
+        "D16 · Núcleo de Essence: alfas y relaciones",
+        "D17 · Núcleo de Essence: espacios de actividad",
+        "D18 · Núcleo de Essence: competencias",
+        "D19 · Elementos y notación de Essence"
+      ],
+      "criterios_aceptacion": [
+        "Los 19 diagramas únicos tienen imagen legible y referencias a sus 21 apariciones.",
+        "Se distinguen 14 diagramas de prácticas y 5 diagramas de proceso, núcleo o notación.",
+        "Las imágenes se pueden ampliar y no se recorta información del diagrama.",
+        "Se conserva la trazabilidad a las láminas originales y no se duplican prácticas por diagramas repetidos."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-002"
+      ],
+      "referencias": [
+        "inventario/diagramas.json",
+        "inventario/diagramas/"
+      ],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-025] Preparar catálogo e imágenes de los 19 diagramas",
+        "desc": "**Preparar catálogo e imágenes de los 19 diagramas**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nIncorporar los diagramas Essence de prácticas y apoyo con imágenes locales ampliables.\n\n**Alcance:**\n- D01 · Integración continua del sistema de software\n- D02 · Entrega continua del sistema de software\n- D03 · Despliegue continuo del sistema de software\n- D04 · Monitoreo continuo del esfuerzo de trabajo\n- D05 · Comunicación colaborativa del trabajo\n- D06 · Planificación estratégica del proyecto de software\n- D07 · Conceptualización de la calidad de software basada en actividades\n- D08 · Certificación simulada de calidad de software\n- D09 · Diseño simulado del sistema de software\n- D10 · Pruebas automatizadas del sistema de software\n- D11 · Desarrollo guiado por pruebas (TDD)\n- D12 · Desarrollo guiado por pruebas de aceptación (ATDD)\n- D13 · Desarrollo guiado por comportamiento (BDD)\n- D14 · Desarrollo basado en modelos de sistemas de software\n- D15 · Proceso de pruebas detallado\n- D16 · Núcleo de Essence: alfas y relaciones\n- D17 · Núcleo de Essence: espacios de actividad\n- D18 · Núcleo de Essence: competencias\n- D19 · Elementos y notación de Essence\n\n**Criterios de aceptación:**\n- Los 19 diagramas únicos tienen imagen legible y referencias a sus 21 apariciones.\n- Se distinguen 14 diagramas de prácticas y 5 diagramas de proceso, núcleo o notación.\n- Las imágenes se pueden ampliar y no se recorta información del diagrama.\n- Se conserva la trazabilidad a las láminas originales y no se duplican prácticas por diagramas repetidos.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-002\n\n**Origen:** Requisito del taller\n\n**Referencias:**\n- inventario/diagramas.json\n- inventario/diagramas/",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-026",
+      "orden": 26,
+      "fase": 5,
+      "titulo": "Redactar relaciones de uso herramientas-prácticas",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Relacionar herramientas pertinentes con prácticas y explicar su aporte a la cultura DevOps.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Cada una de las 14 prácticas tiene al menos un ejemplo pertinente y específico de uso.",
+        "Cada relación contiene IDs válidos y explica qué se hace, cómo y qué aporta a colaboración, automatización, retroalimentación o trazabilidad.",
+        "No se atribuyen capacidades inexistentes ni se crean todas las combinaciones posibles de forma artificial.",
+        "No hay parejas herramienta-práctica duplicadas."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-024",
+        "DEVOPS-010",
+        "DEVOPS-011",
+        "DEVOPS-012",
+        "DEVOPS-013",
+        "DEVOPS-014",
+        "DEVOPS-015",
+        "DEVOPS-016",
+        "DEVOPS-017",
+        "DEVOPS-018",
+        "DEVOPS-019",
+        "DEVOPS-020",
+        "DEVOPS-021",
+        "DEVOPS-022",
+        "DEVOPS-023"
+      ],
+      "referencias": [
+        "Diagramas y actividades de las prácticas; fichas de herramientas"
+      ],
+      "origen": "Requisito del taller; cobertura mínima por práctica propuesta",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-026] Redactar relaciones de uso herramientas-prácticas",
+        "desc": "**Redactar relaciones de uso herramientas-prácticas**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nRelacionar herramientas pertinentes con prácticas y explicar su aporte a la cultura DevOps.\n\n**Criterios de aceptación:**\n- Cada una de las 14 prácticas tiene al menos un ejemplo pertinente y específico de uso.\n- Cada relación contiene IDs válidos y explica qué se hace, cómo y qué aporta a colaboración, automatización, retroalimentación o trazabilidad.\n- No se atribuyen capacidades inexistentes ni se crean todas las combinaciones posibles de forma artificial.\n- No hay parejas herramienta-práctica duplicadas.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-024, DEVOPS-010, DEVOPS-011, DEVOPS-012, DEVOPS-013, DEVOPS-014, DEVOPS-015, DEVOPS-016, DEVOPS-017, DEVOPS-018, DEVOPS-019, DEVOPS-020, DEVOPS-021, DEVOPS-022, DEVOPS-023\n\n**Origen:** Requisito del taller; cobertura mínima por práctica propuesta\n\n**Referencias:**\n- Diagramas y actividades de las prácticas; fichas de herramientas",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-027",
+      "orden": 27,
+      "fase": 5,
+      "titulo": "Consolidar los JSON iniciales",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Generar la base inicial con las fichas completas, sus imágenes y las relaciones de uso.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "El archivo contiene 144 herramientas, 14 prácticas, 19 diagramas y relaciones válidas.",
+        "Los campos obligatorios están completos; las ausencias de información comercial se declaran explícitamente.",
+        "No hay IDs duplicados, referencias rotas ni recursos ausentes.",
+        "El contrato coincide con el estado guardado en Chrome y permite recrear la aplicación en un perfil nuevo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-004",
+        "DEVOPS-010",
+        "DEVOPS-011",
+        "DEVOPS-012",
+        "DEVOPS-013",
+        "DEVOPS-014",
+        "DEVOPS-015",
+        "DEVOPS-016",
+        "DEVOPS-017",
+        "DEVOPS-018",
+        "DEVOPS-019",
+        "DEVOPS-020",
+        "DEVOPS-021",
+        "DEVOPS-022",
+        "DEVOPS-023",
+        "DEVOPS-024",
+        "DEVOPS-025",
+        "DEVOPS-026"
+      ],
+      "referencias": [],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-027] Consolidar los JSON iniciales",
+        "desc": "**Consolidar los JSON iniciales**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nGenerar la base inicial con las fichas completas, sus imágenes y las relaciones de uso.\n\n**Criterios de aceptación:**\n- El archivo contiene 144 herramientas, 14 prácticas, 19 diagramas y relaciones válidas.\n- Los campos obligatorios están completos; las ausencias de información comercial se declaran explícitamente.\n- No hay IDs duplicados, referencias rotas ni recursos ausentes.\n- El contrato coincide con el estado guardado en Chrome y permite recrear la aplicación en un perfil nuevo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-004, DEVOPS-010, DEVOPS-011, DEVOPS-012, DEVOPS-013, DEVOPS-014, DEVOPS-015, DEVOPS-016, DEVOPS-017, DEVOPS-018, DEVOPS-019, DEVOPS-020, DEVOPS-021, DEVOPS-022, DEVOPS-023, DEVOPS-024, DEVOPS-025, DEVOPS-026\n\n**Origen:** Requisito del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-028",
+      "orden": 28,
+      "fase": 4,
+      "titulo": "Implementar el index como esquema navegable",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Construir la página inicial a partir del esquema preconceptual completo.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "El elemento central de index.html es el esquema, con relaciones y atributos legibles.",
+        "Las seis relaciones dinámicas abren las interfaces correspondientes de registro o actualización.",
+        "Los enlaces funcionan con teclado y en pantallas pequeñas; existe leyenda de notación."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-005",
+        "DEVOPS-006",
+        "DEVOPS-007"
+      ],
+      "referencias": [],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-028] Implementar el index como esquema navegable",
+        "desc": "**Implementar el index como esquema navegable**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nConstruir la página inicial a partir del esquema preconceptual completo.\n\n**Criterios de aceptación:**\n- El elemento central de index.html es el esquema, con relaciones y atributos legibles.\n- Las seis relaciones dinámicas abren las interfaces correspondientes de registro o actualización.\n- Los enlaces funcionan con teclado y en pantallas pequeñas; existe leyenda de notación.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-005, DEVOPS-006, DEVOPS-007\n\n**Origen:** Requisito del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-029",
+      "orden": 29,
+      "fase": 4,
+      "titulo": "Implementar registro de herramientas",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Crear el formulario de herramienta con los cinco campos del enunciado.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Se pueden introducir logo, nombre, descripción, modelo de precio y categoría.",
+        "Campos vacíos, nombres duplicados e imágenes inválidas muestran mensajes claros.",
+        "El registro correcto obtiene un ID estable, aparece en el catálogo y persiste al recargar.",
+        "El logo tiene vista previa y se conserva en el respaldo."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-006",
+        "DEVOPS-008",
+        "DEVOPS-027"
+      ],
+      "referencias": [],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-029] Implementar registro de herramientas",
+        "desc": "**Implementar registro de herramientas**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nCrear el formulario de herramienta con los cinco campos del enunciado.\n\n**Criterios de aceptación:**\n- Se pueden introducir logo, nombre, descripción, modelo de precio y categoría.\n- Campos vacíos, nombres duplicados e imágenes inválidas muestran mensajes claros.\n- El registro correcto obtiene un ID estable, aparece en el catálogo y persiste al recargar.\n- El logo tiene vista previa y se conserva en el respaldo.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-006, DEVOPS-008, DEVOPS-027\n\n**Origen:** Requisito del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-030",
+      "orden": 30,
+      "fase": 4,
+      "titulo": "Implementar consulta y actualización de herramientas",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Buscar herramientas existentes y actualizar sus fichas.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "El catálogo permite búsqueda y filtro por categoría con un estado vacío comprensible.",
+        "El formulario de edición muestra todos los valores actuales y permite cambiar los campos del enunciado.",
+        "Guardar conserva el ID y las relaciones de uso; cancelar no modifica datos.",
+        "La ficha y el catálogo reflejan los cambios después de recargar."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-029"
+      ],
+      "referencias": [],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-030] Implementar consulta y actualización de herramientas",
+        "desc": "**Implementar consulta y actualización de herramientas**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nBuscar herramientas existentes y actualizar sus fichas.\n\n**Criterios de aceptación:**\n- El catálogo permite búsqueda y filtro por categoría con un estado vacío comprensible.\n- El formulario de edición muestra todos los valores actuales y permite cambiar los campos del enunciado.\n- Guardar conserva el ID y las relaciones de uso; cancelar no modifica datos.\n- La ficha y el catálogo reflejan los cambios después de recargar.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-029\n\n**Origen:** Requisito del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-031",
+      "orden": 31,
+      "fase": 4,
+      "titulo": "Implementar registro de prácticas",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Crear prácticas con nombre, descripción e imagen de diagrama Essence.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "El formulario exige nombre, descripción e imagen válida del diagrama.",
+        "Se muestra vista previa; los nombres duplicados se detectan.",
+        "Una práctica nueva aparece en el catálogo, tiene ID estable y persiste al recargar."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-006",
+        "DEVOPS-008",
+        "DEVOPS-024",
+        "DEVOPS-025"
+      ],
+      "referencias": [],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-031] Implementar registro de prácticas",
+        "desc": "**Implementar registro de prácticas**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nCrear prácticas con nombre, descripción e imagen de diagrama Essence.\n\n**Criterios de aceptación:**\n- El formulario exige nombre, descripción e imagen válida del diagrama.\n- Se muestra vista previa; los nombres duplicados se detectan.\n- Una práctica nueva aparece en el catálogo, tiene ID estable y persiste al recargar.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-006, DEVOPS-008, DEVOPS-024, DEVOPS-025\n\n**Origen:** Requisito del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-032",
+      "orden": 32,
+      "fase": 4,
+      "titulo": "Implementar actualización de prácticas y galería Essence",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Consultar prácticas, editar sus datos y explorar los diagramas del curso.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Se puede editar nombre, descripción e imagen sin cambiar el ID ni romper relaciones de uso.",
+        "La galería contiene los 19 diagramas iniciales y distingue prácticas de apoyo.",
+        "Las imágenes se amplían y muestran su fuente; los diagramas repetidos mantienen todas sus referencias.",
+        "Cancelar conserva los datos anteriores; guardar persiste los cambios."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-031"
+      ],
+      "referencias": [],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-032] Implementar actualización de prácticas y galería Essence",
+        "desc": "**Implementar actualización de prácticas y galería Essence**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nConsultar prácticas, editar sus datos y explorar los diagramas del curso.\n\n**Criterios de aceptación:**\n- Se puede editar nombre, descripción e imagen sin cambiar el ID ni romper relaciones de uso.\n- La galería contiene los 19 diagramas iniciales y distingue prácticas de apoyo.\n- Las imágenes se amplían y muestran su fuente; los diagramas repetidos mantienen todas sus referencias.\n- Cancelar conserva los datos anteriores; guardar persiste los cambios.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-031\n\n**Origen:** Requisito del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-033",
+      "orden": 33,
+      "fase": 4,
+      "titulo": "Implementar registro de usos",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Registrar una herramienta aplicada a una práctica con una descripción de su uso en cultura DevOps.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Los selectores solo ofrecen herramientas y prácticas existentes.",
+        "La descripción es obligatoria y la ayuda solicita explicar el uso y su aporte cultural.",
+        "Una pareja repetida se dirige a edición o muestra un error; no se generan duplicados.",
+        "El uso guardado tiene ID estable y se muestra asociado a ambas entidades."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-004",
+        "DEVOPS-008",
+        "DEVOPS-026",
+        "DEVOPS-029",
+        "DEVOPS-031"
+      ],
+      "referencias": [],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-033] Implementar registro de usos",
+        "desc": "**Implementar registro de usos**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nRegistrar una herramienta aplicada a una práctica con una descripción de su uso en cultura DevOps.\n\n**Criterios de aceptación:**\n- Los selectores solo ofrecen herramientas y prácticas existentes.\n- La descripción es obligatoria y la ayuda solicita explicar el uso y su aporte cultural.\n- Una pareja repetida se dirige a edición o muestra un error; no se generan duplicados.\n- El uso guardado tiene ID estable y se muestra asociado a ambas entidades.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-004, DEVOPS-008, DEVOPS-026, DEVOPS-029, DEVOPS-031\n\n**Origen:** Requisito del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-034",
+      "orden": 34,
+      "fase": 4,
+      "titulo": "Implementar consulta y actualización de usos",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Localizar relaciones existentes y editar su descripción o entidades relacionadas.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Se puede filtrar por herramienta y práctica y consultar el texto completo.",
+        "La edición valida referencias y evita duplicar otra pareja existente.",
+        "Los cambios conservan el ID, se reflejan en consulta y persisten tras recargar.",
+        "Cancelar deja intacta la relación original."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-033"
+      ],
+      "referencias": [],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-034] Implementar consulta y actualización de usos",
+        "desc": "**Implementar consulta y actualización de usos**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nLocalizar relaciones existentes y editar su descripción o entidades relacionadas.\n\n**Criterios de aceptación:**\n- Se puede filtrar por herramienta y práctica y consultar el texto completo.\n- La edición valida referencias y evita duplicar otra pareja existente.\n- Los cambios conservan el ID, se reflejan en consulta y persisten tras recargar.\n- Cancelar deja intacta la relación original.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-033\n\n**Origen:** Requisito del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-035",
+      "orden": 35,
+      "fase": 6,
+      "titulo": "Ajustar diseño adaptable, accesibilidad y mensajes",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Revisar la interfaz completa en escritorio, móvil y navegación por teclado.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "A 375, 768 y 1280 píxeles no hay desbordamiento horizontal general ni controles inaccesibles.",
+        "Los formularios tienen etiquetas; el foco es visible y los mensajes de guardado/error se anuncian.",
+        "Las imágenes tienen texto alternativo y se pueden ampliar sin perder navegación.",
+        "Botones, filtros, estados vacíos y navegación usan un estilo consistente y texto comprensible."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-028",
+        "DEVOPS-030",
+        "DEVOPS-032",
+        "DEVOPS-034"
+      ],
+      "referencias": [],
+      "origen": "Calidad de implementación",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-035] Ajustar diseño adaptable, accesibilidad y mensajes",
+        "desc": "**Ajustar diseño adaptable, accesibilidad y mensajes**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nRevisar la interfaz completa en escritorio, móvil y navegación por teclado.\n\n**Criterios de aceptación:**\n- A 375, 768 y 1280 píxeles no hay desbordamiento horizontal general ni controles inaccesibles.\n- Los formularios tienen etiquetas; el foco es visible y los mensajes de guardado/error se anuncian.\n- Las imágenes tienen texto alternativo y se pueden ampliar sin perder navegación.\n- Botones, filtros, estados vacíos y navegación usan un estilo consistente y texto comprensible.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-028, DEVOPS-030, DEVOPS-032, DEVOPS-034\n\n**Origen:** Calidad de implementación",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-036",
+      "orden": 36,
+      "fase": 6,
+      "titulo": "Auditar exactitud y cobertura de contenidos",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Contrastar la base de datos terminada con el inventario y las fuentes del curso.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Una verificación comprueba los 144 IDs de herramientas, 14 prácticas y 19 diagramas.",
+        "Se comprueba la existencia de cada logo e imagen y de todas las referencias entre entidades.",
+        "Se explican las correcciones de categoría y no se presentan precios históricos como vigentes.",
+        "Las 14 prácticas tienen usos pertinentes y la matriz de requisitos enlaza cada requisito con su implementación."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-027"
+      ],
+      "referencias": [],
+      "origen": "Verificación del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-036] Auditar exactitud y cobertura de contenidos",
+        "desc": "**Auditar exactitud y cobertura de contenidos**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nContrastar la base de datos terminada con el inventario y las fuentes del curso.\n\n**Criterios de aceptación:**\n- Una verificación comprueba los 144 IDs de herramientas, 14 prácticas y 19 diagramas.\n- Se comprueba la existencia de cada logo e imagen y de todas las referencias entre entidades.\n- Se explican las correcciones de categoría y no se presentan precios históricos como vigentes.\n- Las 14 prácticas tienen usos pertinentes y la matriz de requisitos enlaza cada requisito con su implementación.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-027\n\n**Origen:** Verificación del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-037",
+      "orden": 37,
+      "fase": 6,
+      "titulo": "Probar los seis flujos y la persistencia",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Ejecutar registro y actualización de herramientas, prácticas y usos con datos de prueba aislados.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Los seis flujos se completan desde la navegación del esquema.",
+        "La recarga conserva los cambios y no reinicializa la base.",
+        "Exportación y restauración producen una base equivalente, incluidas imágenes de usuario.",
+        "Se guarda un reporte reproducible con los resultados reales y se corrigen los fallos detectados."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-009",
+        "DEVOPS-028",
+        "DEVOPS-030",
+        "DEVOPS-032",
+        "DEVOPS-034"
+      ],
+      "referencias": [],
+      "origen": "Verificación del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-037] Probar los seis flujos y la persistencia",
+        "desc": "**Probar los seis flujos y la persistencia**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nEjecutar registro y actualización de herramientas, prácticas y usos con datos de prueba aislados.\n\n**Criterios de aceptación:**\n- Los seis flujos se completan desde la navegación del esquema.\n- La recarga conserva los cambios y no reinicializa la base.\n- Exportación y restauración producen una base equivalente, incluidas imágenes de usuario.\n- Se guarda un reporte reproducible con los resultados reales y se corrigen los fallos detectados.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-009, DEVOPS-028, DEVOPS-030, DEVOPS-032, DEVOPS-034\n\n**Origen:** Verificación del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-038",
+      "orden": 38,
+      "fase": 6,
+      "titulo": "Probar validaciones y recuperación de errores",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Probar entradas inválidas y errores de persistencia sin comprometer la base existente.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Se rechazan campos vacíos, duplicados, referencias inexistentes y formatos no válidos.",
+        "Los textos con HTML se muestran como texto y no ejecutan código.",
+        "JSON inválido, almacenamiento corrupto y errores de cuota muestran errores sin pérdida silenciosa.",
+        "Los ensayos usan perfiles de prueba; no se borran datos personales del navegador."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-008",
+        "DEVOPS-009",
+        "DEVOPS-029",
+        "DEVOPS-030",
+        "DEVOPS-031",
+        "DEVOPS-032",
+        "DEVOPS-033",
+        "DEVOPS-034"
+      ],
+      "referencias": [],
+      "origen": "Calidad y robustez",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-038] Probar validaciones y recuperación de errores",
+        "desc": "**Probar validaciones y recuperación de errores**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nProbar entradas inválidas y errores de persistencia sin comprometer la base existente.\n\n**Criterios de aceptación:**\n- Se rechazan campos vacíos, duplicados, referencias inexistentes y formatos no válidos.\n- Los textos con HTML se muestran como texto y no ejecutan código.\n- JSON inválido, almacenamiento corrupto y errores de cuota muestran errores sin pérdida silenciosa.\n- Los ensayos usan perfiles de prueba; no se borran datos personales del navegador.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-008, DEVOPS-009, DEVOPS-029, DEVOPS-030, DEVOPS-031, DEVOPS-032, DEVOPS-033, DEVOPS-034\n\n**Origen:** Calidad y robustez",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-039",
+      "orden": 39,
+      "fase": 6,
+      "titulo": "Verificar ejecución limpia en navegador Chromium",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Ejecutar la entrega desde una copia limpia y un perfil aislado; documentar el navegador utilizado.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Se reproduce el arranque con los pasos de la guía y sin archivos del entorno de desarrollo.",
+        "La base inicial carga y todos los recursos locales responden correctamente.",
+        "No hay errores de JavaScript ni solicitudes de recursos esenciales fallidas.",
+        "Se documenta si la verificación fue en Chrome, Chromium o Edge y cualquier límite de equivalencia."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-035",
+        "DEVOPS-036",
+        "DEVOPS-037",
+        "DEVOPS-038"
+      ],
+      "referencias": [],
+      "origen": "Verificación de compatibilidad con Chrome",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-039] Verificar ejecución limpia en navegador Chromium",
+        "desc": "**Verificar ejecución limpia en navegador Chromium**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nEjecutar la entrega desde una copia limpia y un perfil aislado; documentar el navegador utilizado.\n\n**Criterios de aceptación:**\n- Se reproduce el arranque con los pasos de la guía y sin archivos del entorno de desarrollo.\n- La base inicial carga y todos los recursos locales responden correctamente.\n- No hay errores de JavaScript ni solicitudes de recursos esenciales fallidas.\n- Se documenta si la verificación fue en Chrome, Chromium o Edge y cualquier límite de equivalencia.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-035, DEVOPS-036, DEVOPS-037, DEVOPS-038\n\n**Origen:** Verificación de compatibilidad con Chrome",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-040",
+      "orden": 40,
+      "fase": 7,
+      "titulo": "Redactar guía de ejecución y uso",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Documentar cómo abrir, usar y respaldar la aplicación.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "La guía incluye requisitos, comando de arranque, URL local y los seis recorridos.",
+        "Se explica que los datos dependen del perfil y origen del navegador, y cómo hacer un respaldo.",
+        "Se describen carpetas, fuentes del curso, alcance, tablero real y limitaciones conocidas.",
+        "Los pasos se contrastan con una ejecución limpia."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-039"
+      ],
+      "referencias": [],
+      "origen": "Apoyo propuesto para entregar un proyecto reproducible",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-040] Redactar guía de ejecución y uso",
+        "desc": "**Redactar guía de ejecución y uso**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nDocumentar cómo abrir, usar y respaldar la aplicación.\n\n**Criterios de aceptación:**\n- La guía incluye requisitos, comando de arranque, URL local y los seis recorridos.\n- Se explica que los datos dependen del perfil y origen del navegador, y cómo hacer un respaldo.\n- Se describen carpetas, fuentes del curso, alcance, tablero real y limitaciones conocidas.\n- Los pasos se contrastan con una ejecución limpia.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-039\n\n**Origen:** Apoyo propuesto para entregar un proyecto reproducible",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-041",
+      "orden": 41,
+      "fase": 7,
+      "titulo": "Empaquetar la entrega del proyecto",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Preparar un ZIP con los archivos necesarios para ejecutar y revisar el proyecto.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "El paquete incluye HTML, CSS, JavaScript, JSON, logos, diagramas, guía y planificación.",
+        "Se incluyen referencias a Trello y evidencia disponible, diferenciando una carga pendiente si el MCP no está disponible.",
+        "Se excluyen credenciales, archivos temporales, dependencias instaladas y datos de pruebas.",
+        "El ZIP se extrae en una ubicación de prueba y supera la verificación de arranque."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-039",
+        "DEVOPS-040"
+      ],
+      "referencias": [],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-041] Empaquetar la entrega del proyecto",
+        "desc": "**Empaquetar la entrega del proyecto**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nPreparar un ZIP con los archivos necesarios para ejecutar y revisar el proyecto.\n\n**Criterios de aceptación:**\n- El paquete incluye HTML, CSS, JavaScript, JSON, logos, diagramas, guía y planificación.\n- Se incluyen referencias a Trello y evidencia disponible, diferenciando una carga pendiente si el MCP no está disponible.\n- Se excluyen credenciales, archivos temporales, dependencias instaladas y datos de pruebas.\n- El ZIP se extrae en una ubicación de prueba y supera la verificación de arranque.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-039, DEVOPS-040\n\n**Origen:** Requisito del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    },
+    {
+      "id": "DEVOPS-042",
+      "orden": 42,
+      "fase": 7,
+      "titulo": "Revisar entrega final y preparar envío a MinasLap",
+      "responsable_principal": "Juan José Alzate",
+      "lista_destino": "Backlog",
+      "descripcion": "Revisar el cumplimiento y dejar el paquete listo para que el responsable entregue en MinasLap.",
+      "alcance": [],
+      "criterios_aceptacion": [
+        "Cada requisito del enunciado tiene evidencia y se identifican pendientes reales de entrega.",
+        "Se verifica el enlace al tablero y el estado real de publicación de sus tarjetas.",
+        "Se comprueba que el paquete final corresponde a la versión verificada y al historial de commits.",
+        "La guía recuerda el 24 de noviembre indicado en el enunciado, sin inventar hora ni confirmar envío no realizado."
+      ],
+      "criterio_terminado": "Todos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.",
+      "dependencias": [
+        "DEVOPS-003",
+        "DEVOPS-041"
+      ],
+      "referencias": [],
+      "origen": "Requisito del taller",
+      "herramientas": [],
+      "trello": {
+        "name": "[DEVOPS-042] Revisar entrega final y preparar envío a MinasLap",
+        "desc": "**Revisar entrega final y preparar envío a MinasLap**\n\n**Responsable Principal:** Juan José Alzate\n\n**Descripción:**\nRevisar el cumplimiento y dejar el paquete listo para que el responsable entregue en MinasLap.\n\n**Criterios de aceptación:**\n- Cada requisito del enunciado tiene evidencia y se identifican pendientes reales de entrega.\n- Se verifica el enlace al tablero y el estado real de publicación de sus tarjetas.\n- Se comprueba que el paquete final corresponde a la versión verificada y al historial de commits.\n- La guía recuerda el 24 de noviembre indicado en el enunciado, sin inventar hora ni confirmar envío no realizado.\n\n**Criterio de terminado:**\nTodos los criterios de aceptación están verificados. Se registra evidencia concreta (archivo, prueba o commit) y se resuelven los pendientes que impidan el uso del resultado por las tareas dependientes.\n\n**Dependencias:** DEVOPS-003, DEVOPS-041\n\n**Origen:** Requisito del taller",
+        "id": null,
+        "idList": null,
+        "idMembers": [],
+        "due": null
+      },
+      "estado_publicacion": "pendiente_mcp"
+    }
+  ]
+}
