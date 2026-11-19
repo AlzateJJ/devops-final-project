@@ -3,6 +3,7 @@ import { parseDatabase } from "./store.js";
 import { createPortableBackup, checkImages } from "./portable.js";
 import { MAX_BACKUP_BYTES } from "./resources.js";
 import { openJSONGuide } from "./json-guide.js";
+import { completeEmbeddedResources } from "./embedded.js";
 export function downloadText(text, filename) {
   const url = URL.createObjectURL(
     new Blob([text], { type: "application/json;charset=utf-8" }),
@@ -133,8 +134,10 @@ export function renderBackup(store, recoveryMessage = "") {
     try {
       if (file.size > MAX_BACKUP_BYTES)
         throw Error("El respaldo supera el máximo de 100 MB.");
-      const raw = await file.text(),
-        parsed = parseDatabase(raw);
+      let raw = await file.text();
+      const original = parseDatabase(raw),
+        parsed = completeEmbeddedResources(original);
+      if (parsed !== original) raw = JSON.stringify(parsed);
       if (parsed.meta.resourceBundle && !parsed.resources)
         throw Error(
           "El archivo depende de recursos internos. Elige un respaldo completo descargado desde Gestión de datos.",

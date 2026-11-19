@@ -2,9 +2,12 @@ const fs = require("node:fs");
 const path = require("node:path");
 const assert = require("node:assert/strict");
 const { chromium } = require("playwright");
+const { configureContext } = require("./browser_environment.cjs");
 const root = path.resolve(__dirname, ".."),
   base = process.env.DEVOPS_TEST_URL || "http://127.0.0.1:8765/app/";
 const temp = path.join(root, "tmp", "backup-qa-" + Date.now());
+const out = process.env.DEVOPS_EVIDENCE_DIR || path.join(root, "evidencias");
+fs.mkdirSync(out, { recursive: true });
 fs.mkdirSync(temp, { recursive: true });
 const results = [],
   errors = [];
@@ -24,6 +27,7 @@ async function open() {
     path.join(temp, "profile"),
     options,
   );
+  await configureContext(context, base);
   page = context.pages()[0] || (await context.newPage());
   page.setDefaultTimeout(30000);
   page.on("pageerror", (error) => errors.push(error.message));
@@ -70,7 +74,7 @@ const mediaCount = () =>
   page.evaluate(
     () =>
       new Promise((resolve, reject) => {
-        const request = indexedDB.open("entrega-final-devops-resources", 1);
+        const request = indexedDB.open(window.__qaResourceDB, 1);
         request.onupgradeneeded = () =>
           request.result.createObjectStore("bundles");
         request.onerror = () => reject(request.error);
@@ -97,8 +101,24 @@ async function blockOriginals() {
 }
 async function checkRestoredMedia() {
   return page.evaluate(async () => {
-    const { resourceURL } = await import("./js/resources.js");
-    const db = JSON.parse(localStorage.getItem("devops-atlas:v1"));
+    const db = JSON.parse(localStorage.getItem(window.__qaDataKey));
+    const resources = await new Promise((resolve, reject) => {
+      const request = indexedDB.open(window.__qaResourceDB, 1);
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => {
+        const connection = request.result,
+          tx = connection.transaction("bundles"),
+          bundle = tx.objectStore("bundles").get(db.meta.resourceBundle);
+        tx.oncomplete = () => {
+          resolve(bundle.result);
+          connection.close();
+        };
+        tx.onerror = () => {
+          reject(tx.error);
+          connection.close();
+        };
+      };
+    });
     const images = [
       ...new Set([
         ...db.tools.map((t) => t.logo),
@@ -108,11 +128,11 @@ async function checkRestoredMedia() {
     ];
     for (const src of images) {
       const img = new Image();
-      img.src = resourceURL(src);
+      img.src = resources[src] || src;
       await img.decode();
     }
     for (const source of db.sources) {
-      const response = await fetch(resourceURL(source.file));
+      const response = await fetch(resources[source.file]);
       if (!(await response.text()).startsWith("%PDF-"))
         throw Error("PDF no disponible");
     }
@@ -137,7 +157,7 @@ async function checkRestoredMedia() {
     await page.locator("#flush-data").isDisabled(),
   );
   await page.screenshot({
-    path: path.join(root, "evidencias/gestion-datos.png"),
+    path: path.join(out, "gestion-datos.png"),
     fullPage: true,
   });
   const file = await download("complete.json"),
@@ -175,7 +195,7 @@ async function checkRestoredMedia() {
     "Flush elimina los registros de localStorage y conserva datos ajenos",
     await page.evaluate(
       () =>
-        localStorage.getItem("devops-atlas:v1") === null &&
+        localStorage.getItem(window.__qaDataKey) === null &&
         localStorage.getItem("otra-aplicacion") === "conservar",
     ),
   );
@@ -240,7 +260,7 @@ async function checkRestoredMedia() {
     (await page.locator("#restore-data").isDisabled()) &&
       (await page.evaluate(
         () =>
-          JSON.parse(localStorage.getItem("devops-atlas:v1")).tools.length ===
+          JSON.parse(localStorage.getItem(window.__qaDataKey)).tools.length ===
           144,
       )),
   );
@@ -281,7 +301,7 @@ async function checkRestoredMedia() {
     "La plantilla vacía permite crear recursos propios",
     await page.evaluate(
       () =>
-        JSON.parse(localStorage.getItem("devops-atlas:v1")).tools.length === 1,
+        JSON.parse(localStorage.getItem(window.__qaDataKey)).tools.length === 1,
     ),
   );
   assert.deepEqual(errors, []);
@@ -296,7 +316,7 @@ async function checkRestoredMedia() {
     note: "Perfil aislado; recursos originales y semilla bloqueados después del vaciado.",
   };
   fs.writeFileSync(
-    path.join(root, "evidencias/pruebas-respaldos.json"),
+    path.join(out, "pruebas-respaldos.json"),
     JSON.stringify(report, null, 2),
   );
   await context.close();

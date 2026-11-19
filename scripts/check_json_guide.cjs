@@ -3,9 +3,12 @@ const path = require("node:path");
 const assert = require("node:assert/strict");
 const { pathToFileURL } = require("node:url");
 const { chromium } = require("playwright");
+const { configureContext } = require("./browser_environment.cjs");
 const root = path.resolve(__dirname, ".."),
   base = process.env.DEVOPS_TEST_URL || "http://127.0.0.1:8765/app/";
 const temp = path.join(root, "tmp", "json-guide-qa-" + Date.now());
+const out = process.env.DEVOPS_EVIDENCE_DIR || path.join(root, "evidencias");
+fs.mkdirSync(out, { recursive: true });
 fs.mkdirSync(temp, { recursive: true });
 const results = [],
   errors = [];
@@ -51,14 +54,15 @@ async function restore(file) {
     acceptDownloads: true,
     viewport: { width: 1440, height: 1050 },
   });
+  await configureContext(context, base);
   page = context.pages()[0] || (await context.newPage());
   page.on("pageerror", (err) => errors.push(err.message));
   await goBackup();
   const initial = await page.evaluate(() =>
-    localStorage.getItem("devops-atlas:v1"),
+    localStorage.getItem(window.__qaDataKey),
   );
   await page.screenshot({
-    path: path.join(root, "evidencias/gestion-datos.png"),
+    path: path.join(out, "gestion-datos.png"),
     fullPage: true,
   });
   await openGuide();
@@ -87,7 +91,7 @@ async function restore(file) {
       Object.keys(template.resources).length === 0,
   );
   await page.screenshot({
-    path: path.join(root, "evidencias/guia-json-escritorio.png"),
+    path: path.join(out, "guia-json-escritorio.png"),
     fullPage: true,
   });
   await page.locator("#json-converter > summary").click();
@@ -177,10 +181,16 @@ async function restore(file) {
   );
   check(
     "Leer la guía, descargar y convertir no altera el catálogo",
-    (await page.evaluate(() => localStorage.getItem("devops-atlas:v1"))) ===
+    (await page.evaluate(() => localStorage.getItem(window.__qaDataKey))) ===
       initial,
   );
   await page.keyboard.press("Escape");
+  // El evento close del dialog se despacha después del evento de teclado.
+  await page.waitForFunction(
+    () =>
+      !document.querySelector("#json-guide") &&
+      document.activeElement === document.querySelector("#open-json-guide"),
+  );
   check(
     "Escape cierra la guía y devuelve el foco al botón",
     (await page.locator("#json-guide").count()) === 0 &&
@@ -210,7 +220,7 @@ async function restore(file) {
       .evaluateAll((nodes) => nodes.forEach((node) => (node.open = false)));
     if (width === 375)
       await page.screenshot({
-        path: path.join(root, "evidencias/guia-json-movil.png"),
+        path: path.join(out, "guia-json-movil.png"),
         fullPage: false,
       });
     await page.locator("#close-json-guide").click();
@@ -281,7 +291,7 @@ async function restore(file) {
     note: "Perfil aislado; portapapeles simulado, imágenes y PDF propios importados con los archivos originales bloqueados.",
   };
   fs.writeFileSync(
-    path.join(root, "evidencias/pruebas-guia-json.json"),
+    path.join(out, "pruebas-guia-json.json"),
     JSON.stringify(report, null, 2),
   );
   await context.close();

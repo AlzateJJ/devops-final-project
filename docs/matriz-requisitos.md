@@ -4,7 +4,7 @@ Fuente: `inventario/fuentes/supletorio.pdf`, página 1. Responsable: Juan José 
 
 | Requisito | Implementación | Evidencia |
 |---|---|---|
-| HTML5 y CSS | `app/index.html`, `app/styles.css` | Inicio y capturas de escritorio/móvil |
+| HTML5 y CSS | `index.html` generado y `app/styles.css`; HTML fuente en `app/index-desarrollo.html` dentro del ZIP | Apertura directa en Chrome y capturas de escritorio/móvil |
 | Index como esquema preconceptual completo | `app/js/app.js` y `app/js/schema.js`: conceptos, atributos, seis relaciones dinámicas y Herramienta → Uso ← Práctica | Seis enlaces y sus destinos en Chrome; flechas conectadas a Uso entre 320 y 1920 px |
 | Registrar/actualizar herramientas con logo, nombre, descripción, precio y categoría | `app/js/tools.js` | Registro y edición de herramienta con imagen cargada |
 | Herramientas de los bloques exigidos | `app/data/database.json`, 144 herramientas | Test de igualdad exacta de IDs con el inventario |
@@ -28,12 +28,12 @@ Fuente: `inventario/fuentes/supletorio.pdf`, página 1. Responsable: Juan José 
 | Escritura segura | Error de cuota conserva estado; otra pestaña impide sobrescribir cambios nuevos |
 | Texto seguro | Texto con HTML se muestra sin ejecutar código |
 | Accesibilidad y tamaños | Enlace para saltar al contenido, diálogos con Escape, 375/768/1440 px sin desbordamiento |
-| Ejecución reproducible | Servidor de archivos local sin dependencias de ejecución ni base remota |
+| Apertura con doble clic (solicitud adicional del responsable) | ZIP completo: index.html y scripts preparados, sin Node.js ni servidor; misma suite funcional con conexión desactivada |
 
 ## Resultados
 
-`evidencias/pruebas-datos.xml`: 35 casos aprobados. `evidencias/pruebas-navegador.json`: 55 comprobaciones aprobadas en Google Chrome 157.0.8103.79. `evidencias/pruebas-respaldos.json`: 19 comprobaciones de exportación, vaciado y restauración. `evidencias/pruebas-guia-json.json`: 17 comprobaciones de la guía, sus descargas, conversión Base64 e importación de archivos propios. Se verifica la restauración sin acceso a los archivos originales. Las pruebas utilizan perfiles aislados y un portapapeles simulado; no borran datos personales del navegador ni cambian el portapapeles del usuario.
+`evidencias/pruebas-datos.xml`: 39 casos aprobados. `evidencias/offline/` contiene las tres suites ejecutadas desde `file://` con conexión desactivada: 55 comprobaciones de recorridos generales, 19 de exportación/vaciado/restauración y 17 de la guía del JSON. Se verifica la restauración sin acceso a los archivos originales. Las pruebas utilizan perfiles aislados y un portapapeles simulado; no borran datos personales del navegador ni cambian el portapapeles del usuario. Los reportes de la versión HTTP permanecen en `evidencias/`.
 
-Las verificaciones automatizadas comprueban cobertura, integridad y comportamiento. La ejecución desde el ZIP extraído se registra en `evidencias/entrega-limpia.json`. No se ha realizado el envío a MinasLap.
+Las verificaciones automatizadas comprueban cobertura, integridad y comportamiento. La ejecución del ZIP extraído por file:// se registra en `evidencias/entrega-limpia.json`, incluyendo apertura sin servidor, archivos íntegros, navegación e independencia de dos copias en carpetas distintas. Para PDF se comprueban los bytes exactos y el enlace a una nueva pestaña; [Playwright no permite comprobar visualmente su visor en modo headless](https://playwright.dev/docs/api/class-page#page-goto). No se ha realizado el envío a MinasLap.
 
 `evidencias/esquema-relaciones.json` registra la revisión visual y geométrica del esquema en nueve anchos: Uso permanece entre las otras entidades, las dos flechas terminan en sus bordes y no hay desbordamiento horizontal. Los 19 diagramas se conservan dentro de Prácticas.

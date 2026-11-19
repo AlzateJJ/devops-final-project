@@ -1,46 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testsuites>
-	<testcase name="Flush elimina registros y recursos, conserva otras aplicaciones y persiste vacío sin consultar semilla" time="0.006997" classname="test"/>
-	<testcase name="Flush fallido no cambia datos ni recursos ni deja un marcador nuevo" time="0.001278" classname="test"/>
-	<testcase name="Una pestaña desactualizada no puede vaciar cambios ajenos, incluso con catálogo vacío" time="0.000651" classname="test"/>
-	<testcase name="Restaurar conserva archivos en IndexedDB y carga URLs locales después de reiniciar" time="0.000847" classname="test"/>
-	<testcase name="Errores al guardar archivos o registros conservan la base y el paquete anterior" time="0.001332" classname="test"/>
-	<testcase name="Un cambio en otra pestaña durante la importación conserva el cambio y elimina recursos temporales" time="0.000562" classname="test"/>
-	<testcase name="Respaldos incompletos, archivos ajenos y formatos falsos se rechazan antes de modificar datos" time="0.000598" classname="test"/>
-	<testcase name="Los recursos perdidos muestran recuperación sin reemplazar los registros originales" time="0.000508" classname="test"/>
-	<testcase name="Un respaldo anterior sigue funcionando y reemplaza los recursos importados" time="0.000476" classname="test"/>
-	<testcase name="Flush también limpia recursos huérfanos cuando los registros están corruptos" time="0.000726" classname="test"/>
-	<testcase name="Un fallo al eliminar archivos se informa y permite completar el vaciado al reintentar" time="0.000609" classname="test"/>
-	<testcase name="La semilla satisface el contrato y conserva todos los IDs requeridos" time="0.003457" classname="test"/>
-	<testcase name="Cada práctica tiene uso, diagrama y referencias de fuente válidas" time="0.000241" classname="test"/>
-	<testcase name="Los archivos de todas las imágenes y fuentes existen en la entrega" time="0.007733" classname="test"/>
-	<testcase name="La edición conserva el ID y no rompe los usos existentes" time="0.005414" classname="test"/>
-	<testcase name="La lectura no reinicializa una base que ya existe" time="0.004920" classname="test"/>
-	<testcase name="La escritura fallida conserva tanto el estado en memoria como la base guardada" time="0.003355" classname="test"/>
-	<testcase name="Los cambios externos impiden sobrescritura desde una pestaña desactualizada" time="0.004706" classname="test"/>
-	<testcase name="Una base corrupta se preserva durante la inicialización" time="0.000394" classname="test"/>
-	<testcase name="La recuperación permite restaurar explícitamente después de detectar corrupción" time="0.002292" classname="test"/>
-	<testcase name="No se ignora el bloqueo de lectura del navegador" time="0.000302" classname="test"/>
-	<testcase name="Exportar y restaurar conserva la estructura completa" time="0.007022" classname="test"/>
-	<testcase name="Un respaldo inválido no altera el estado" time="0.001158" classname="test"/>
-	<testcase name="Se rechazan nombres duplicados ignorando mayúsculas y acentos" time="0.001290" classname="test"/>
-	<testcase name="Se rechazan IDs duplicados aunque el nombre sea distinto" time="0.000993" classname="test"/>
-	<testcase name="Se rechazan descripciones y nombres vacíos" time="0.002278" classname="test"/>
-	<testcase name="Se rechazan categorías y modelos de precio fuera del catálogo" time="0.001957" classname="test"/>
-	<testcase name="Se rechazan relaciones con entidades inexistentes" time="0.002730" classname="test"/>
-	<testcase name="Se rechazan pares de uso duplicados" time="0.001431" classname="test"/>
-	<testcase name="La práctica y su diagrama deben mantener la misma imagen" time="0.001222" classname="test"/>
-	<testcase name="Los diagramas no pueden enlazar prácticas inexistentes" time="0.001535" classname="test"/>
-	<testcase name="No se admiten versiones o colecciones incompatibles" time="0.001606" classname="test"/>
-	<testcase name="Los recursos no permiten URLs ejecutables, externas ni rutas fuera de assets" time="0.000191" classname="test"/>
-	<testcase name="Las fuentes solo permiten PDFs del inventario y páginas válidas" time="0.001698" classname="test"/>
-	<testcase name="El backlog tiene 42 tarjetas, dependencias válidas y cobertura exacta" time="0.001241" classname="test"/>
-	<!-- tests 35 -->
+	<testcase name="Flush elimina registros y recursos, conserva otras aplicaciones y persiste vacío sin consultar semilla" time="0.013417" classname="test"/>
+	<testcase name="Flush fallido no cambia datos ni recursos ni deja un marcador nuevo" time="0.001953" classname="test"/>
+	<testcase name="Una pestaña desactualizada no puede vaciar cambios ajenos, incluso con catálogo vacío" time="0.001870" classname="test"/>
+	<testcase name="Restaurar conserva archivos en IndexedDB y carga URLs locales después de reiniciar" time="0.001905" classname="test"/>
+	<testcase name="Errores al guardar archivos o registros conservan la base y el paquete anterior" time="0.003331" classname="test"/>
+	<testcase name="Un cambio en otra pestaña durante la importación conserva el cambio y elimina recursos temporales" time="0.001173" classname="test"/>
+	<testcase name="Respaldos incompletos, archivos ajenos y formatos falsos se rechazan antes de modificar datos" time="0.001008" classname="test"/>
+	<testcase name="Los recursos perdidos muestran recuperación sin reemplazar los registros originales" time="0.000791" classname="test"/>
+	<testcase name="Un respaldo anterior sigue funcionando y reemplaza los recursos importados" time="0.000828" classname="test"/>
+	<testcase name="Flush también limpia recursos huérfanos cuando los registros están corruptos" time="0.001196" classname="test"/>
+	<testcase name="Un fallo al eliminar archivos se informa y permite completar el vaciado al reintentar" time="0.001333" classname="test"/>
+	<testcase name="Las entregas file tienen almacenamiento separado por carpeta y HTTP conserva sus claves" time="0.000237" classname="test"/>
+	<testcase name="El catálogo incorporado arranca sin fetch y no reaparece después de vaciar" time="0.000703" classname="test"/>
+	<testcase name="Un JSON anterior recupera sus imágenes del catálogo incluido sin cambiar el archivo recibido" time="0.000791" classname="test"/>
+	<testcase name="Un JSON antiguo con archivos propios ausentes no borra datos al abrir sin servidor" time="0.000560" classname="test"/>
+	<testcase name="La semilla satisface el contrato y conserva todos los IDs requeridos" time="0.005443" classname="test"/>
+	<testcase name="Cada práctica tiene uso, diagrama y referencias de fuente válidas" time="0.000336" classname="test"/>
+	<testcase name="Los archivos de todas las imágenes y fuentes existen en la entrega" time="0.013070" classname="test"/>
+	<testcase name="La edición conserva el ID y no rompe los usos existentes" time="0.009039" classname="test"/>
+	<testcase name="La lectura no reinicializa una base que ya existe" time="0.009393" classname="test"/>
+	<testcase name="La escritura fallida conserva tanto el estado en memoria como la base guardada" time="0.007031" classname="test"/>
+	<testcase name="Los cambios externos impiden sobrescritura desde una pestaña desactualizada" time="0.008973" classname="test"/>
+	<testcase name="Una base corrupta se preserva durante la inicialización" time="0.000753" classname="test"/>
+	<testcase name="La recuperación permite restaurar explícitamente después de detectar corrupción" time="0.003747" classname="test"/>
+	<testcase name="No se ignora el bloqueo de lectura del navegador" time="0.000453" classname="test"/>
+	<testcase name="Exportar y restaurar conserva la estructura completa" time="0.010990" classname="test"/>
+	<testcase name="Un respaldo inválido no altera el estado" time="0.002048" classname="test"/>
+	<testcase name="Se rechazan nombres duplicados ignorando mayúsculas y acentos" time="0.002036" classname="test"/>
+	<testcase name="Se rechazan IDs duplicados aunque el nombre sea distinto" time="0.001483" classname="test"/>
+	<testcase name="Se rechazan descripciones y nombres vacíos" time="0.003808" classname="test"/>
+	<testcase name="Se rechazan categorías y modelos de precio fuera del catálogo" time="0.003956" classname="test"/>
+	<testcase name="Se rechazan relaciones con entidades inexistentes" time="0.003835" classname="test"/>
+	<testcase name="Se rechazan pares de uso duplicados" time="0.001782" classname="test"/>
+	<testcase name="La práctica y su diagrama deben mantener la misma imagen" time="0.001517" classname="test"/>
+	<testcase name="Los diagramas no pueden enlazar prácticas inexistentes" time="0.002081" classname="test"/>
+	<testcase name="No se admiten versiones o colecciones incompatibles" time="0.003180" classname="test"/>
+	<testcase name="Los recursos no permiten URLs ejecutables, externas ni rutas fuera de assets" time="0.000447" classname="test"/>
+	<testcase name="Las fuentes solo permiten PDFs del inventario y páginas válidas" time="0.002883" classname="test"/>
+	<testcase name="El backlog tiene 42 tarjetas, dependencias válidas y cobertura exacta" time="0.001959" classname="test"/>
+	<!-- tests 39 -->
 	<!-- suites 0 -->
-	<!-- pass 35 -->
+	<!-- pass 39 -->
 	<!-- fail 0 -->
 	<!-- cancelled 0 -->
 	<!-- skipped 0 -->
 	<!-- todo 0 -->
-	<!-- duration_ms 163.5888 -->
+	<!-- duration_ms 269.165 -->
 </testsuites>

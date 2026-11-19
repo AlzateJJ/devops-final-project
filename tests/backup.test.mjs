@@ -8,6 +8,8 @@ import {
 } from "../app/js/store.js";
 import { emptyDatabase } from "../app/js/catalogs.js";
 import { resourceURL } from "../app/js/resources.js";
+import { storageScope } from "../app/js/storage-scope.js";
+import { completeEmbeddedResources } from "../app/js/embedded.js";
 
 class MemoryStorage {
   constructor() {
@@ -233,4 +235,68 @@ test("Un fallo al eliminar archivos se informa y permite completar el vaciado al
   await db.flush();
   assert.equal(media.items.size, 0);
   assert.equal(db.cleanupWarning, "");
+});
+test("Las entregas file tienen almacenamiento separado por carpeta y HTTP conserva sus claves", () => {
+  const a = new URL("file:///C:/Entrega%20uno/index.html#/home"),
+    b = new URL("file:///C:/Entrega%20dos/index.html#/home");
+  assert.notEqual(storageScope(a), storageScope(b));
+  assert.equal(
+    storageScope(a),
+    storageScope(new URL("file:///C:/Entrega%20uno/index.html#/backup")),
+  );
+  assert.equal(storageScope(new URL("http://127.0.0.1:8765/app/")), "");
+});
+test("El catálogo incorporado arranca sin fetch y no reaparece después de vaciar", async () => {
+  const previous = globalThis.__DEVOPS_INITIAL_DATA__;
+  try {
+    globalThis.__DEVOPS_INITIAL_DATA__ = portable();
+    const storage = new MemoryStorage(),
+      media = new MemoryMedia(),
+      db = new Database(storage, media);
+    await db.init("no-consultar-red");
+    assert.equal(db.data.tools.length, 1);
+    assert.equal(media.items.size, 1);
+    await db.flush();
+    const reopened = new Database(storage, media);
+    await reopened.init("no-consultar-red");
+    assert.deepEqual(reopened.data.tools, []);
+    assert.equal(media.items.size, 0);
+  } finally {
+    globalThis.__DEVOPS_INITIAL_DATA__ = previous;
+  }
+});
+test("Un JSON anterior recupera sus imágenes del catálogo incluido sin cambiar el archivo recibido", async () => {
+  const previous = globalThis.__DEVOPS_INITIAL_DATA__;
+  try {
+    globalThis.__DEVOPS_INITIAL_DATA__ = portable();
+    const { db } = await setup(),
+      legacy = portable();
+    delete legacy.resources;
+    const before = JSON.stringify(legacy);
+    const complete = completeEmbeddedResources(legacy);
+    assert.equal(complete.resources[imagePath], png);
+    assert.equal(JSON.stringify(legacy), before);
+    await db.restore(before);
+    assert.equal(db.resources[imagePath], png);
+  } finally {
+    globalThis.__DEVOPS_INITIAL_DATA__ = previous;
+  }
+});
+test("Un JSON antiguo con archivos propios ausentes no borra datos al abrir sin servidor", async () => {
+  const previous = globalThis.__DEVOPS_INITIAL_DATA__;
+  try {
+    globalThis.__DEVOPS_INITIAL_DATA__ = portable();
+    const { db, storage } = await setup(),
+      legacy = portable();
+    delete legacy.resources;
+    legacy.tools[0].logo = "assets/logos/ausente.png";
+    const before = storage.getItem(STORAGE_KEY);
+    await assert.rejects(
+      () => db.restore(JSON.stringify(legacy)),
+      /no incluye el archivo/,
+    );
+    assert.equal(storage.getItem(STORAGE_KEY), before);
+  } finally {
+    globalThis.__DEVOPS_INITIAL_DATA__ = previous;
+  }
 });

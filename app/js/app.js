@@ -76,9 +76,12 @@ window.addEventListener("storage", (event) => {
   if (event.key === STORAGE_KEY || event.key === EMPTY_KEY)
     notify("La base cambió en otra pestaña. Recarga antes de guardar.", true);
 });
-try {
-  await store.init();
-  route(false);
-} catch (error) {
-  renderBackup(store, error.message);
+async function start() {
+  try {
+    await store.init();
+    route(false);
+  } catch (error) {
+    renderBackup(store, error.message);
+  }
 }
+start();

@@ -1,4 +1,6 @@
 import { emptyDatabase } from "./catalogs.js";
+import { STORAGE_SCOPE } from "./storage-scope.js";
+import { embeddedSeed, completeEmbeddedResources } from "./embedded.js";
 import {
   ResourceStorage,
   validateResources,
@@ -6,8 +8,8 @@ import {
   activateResourceURLs,
   releaseResourceURLs,
 } from "./resources.js";
-export const STORAGE_KEY = "devops-atlas:v1";
-export const EMPTY_KEY = "devops-atlas:empty";
+export const STORAGE_KEY = `devops-atlas:v1${STORAGE_SCOPE}`;
+export const EMPTY_KEY = `devops-atlas:empty${STORAGE_SCOPE}`;
 const CATEGORY_IDS = [
   "SCM",
   "DB",
@@ -234,7 +236,7 @@ export class Database {
         const parsed = parseDatabase(this.snapshot);
         const resources = parsed.meta.resourceBundle
           ? await this.media.read(parsed.meta.resourceBundle)
-          : {};
+          : completeEmbeddedResources(parsed).resources || {};
         if (parsed.meta.resourceBundle && !resources)
           fail(
             "No se encontraron los archivos guardados. Restaura un respaldo completo.",
@@ -267,10 +269,12 @@ export class Database {
       activateResourceURLs(new Map());
       return this.data;
     }
+    const embedded = embeddedSeed();
+    if (embedded) return this.restore(JSON.stringify(embedded));
     const response = await fetch(seedURL);
     if (!response.ok)
       fail(
-        "No se pudo cargar la base inicial. Abre la aplicación mediante el servidor local indicado en la guía.",
+        "No se pudo cargar la base inicial. Extrae todo el ZIP y abre su index.html principal. Para trabajar con el código fuente, usa el servidor indicado en la guía.",
       );
     const seed = parseDatabase(await response.text());
     this.save(seed);
@@ -332,7 +336,7 @@ export class Database {
   async restore(raw) {
     if (this.busy)
       fail("Espera a que termine la operación de gestión de datos.");
-    const next = parseDatabase(raw);
+    const next = completeEmbeddedResources(parseDatabase(raw));
     this.assertCurrent();
     const resources = next.resources || {};
     if (next.meta.resourceBundle && !next.resources)

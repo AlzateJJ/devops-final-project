@@ -24,13 +24,21 @@ Un objeto JSON versión 1 contiene `categories`, `prices`, `tools`, `practices`,
 
 Los identificadores estables no dependen del nombre ni del símbolo de la tabla. No se admite duplicar una pareja herramienta/práctica. Las ediciones no cambian los IDs. La aplicación no necesita eliminación para satisfacer el enunciado. Las imágenes nuevas se guardan como PNG, JPEG o WebP embebidos con tamaño limitado; las imágenes iniciales usan rutas locales.
 
-`localStorage` usa la clave `devops-atlas:v1` para los registros. Los recursos restaurados se guardan como un paquete en IndexedDB (`entrega-final-devops-resources`, almacén `bundles`), identificado por `meta.resourceBundle`. Ese identificador interno no se exporta. La vista resuelve las rutas a URL de Blob; al cerrar y reabrir se recuperan desde IndexedDB. Así los aproximadamente 22 MB del respaldo completo no tienen que caber en localStorage. Las imágenes PNG, JPEG, WebP y los PDF se incluyen sin alterar sus bytes; los logos SVG/ICO locales se convierten a PNG en la exportación.
+`localStorage` usa la clave base `devops-atlas:v1` para los registros. Los recursos restaurados se guardan como un paquete en IndexedDB (nombre base `entrega-final-devops-resources`, almacén `bundles`), identificado por `meta.resourceBundle`. En `file://`, `storage-scope.js` añade la URL de la carpeta a las claves de registros/vaciado y al nombre de IndexedDB, porque Chrome comparte el origen de los archivos locales. Así vaciar una copia no elimina archivos de otra. Las claves HTTP se conservan para mantener los datos existentes. Ese identificador interno no se exporta. La vista resuelve las rutas a URL de Blob; al cerrar y reabrir se recuperan desde IndexedDB. Así los aproximadamente 22 MB del respaldo completo no tienen que caber en localStorage. Las imágenes PNG, JPEG, WebP y los PDF se incluyen sin alterar sus bytes; los logos SVG/ICO locales se convierten a PNG en la exportación.
 
 Restaurar valida los registros, la cobertura exacta de recursos, rutas, tipos, encabezados de archivos y la decodificación de imágenes. Primero guarda el paquete nuevo; solo después reemplaza los registros. Si falla la escritura o cambia la base en otra pestaña, conserva el estado anterior y elimina el paquete temporal. Los JSON antiguos siguen siendo compatibles usando los archivos locales del proyecto.
 
 Vaciar requiere confirmación. Elimina la clave de registros y los paquetes de recursos que existían al iniciar la operación, incluidos huérfanos de recuperaciones anteriores. Mantiene `devops-atlas:empty` como marcador sin datos del usuario: evita cargar otra vez la semilla y detecta cambios entre pestañas incluso cuando el catálogo está vacío. Solo se carga la semilla cuando no existe ni base ni marcador. No se usa `localStorage.clear()`. Si falla el borrado físico de recursos, se informa y el usuario puede reintentarlo. Categorías y modelos de precio permanecen como configuración de los formularios.
 
 Un error de lectura, validación o escritura no autoriza reemplazar datos. Restaurar y vaciar exigen confirmación. Dos pestañas detectan cambios externos antes de guardar; las mutaciones quedan bloqueadas mientras se restaura o vacía el catálogo.
+
+## Apertura directa del ZIP
+
+`scripts/build_offline.cjs` genera `index.html`, `runtime/app.js` y `runtime/catalogo.js`. El primero carga scripts clásicos con `defer`, en orden: datos incorporados y aplicación. esbuild reúne los módulos originales en un archivo IIFE; no hay importaciones ES de archivos locales ni `fetch()` de JSON o recursos del disco durante el arranque. La entrada `app/index.html` del ZIP redirige a la principal, y `app/index-desarrollo.html` conserva el HTML fuente para desarrollo mediante HTTP.
+
+El constructor incorpora los 171 archivos referenciados (144 logos, 19 diagramas y ocho PDF) usando el mismo formato validado de respaldo. La construcción se verifica en Chrome con la conexión desactivada. `embedded.js` proporciona la semilla al primer inicio y completa los JSON antiguos con los archivos conocidos del catálogo. Los respaldos propios con `resources` conservan sus propios archivos. El marcador de vaciado tiene prioridad sobre la semilla incorporada.
+
+La generación requiere herramientas de desarrollo; el resultado solo necesita Chrome para abrirse con doble clic. Los originales HTML, CSS, JavaScript, JSON, imágenes y PDF quedan en el ZIP para revisión. El servidor local se conserva como herramienta opcional de desarrollo.
 
 ## Esquema preconceptual
 
@@ -52,4 +60,4 @@ Se conserva el modelo de precio transcrito del curso; no es una cotización actu
 
 Vite y webpack aparecen bajo Containers en la lámina P06F:11. La aplicación los clasifica funcionalmente en Integración continua por su papel en la construcción, conserva `sourceCategory=CONT` y explica el cambio. Las restantes categorías conservan el criterio de la tabla del profesor.
 
-No se requieren cuentas, integración con las 144 herramientas, servidor de datos ni despliegue comercial. El servidor HTTP local solo entrega archivos. Respaldos, búsqueda, filtros y guía son apoyos de implementación, no nuevos requisitos atribuidos al profesor.
+No se requieren cuentas, integración con las 144 herramientas, servidor de datos ni despliegue comercial. La entrega para revisión se abre sin servidor; el servidor HTTP es opcional durante el desarrollo. Respaldos, búsqueda, filtros y guía son apoyos de implementación, no nuevos requisitos atribuidos al profesor.

@@ -1,17 +1,24 @@
 {
   "status": "passed",
-  "date": "2026-11-19T12:54:42.277Z",
+  "date": "2026-11-19T13:22:39.695Z",
   "browser": "157.0.8103.79",
-  "filesVerified": 267,
-  "resourceResponses": 171,
-  "checks": [
-    "SHA-256 de cada archivo extraído coincide",
-    "Arranque con Node.js sin instalar dependencias",
-    "Base inicial 144/14/19/42",
-    "Recursos locales responden HTTP 200",
-    "Planificación contiene 42 enlaces reales; búsqueda y filtro funcionan",
-    "Sin errores de JavaScript",
-    "Directorio .git no se sirve"
+  "protocol": "file:",
+  "offline": true,
+  "browserLimitations": [
+    "El visor PDF interno no se ejecuta en modo headless; se verificaron los bytes íntegros y el destino del enlace."
   ],
-  "note": "Verificación de ejecución desde copia extraída. El manifiesto externo identifica el commit final de la entrega."
+  "filesVerified": 286,
+  "checks": [
+    "SHA-256 de todos los archivos coincide",
+    "Apertura directa del index.html sin servidor ni dependencias de ejecución",
+    "Base inicial 144/14/19/42",
+    "Logo visible y PDF incorporado íntegro, con enlace a una nueva pestaña",
+    "Dos copias en el mismo perfil conservan almacenes separados",
+    "Vaciar una copia no afecta registros ni imágenes de la otra",
+    "app/index.html lleva a la entrada principal",
+    "Inventario y planificación funcionan como archivos locales",
+    "42 enlaces de Trello; búsqueda y filtro funcionan",
+    "Cero solicitudes HTTP, fallos de recursos de la aplicación o excepciones de JavaScript"
+  ],
+  "note": "Chrome con conexión desactivada. Node.js solo ejecuta la verificación automatizada; no inicia ningún servidor ni forma parte de la ejecución del ZIP."
 }

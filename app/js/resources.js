@@ -1,3 +1,5 @@
+import { STORAGE_SCOPE } from "./storage-scope.js";
+export const RESOURCE_DB_NAME = `entrega-final-devops-resources${STORAGE_SCOPE}`;
 export const MAX_BACKUP_BYTES = 100 * 1024 * 1024;
 const IMAGE_PATH =
   /^assets\/(logos|diagramas)\/[A-Za-z0-9_-]+\.(png|jpg|jpeg|webp|svg|ico)$/;
@@ -94,7 +96,7 @@ export class ResourceStorage {
         "El navegador no permite almacenar los recursos del respaldo.",
       );
     const db = await new Promise((resolve, reject) => {
-      const request = indexedDB.open("entrega-final-devops-resources", 1);
+      const request = indexedDB.open(RESOURCE_DB_NAME, 1);
       request.onupgradeneeded = () =>
         request.result.createObjectStore("bundles");
       request.onsuccess = () => resolve(request.result);

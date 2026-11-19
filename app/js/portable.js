@@ -1,4 +1,5 @@
 import { validateDatabase } from "./store.js";
+import { embeddedResource } from "./embedded.js";
 import {
   MAX_BACKUP_BYTES,
   resourcePaths,
@@ -81,7 +82,10 @@ export async function createPortableBackup(
     paths = resourcePaths(backup);
   for (let i = 0; i < paths.length; i++) {
     const path = paths[i];
-    resources[path] = storedResources[path] || (await encodeLocal(path));
+    resources[path] =
+      storedResources[path] ||
+      embeddedResource(path) ||
+      (await encodeLocal(path));
     onProgress(i + 1, paths.length);
   }
   validateResources(resources, backup);

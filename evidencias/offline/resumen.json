@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "date": "2026-11-19T13:27:18.585Z",
+  "entry": "file:///C:/Users/USUARIO/Desktop/SEMESTRE%2013%20-%20UNAL/DevOps/tmp/Entrega%20con%20espacios%20-%20b19835c3-6641-489d-8eff-4d642e87170f/devops-atlas/index.html",
+  "protocol": "file:",
+  "offline": true,
+  "checks": 91,
+  "suites": [
+    {
+      "checks": 55,
+      "status": "passed"
+    },
+    {
+      "checks": 19,
+      "status": "passed"
+    },
+    {
+      "checks": 17,
+      "status": "passed"
+    }
+  ],
+  "note": "Se utilizan perfiles aislados con la conexión desactivada. Ninguna suite inicia un servidor."
+}

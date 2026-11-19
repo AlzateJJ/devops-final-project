@@ -2,7 +2,7 @@
 
 ## Contenido listo
 
-- Aplicación funcional: `app/`.
+- Aplicación lista para doble clic: `index.html` en la raíz del ZIP, con `runtime/` y `app/`.
 - Base JSON: 144 herramientas, 14 prácticas, 19 diagramas y 42 relaciones de uso.
 - Logos, diagramas y referencias a las ocho presentaciones.
 - [42 tarjetas en Testing](https://trello.com/b/5CSrY3pF/devops-tools-project), con responsable, descripción, aceptación, terminado, dependencias y pautas de revisión.
@@ -18,7 +18,7 @@
 | 3. Diseño | Contrato JSON, navegación y esquema preconceptual |
 | 4. Implementación | Seis operaciones, consulta, persistencia y respaldo |
 | 5. Contenido | Fichas, logos, prácticas, diagramas y usos iniciales |
-| 6. Verificación | 35 casos de datos y 91 comprobaciones en Chrome, incluidas exportación completa, vaciado, restauración y guía para JSON propio |
+| 6. Verificación | 39 casos de datos y 91 comprobaciones en Chrome desde file:// sin conexión, además de verificar el ZIP y el aislamiento entre copias |
 | 7. Entrega | Guías, evidencias y ZIP con verificación desde copia extraída |
 
 Las tarjetas se crearon inicialmente en Backlog y, tras revisar sus criterios y evidencias, se trasladaron a Testing por solicitud del responsable. El trabajo de implementación y preparación está terminado y listo para revisión; no se ha marcado como aceptado en Done. La tarjeta de preparación del envío no acredita una entrega ya realizada en MinasLap. El responsable se escribió en cada descripción; la versión del MCP utilizada no permite asignar nativamente un miembro a una tarjeta.
@@ -37,7 +37,7 @@ El PDF no exige un informe escrito separado, un video ni una presentación adici
 
 `entrega/devops-atlas-entrega.zip` contiene las carpetas necesarias, el lanzador de Windows, la guía principal y un manifiesto SHA-256. También incluye `historial-commits.txt` generado desde el repositorio. El manifiesto externo `entrega/manifiesto-entrega.json` identifica el commit y el checksum del ZIP.
 
-El paquete no incluye `node_modules`, perfiles de Chrome, archivos temporales ni credenciales. Para ejecutar solo se necesita Node.js y Chrome. Para regenerar contenido se requieren los scripts y las dependencias de desarrollo indicadas en la guía.
+El paquete no incluye `node_modules`, perfiles de Chrome, archivos temporales ni credenciales. El profesor solo necesita **extraer todo el ZIP y abrir el `index.html` principal en Chrome**. No requiere instalar Node.js ni levantar un servidor. `LEEME.txt` incluye las instrucciones y señala los archivos HTML, CSS, JavaScript y JSON para revisar. Para regenerar la entrega se usan las herramientas de desarrollo indicadas en el README.
 
 ## Presentación sugerida al profesor
 

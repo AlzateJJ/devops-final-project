@@ -1,6 +1,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const assert = require("node:assert/strict");
+const { configureContext } = require("./browser_environment.cjs");
 let chromium;
 try {
   ({ chromium } = require("playwright"));
@@ -11,7 +12,7 @@ try {
 }
 const root = path.resolve(__dirname, "..");
 const base = process.env.DEVOPS_TEST_URL || "http://127.0.0.1:8765/app/";
-const out = path.join(root, "evidencias");
+const out = process.env.DEVOPS_EVIDENCE_DIR || path.join(root, "evidencias");
 fs.mkdirSync(out, { recursive: true });
 const temp = path.join(root, "tmp", "qa-" + Date.now());
 fs.mkdirSync(temp, { recursive: true });
@@ -45,7 +46,7 @@ async function go(hash, heading) {
     await page.getByRole("heading", { name: heading, exact: true }).waitFor();
 }
 const db = () =>
-  page.evaluate(() => JSON.parse(localStorage.getItem("devops-atlas:v1")));
+  page.evaluate(() => JSON.parse(localStorage.getItem(window.__qaDataKey)));
 async function clickSave() {
   await page.getByRole("button", { name: "Guardar", exact: true }).click();
 }
@@ -85,6 +86,7 @@ async function restore(file) {
     path.join(temp, "profile"),
     contextOptions,
   );
+  await configureContext(context, base);
   page = context.pages()[0] || (await context.newPage());
   page.setDefaultTimeout(12000);
   observe(page);
@@ -278,6 +280,7 @@ async function restore(file) {
     path.join(temp, "profile"),
     contextOptions,
   );
+  await configureContext(context, base);
   page = context.pages()[0] || (await context.newPage());
   observe(page);
   await go("tools/view/" + toolId, "Herramienta QA actualizada");
@@ -385,7 +388,7 @@ async function restore(file) {
   assert.deepEqual(restoredRecords, exportedRecords);
   check("Exportar y restaurar recupera exactamente la base editada");
   await page.evaluate(() =>
-    localStorage.setItem("devops-atlas:v1", "{corrupto"),
+    localStorage.setItem(window.__qaDataKey, "{corrupto"),
   );
   await page.reload();
   await page
@@ -397,7 +400,7 @@ async function restore(file) {
   check(
     "La corrupción muestra recuperación y no borra la base",
     await page.evaluate(
-      () => localStorage.getItem("devops-atlas:v1") === "{corrupto",
+      () => localStorage.getItem(window.__qaDataKey) === "{corrupto",
     ),
   );
   await restore(path.join(root, "app/data/database.json"));
@@ -417,15 +420,10 @@ async function restore(file) {
     page.url().endsWith("#/practices"),
   );
   assert.deepEqual(
-    (
-      await page
-        .locator(".diagram-thumb")
-        .evaluateAll((images) =>
-          images.map((image) => image.getAttribute("src")),
-        )
-    ).sort(),
+    (await db()).diagrams.map((diagram) => diagram.image).sort(),
     seed.diagrams.map((diagram) => diagram.image).sort(),
   );
+  assert.equal(await page.locator(".diagram-thumb").count(), 19);
   check("Prácticas conserva exactamente los 19 diagramas del curso");
   check(
     "Las 14 prácticas incluyen su diagrama en la ficha",
@@ -436,10 +434,13 @@ async function restore(file) {
     (await page.locator("#support-grid .tool-card").count()) === 5,
   );
   for (const diagram of seed.diagrams.filter((d) => !d.practiceId)) {
+    const thumbnail = await page
+      .locator(`[data-support="${diagram.id}"] img`)
+      .getAttribute("src");
     await page.locator(`[data-support="${diagram.id}"]`).first().click();
     assert.equal(
       await page.locator("#large-image").getAttribute("src"),
-      diagram.image,
+      thumbnail,
     );
     assert.equal(
       await page.locator("#image-title").textContent(),
@@ -514,20 +515,29 @@ async function restore(file) {
     ...seed.tools.map((t) => t.logo),
     ...seed.diagrams.map((d) => d.image),
   ];
-  const invalid = await page.evaluate(async (assets) => {
-    const result = await Promise.all(
-      assets.map(
-        (src) =>
-          new Promise((resolve) => {
-            const i = new Image();
-            i.onload = () => resolve(null);
-            i.onerror = () => resolve(src);
-            i.src = src;
-          }),
-      ),
-    );
-    return result.filter(Boolean);
-  }, assets);
+  const invalid = await page.evaluate(
+    async (assets) => {
+      const result = await Promise.all(
+        assets.map(
+          (src) =>
+            new Promise((resolve) => {
+              const i = new Image();
+              i.onload = () => resolve(null);
+              i.onerror = () => resolve(src);
+              i.src = src;
+            }),
+        ),
+      );
+      return result.filter(Boolean);
+    },
+    assets.map(
+      (src) =>
+        new URL(
+          src,
+          base.startsWith("file:") ? new URL("app/", base).href : base,
+        ).href,
+    ),
+  );
   check("Chrome decodifica los 144 logos y 19 diagramas", invalid.length === 0);
   assert.deepEqual(errors, []);
   check("Sin excepciones de JavaScript en los recorridos probados");
