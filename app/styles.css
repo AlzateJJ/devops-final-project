@@ -380,6 +380,7 @@ button:hover {
   border-radius: 20px;
 }
 .schema {
+  container-type: inline-size;
   background: radial-gradient(#b4c6c744 0.8px, transparent 0.8px);
   background-size: 15px 15px;
   padding: 24px 12px 12px;
@@ -424,6 +425,46 @@ button:hover {
   flex-direction: column;
   text-align: center;
   min-width: 0;
+}
+.branch > :not(.connector) {
+  position: relative;
+  z-index: 2;
+}
+.branch[data-entity="usages"] > .concept {
+  border-color: #2b7a70;
+  background: #edf9f4;
+}
+.schema-connections {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.schema-edge {
+  fill: none;
+  stroke: #2b7a70;
+  stroke-width: 1.5;
+}
+.schema-edge-label rect {
+  fill: #f9fbfb;
+  stroke: #7a969b;
+}
+.schema-edge-label text {
+  fill: var(--ink);
+  font-size: 12px;
+}
+.practice-diagram-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+.schema-context {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
 }
 .connector {
   height: 25px;
@@ -497,6 +538,30 @@ button:hover {
   margin: 18px 0 0;
   font-size: 12px;
   color: var(--muted);
+}
+@container (max-width: 620px) {
+  .branches {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-inline: 48px;
+  }
+  .branches:before {
+    display: none;
+  }
+  .branch:not(:first-of-type):before {
+    content: "Ingeniero DevOps";
+    font-size: 12px;
+    color: var(--muted);
+    border: 1px solid #8faab0;
+    background: white;
+    padding: 5px 10px;
+  }
+  .attributes {
+    max-width: min(270px, 100%);
+  }
+  .attribute {
+    max-width: 100%;
+  }
 }
 .section-title {
   margin: 32px 0 16px;
@@ -1097,24 +1162,6 @@ pre {
   }
   .schema {
     padding: 18px 10px;
-  }
-  .branches {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .branches:before {
-    display: none;
-  }
-  .branch:not(:first-child):before {
-    content: "Ingeniero DevOps";
-    font-size: 12px;
-    color: var(--muted);
-    border: 1px solid #8faab0;
-    background: white;
-    padding: 5px 10px;
-  }
-  .attributes {
-    max-width: 270px;
   }
   .stats {
     padding: 18px;

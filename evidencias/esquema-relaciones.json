@@ -1,0 +1,152 @@
+{
+  "status": "passed",
+  "date": "2026-11-19T12:53:30.664Z",
+  "layouts": [
+    {
+      "width": 320,
+      "stacked": true,
+      "order": true,
+      "edges": [
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        },
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "stacked": true,
+      "order": true,
+      "edges": [
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        },
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 560,
+      "stacked": true,
+      "order": true,
+      "edges": [
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        },
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "stacked": false,
+      "order": true,
+      "edges": [
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        },
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 821,
+      "stacked": true,
+      "order": true,
+      "edges": [
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        },
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 900,
+      "stacked": true,
+      "order": true,
+      "edges": [
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        },
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "stacked": false,
+      "order": true,
+      "edges": [
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        },
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "stacked": false,
+      "order": true,
+      "edges": [
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        },
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "stacked": false,
+      "order": true,
+      "edges": [
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        },
+        {
+          "landsOnUsage": true,
+          "arrow": true
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "diagramsInPractices": 19,
+  "jsErrors": []
+}

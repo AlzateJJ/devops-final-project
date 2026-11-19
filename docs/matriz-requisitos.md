@@ -5,7 +5,7 @@ Fuente: `inventario/fuentes/supletorio.pdf`, página 1. Responsable: Juan José 
 | Requisito | Implementación | Evidencia |
 |---|---|---|
 | HTML5 y CSS | `app/index.html`, `app/styles.css` | Inicio y capturas de escritorio/móvil |
-| Index como esquema preconceptual completo | `app/js/app.js`, conceptos, atributos y seis relaciones dinámicas | Prueba de seis enlaces y sus destinos en Chrome |
+| Index como esquema preconceptual completo | `app/js/app.js` y `app/js/schema.js`: conceptos, atributos, seis relaciones dinámicas y Herramienta → Uso ← Práctica | Seis enlaces y sus destinos en Chrome; flechas conectadas a Uso entre 320 y 1920 px |
 | Registrar/actualizar herramientas con logo, nombre, descripción, precio y categoría | `app/js/tools.js` | Registro y edición de herramienta con imagen cargada |
 | Herramientas de los bloques exigidos | `app/data/database.json`, 144 herramientas | Test de igualdad exacta de IDs con el inventario |
 | Registrar/actualizar prácticas con nombre, descripción e imagen | `app/js/practices.js` | Registro, edición y sincronización del diagrama |
@@ -35,3 +35,5 @@ Fuente: `inventario/fuentes/supletorio.pdf`, página 1. Responsable: Juan José 
 `evidencias/pruebas-datos.xml`: 35 casos aprobados. `evidencias/pruebas-navegador.json`: 55 comprobaciones aprobadas en Google Chrome 157.0.8103.79. `evidencias/pruebas-respaldos.json`: 19 comprobaciones de exportación, vaciado y restauración. `evidencias/pruebas-guia-json.json`: 17 comprobaciones de la guía, sus descargas, conversión Base64 e importación de archivos propios. Se verifica la restauración sin acceso a los archivos originales. Las pruebas utilizan perfiles aislados y un portapapeles simulado; no borran datos personales del navegador ni cambian el portapapeles del usuario.
 
 Las verificaciones automatizadas comprueban cobertura, integridad y comportamiento. La ejecución desde el ZIP extraído se registra en `evidencias/entrega-limpia.json`. No se ha realizado el envío a MinasLap.
+
+`evidencias/esquema-relaciones.json` registra la revisión visual y geométrica del esquema en nueve anchos: Uso permanece entre las otras entidades, las dos flechas terminan en sus bordes y no hay desbordamiento horizontal. Los 19 diagramas se conservan dentro de Prácticas.

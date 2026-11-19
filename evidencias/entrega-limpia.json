@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "date": "2026-11-19T12:37:39.023Z",
+  "date": "2026-11-19T12:54:42.277Z",
   "browser": "157.0.8103.79",
-  "filesVerified": 263,
+  "filesVerified": 267,
   "resourceResponses": 171,
   "checks": [
     "SHA-256 de cada archivo extraído coincide",

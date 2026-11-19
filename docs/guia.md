@@ -21,6 +21,8 @@ Si el puerto 8765 ya está ocupado, comprueba si dejaste abierto el servidor del
 
 Las seis acciones están disponibles desde el esquema inicial. También puedes usar la navegación lateral o superior. Cancelar deja intacta la base. El sistema conserva el ID de los registros editados para mantener sus relaciones.
 
+El esquema coloca **Uso en el centro**, entre Herramienta y Práctica. Las dos flechas llegan a Uso para mostrar que relaciona una herramienta con una práctica. En pantallas estrechas, las ramas se apilan y conservan sus conexiones. **Diagrama Essence** sigue apareciendo dentro de Práctica, con Imagen y Fuente: es parte de su contenido. El contador «Diagramas en Prácticas» reúne los diagramas de las fichas y el material de apoyo de esa sección.
+
 No se admiten nombres repetidos dentro del mismo tipo de entidad ni una pareja herramienta/práctica repetida. Para registrar otro ejemplo de la misma pareja, amplía su descripción existente. Los textos obligatorios no pueden quedar vacíos.
 
 Los formularios aceptan imágenes PNG, JPEG o WebP de hasta 1 MB. La vista previa permite comprobar el archivo antes de guardar. Las imágenes cargadas se incorporan al respaldo. Los logos iniciales pueden estar en SVG porque forman parte de los recursos locales revisados; el formulario no admite SVG de usuario.

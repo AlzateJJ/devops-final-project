@@ -34,7 +34,11 @@ Un error de lectura, validación o escritura no autoriza reemplazar datos. Resta
 
 ## Esquema preconceptual
 
-El index presenta conceptos rectangulares, relaciones estructurales «tiene» con borde continuo y relaciones dinámicas con borde discontinuo. Cada acción Registrar/Actualizar enlaza a su interfaz. Las ramas de atributos muestran nombre, descripción, logo, precio y categoría para herramientas; nombre, descripción y diagrama para prácticas; herramienta, práctica y descripción cultural para usos. La misma referencia de concepto en distintas ramas se identifica por nombre.
+El index presenta conceptos rectangulares, relaciones estructurales «tiene» con borde continuo y relaciones dinámicas con borde discontinuo. Las ramas se ordenan Herramienta → Uso ← Práctica: Uso ocupa el centro y recibe una flecha desde cada entidad, con la relación estructural «tiene». Cada acción Registrar/Actualizar enlaza a su interfaz. Las ramas de atributos muestran nombre, descripción, logo, precio y categoría para herramientas; herramienta, práctica y descripción cultural para usos; nombre, descripción y diagrama para prácticas. La misma referencia de concepto en distintas ramas se identifica por nombre.
+
+La definición de Diagrama Essence, con su imagen y fuente, queda dentro de la rama Práctica. El contador «Diagramas en Prácticas» incluye los 14 diagramas asociados a prácticas y los 5 materiales de apoyo disponibles en esa sección. Se conservan los 19 diagramas sin presentar una sección de navegación independiente.
+
+`app/js/schema.js` genera el esquema y ajusta las conexiones SVG a la posición de sus conceptos. Cuando el contenedor es estrecho, las ramas se apilan en el mismo orden y las flechas recorren los márgenes hasta Uso. La aplicación desconecta la observación de tamaño al abandonar la vista.
 
 La notación sigue la descripción de [Zapata, Tamayo y Arango, sección 2.3](https://revistas.unal.edu.co/index.php/dyna/article/download/981/11652/25619?inline=1). El diagrama concreto es una elaboración para este proyecto.
 
