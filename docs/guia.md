@@ -33,17 +33,21 @@ En Prácticas puedes consultar su descripción, ampliar el diagrama y revisar us
 
 Las relaciones de uso son ejemplos elaborados para explicar colaboración, automatización, retroalimentación y trazabilidad. No son integraciones que esta aplicación ejecute con los productos catalogados. Las prácticas académicas de conceptualización y certificación simulada conservan su sentido educativo.
 
-## Respaldar y restaurar
+## Gestión de datos: respaldar, restaurar y vaciar
 
 Esta utilidad es un apoyo adicional, no un requisito del taller. Está disponible en el menú principal como «Gestión de datos» y en la dirección `http://127.0.0.1:8765/app/#/backup`.
 
 1. Abre Gestión de datos y selecciona Descargar respaldo JSON.
-2. Conserva ese archivo junto con una copia completa del proyecto, que contiene las imágenes iniciales.
+2. Conserva ese único JSON: incluye registros, logos, diagramas e imágenes cargadas y los PDF de referencia. No necesitas una carpeta adicional de imágenes para restaurar los datos en la aplicación.
 3. Para recuperar datos, selecciona el JSON en Restaurar desde JSON.
 4. Comprueba las cantidades mostradas. La aplicación valida estructura, referencias e imágenes antes de permitir la restauración.
 5. Marca la confirmación de reemplazo y selecciona Restaurar base de datos.
 
 La restauración reemplaza la base completa de esta aplicación. Un archivo inválido no modifica los datos. Para regresar al catálogo inicial, restaura explícitamente `app/data/database.json`, después de guardar cualquier cambio que quieras conservar.
+
+La tercera tarjeta, **Vaciar información**, permite comenzar con una plantilla vacía. Descarga primero un respaldo, marca la confirmación y pulsa Vaciar información. Se borran las herramientas, prácticas, diagramas, relaciones, fuentes y archivos guardados por esta aplicación en el navegador. Los datos de otros sitios o aplicaciones no se borran. Al recargar o volver a abrir Chrome, el catálogo sigue vacío: puedes registrar recursos propios o restaurar el JSON descargado. Las categorías y modelos de precio siguen disponibles como opciones de los formularios.
+
+El respaldo del catálogo inicial pesa aproximadamente 22 MB. Se aceptan archivos de hasta 100 MB. Los respaldos nuevos contienen todos sus recursos; los anteriores, incluido `app/data/database.json`, siguen siendo compatibles pero dependen de los archivos originales del proyecto. El JSON de respaldo contiene datos y recursos, no el código de la aplicación.
 
 ## Recuperación y límites
 
@@ -51,7 +55,8 @@ La restauración reemplaza la base completa de esta aplicación. Un archivo inv�
 - **Almacenamiento sin espacio o bloqueado:** el guardado se rechaza y mantiene los datos anteriores. Exporta un respaldo, reduce el tamaño de imágenes o revisa los permisos de almacenamiento del sitio.
 - **Otra pestaña modificó la base:** se avisa y se bloquea un guardado desde la versión anterior. Recarga antes de editar de nuevo. Copia aparte cualquier texto sin guardar que necesites conservar.
 - **Datos distintos en otra dirección:** `localhost`, `127.0.0.1`, diferentes puertos y perfiles tienen almacenes separados. Usa el respaldo para transportarlos.
-- **Imágenes no disponibles al importar:** conserva la estructura completa de carpetas del proyecto. Los recursos iniciales se referencian con rutas relativas.
+- **Imágenes no disponibles al importar:** un respaldo nuevo debe incluir todos sus archivos y se rechaza si falta alguno. Si usas un JSON anterior sin recursos embebidos, necesitas la copia original del proyecto para cargar sus imágenes. Ábrelo allí y descarga un respaldo nuevo completo.
+- **Vaciado incompleto de archivos:** si el navegador no permite eliminar los archivos guardados, se informa el fallo. Vuelve a Gestión de datos y repite Vaciar información para completar el borrado.
 - **Servidor detenido:** vuelve a iniciar el proyecto. No se necesita internet para usar el catálogo; los enlaces a Trello, sitios oficiales y documentación externa sí lo requieren.
 
 Los límites de almacenamiento los determina el navegador. La validación impide guardar imágenes mayores de 1 MB individualmente, pero muchas imágenes pueden agotar la cuota acumulada. La aplicación informa el fallo sin confirmar un guardado que no ocurrió.

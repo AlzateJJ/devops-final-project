@@ -1,5 +1,5 @@
 import { $, escape, intro, link, notify } from "./ui.js";
-import { Database, STORAGE_KEY } from "./store.js";
+import { Database, STORAGE_KEY, EMPTY_KEY } from "./store.js";
 import { renderTools } from "./tools.js";
 import { renderPractices } from "./practices.js";
 import { renderUsages } from "./usages.js";
@@ -25,6 +25,12 @@ export function home(
       "",
       "EL MAPA DE TU ENTORNO DEVOPS",
     ) +
+    (!db.tools.length &&
+    !db.practices.length &&
+    !db.diagrams.length &&
+    !db.usages.length
+      ? `<div class="info">El catálogo está vacío. Registra tus propios recursos desde el esquema o <a href="#/backup">restaura un respaldo en Gestión de datos</a>.</div>`
+      : "") +
     `<div class="stats"><div class="stat"><b>${db.tools.length}</b><span>Herramientas</span></div><div class="stat"><b>${db.practices.length}</b><span>Prácticas</span></div><div class="stat"><b>${db.diagrams.length}</b><span>Diagramas Essence</span></div><div class="stat"><b>${db.usages.length}</b><span>Relaciones de uso</span></div></div>
  <section class="panel"><div class="panel-heading"><h2>Esquema preconceptual del sistema</h2><div class="legend"><span><i class="key"></i>Concepto</span><span><i class="key dynamic"></i>Relación dinámica</span><span><i class="key static"></i>Relación estructural</span></div></div><div class="schema" aria-label="Ingeniero DevOps registra y actualiza herramientas, prácticas y usos"><div class="schema-actor">Ingeniero DevOps</div><div class="schema-trunk"></div><div class="branches">${branch("tools", "Herramienta", ["Nombre", "Descripción", "Logo", "Modelo de precio", "Categoría"])}${branch("practices", "Práctica", ["Nombre", "Descripción", "Diagrama Essence"])}${branch("usages", "Uso", ["Herramienta", "Práctica", "Descripción en cultura DevOps"])}</div><div class="schema-extensions"><div><span class="attribute">Diagrama Essence</span><span aria-hidden="true">→</span><span class="relation-static">tiene</span><span aria-hidden="true">→</span><span class="attribute">Imagen</span><span class="attribute">Fuente</span></div><div><span class="attribute">Categoría</span><span aria-hidden="true">→</span><span class="relation-static">tiene</span><span aria-hidden="true">→</span><span class="attribute">Nombre</span></div><div><span class="attribute">Modelo de precio</span><span aria-hidden="true">→</span><span class="relation-static">tiene</span><span aria-hidden="true">→</span><span class="attribute">Nombre</span></div></div><p class="schema-note">Cada flecha conecta un concepto con una relación. Los conceptos Herramienta y Práctica bajo Uso se refieren a los mismos conceptos de las otras ramas. Diagrama Essence tiene imagen y fuente; Categoría y Modelo de precio tienen nombre.</p></div></section>
  <div class="section-title"><h2>Un catálogo para aprender y construir</h2>${link("#/tools", "Explorar herramientas")}</div><p class="muted">Encuentra herramientas por categoría, consulta las prácticas del curso y descubre cómo se relacionan con la colaboración, la automatización y la retroalimentación continua.</p><div class="info">Los 120 modelos de precio de la tabla se conservan como referencia histórica. Para las 24 herramientas adicionales, la ficha incluye la fuente y fecha de su clasificación. Las marcas del curso se mantienen para facilitar su revisión.</div>`
@@ -64,7 +70,7 @@ function route(moveFocus = true) {
 $("#close-image").onclick = () => $("#image-dialog").close();
 window.addEventListener("hashchange", route);
 window.addEventListener("storage", (event) => {
-  if (event.key === STORAGE_KEY)
+  if (event.key === STORAGE_KEY || event.key === EMPTY_KEY)
     notify("La base cambió en otra pestaña. Recarga antes de guardar.", true);
 });
 try {

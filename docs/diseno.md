@@ -14,7 +14,7 @@ Responsable: Juan José Alzate. Fuente de requisitos: `inventario/fuentes/suplet
 
 ## Contrato
 
-Un objeto JSON versionado contiene `categories`, `prices`, `tools`, `practices`, `diagrams`, `usages`, `sources` y `meta`. Se usa exactamente esta estructura en `app/data/database.json`, localStorage y exportaciones. Las listas de categorías y modelos de precio son catálogos controlados.
+Un objeto JSON versión 1 contiene `categories`, `prices`, `tools`, `practices`, `diagrams`, `usages`, `sources` y `meta`. Las entidades tienen el mismo contrato en `app/data/database.json`, localStorage y exportaciones. El respaldo portable añade `resources`, un mapa de rutas a archivos codificados como data URL. Las listas de categorías y modelos de precio son catálogos controlados.
 
 - Herramienta: `id`, `name`, `description`, `logo`, `price`, `category`, `aliases`, `sourceCategory`, `sourcePrice`, `references`, `notes` y `logoSource`.
 - Práctica: `id`, `name`, `description`, `image`, `diagramId`, `references`.
@@ -24,7 +24,13 @@ Un objeto JSON versionado contiene `categories`, `prices`, `tools`, `practices`,
 
 Los identificadores estables no dependen del nombre ni del símbolo de la tabla. No se admite duplicar una pareja herramienta/práctica. Las ediciones no cambian los IDs. La aplicación no necesita eliminación para satisfacer el enunciado. Las imágenes nuevas se guardan como PNG, JPEG o WebP embebidos con tamaño limitado; las imágenes iniciales usan rutas locales.
 
-`localStorage` usa una clave exclusiva `devops-atlas:v1`. La inicialización solo ocurre cuando la clave no existe. Un error de lectura, validación o escritura no autoriza reemplazar datos. El respaldo completo permite traslado entre perfiles; restaurar exige confirmación y validación previa. Dos pestañas detectan cambios externos para impedir sobrescritura de una versión antigua.
+`localStorage` usa la clave `devops-atlas:v1` para los registros. Los recursos restaurados se guardan como un paquete en IndexedDB (`entrega-final-devops-resources`, almacén `bundles`), identificado por `meta.resourceBundle`. Ese identificador interno no se exporta. La vista resuelve las rutas a URL de Blob; al cerrar y reabrir se recuperan desde IndexedDB. Así los aproximadamente 22 MB del respaldo completo no tienen que caber en localStorage. Las imágenes PNG, JPEG, WebP y los PDF se incluyen sin alterar sus bytes; los logos SVG/ICO locales se convierten a PNG en la exportación.
+
+Restaurar valida los registros, la cobertura exacta de recursos, rutas, tipos, encabezados de archivos y la decodificación de imágenes. Primero guarda el paquete nuevo; solo después reemplaza los registros. Si falla la escritura o cambia la base en otra pestaña, conserva el estado anterior y elimina el paquete temporal. Los JSON antiguos siguen siendo compatibles usando los archivos locales del proyecto.
+
+Vaciar requiere confirmación. Elimina la clave de registros y los paquetes de recursos que existían al iniciar la operación, incluidos huérfanos de recuperaciones anteriores. Mantiene `devops-atlas:empty` como marcador sin datos del usuario: evita cargar otra vez la semilla y detecta cambios entre pestañas incluso cuando el catálogo está vacío. Solo se carga la semilla cuando no existe ni base ni marcador. No se usa `localStorage.clear()`. Si falla el borrado físico de recursos, se informa y el usuario puede reintentarlo. Categorías y modelos de precio permanecen como configuración de los formularios.
+
+Un error de lectura, validación o escritura no autoriza reemplazar datos. Restaurar y vaciar exigen confirmación. Dos pestañas detectan cambios externos antes de guardar; las mutaciones quedan bloqueadas mientras se restaura o vacía el catálogo.
 
 ## Esquema preconceptual
 

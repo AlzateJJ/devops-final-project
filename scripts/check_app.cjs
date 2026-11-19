@@ -378,7 +378,11 @@ async function restore(file) {
   );
   await go("backup", "Tus datos, contigo.");
   await restore(backupPath);
-  assert.deepEqual(await db(), exported);
+  const restoredRecords = await db(),
+    exportedRecords = structuredClone(exported);
+  delete restoredRecords.meta.resourceBundle;
+  delete exportedRecords.resources;
+  assert.deepEqual(restoredRecords, exportedRecords);
   check("Exportar y restaurar recupera exactamente la base editada");
   await page.evaluate(() =>
     localStorage.setItem("devops-atlas:v1", "{corrupto"),

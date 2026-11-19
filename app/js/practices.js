@@ -1,3 +1,4 @@
+import { resourceURL } from "./resources.js";
 import {
   $,
   escape as e,
@@ -37,7 +38,7 @@ export function renderPractices(store, mode, id) {
       ? `<section aria-labelledby="support-title"><div class="section-title"><h2 id="support-title">Material de apoyo Essence</h2></div><p class="muted">Estos ${support.length} diagramas del curso explican el proceso de pruebas, los conceptos y los símbolos utilizados en las prácticas. Selecciona una imagen para ampliarla.</p><div id="support-grid" class="grid">${support
           .map(
             (d) =>
-              `<article class="tool-card"><button class="image-button" data-support="${e(d.id)}" aria-label="Ampliar ${e(d.name)}"><img class="diagram-thumb" src="${e(d.image)}" alt="${e(d.name)}" loading="lazy"></button><div class="body"><span class="tag">${e(types[d.type] || "Material de apoyo")}</span><h3>${e(d.name)}</h3>${sourceLinks(d.references, db.sources)}</div><div class="card-actions"><button data-support="${e(d.id)}">Ampliar</button><span class="muted">Material de apoyo</span></div></article>`,
+              `<article class="tool-card"><button class="image-button" data-support="${e(d.id)}" aria-label="Ampliar ${e(d.name)}"><img class="diagram-thumb" src="${e(resourceURL(d.image))}" alt="${e(d.name)}" loading="lazy"></button><div class="body"><span class="tag">${e(types[d.type] || "Material de apoyo")}</span><h3>${e(d.name)}</h3>${sourceLinks(d.references, db.sources)}</div><div class="card-actions"><button data-support="${e(d.id)}">Ampliar</button><span class="muted">Material de apoyo</span></div></article>`,
           )
           .join("")}</div></section>`
       : "");
@@ -54,7 +55,7 @@ export function renderPractices(store, mode, id) {
       ? rows
           .map(
             (p) =>
-              `<article class="tool-card practice-card"><button class="image-button" data-image="${e(p.id)}" aria-label="Ampliar diagrama: ${e(p.name)}"><img class="diagram-thumb" src="${e(p.image)}" alt="Diagrama Essence de ${e(p.name)}" loading="lazy"></button><div class="body"><span class="tag green">${e(p.id)} · Essence</span><h2>${e(p.name)}</h2><p class="clamp">${e(p.description)}</p></div><div class="card-actions"><a href="#/practices/view/${e(p.id)}">Ver práctica</a><a href="#/practices/edit/${e(p.id)}" aria-label="Editar ${e(p.name)}">Editar</a></div></article>`,
+              `<article class="tool-card practice-card"><button class="image-button" data-image="${e(p.id)}" aria-label="Ampliar diagrama: ${e(p.name)}"><img class="diagram-thumb" src="${e(resourceURL(p.image))}" alt="Diagrama Essence de ${e(p.name)}" loading="lazy"></button><div class="body"><span class="tag green">${e(p.id)} · Essence</span><h2>${e(p.name)}</h2><p class="clamp">${e(p.description)}</p></div><div class="card-actions"><a href="#/practices/view/${e(p.id)}">Ver práctica</a><a href="#/practices/edit/${e(p.id)}" aria-label="Editar ${e(p.name)}">Editar</a></div></article>`,
           )
           .join("")
       : empty(
@@ -103,7 +104,7 @@ function detail(db, id) {
       link(`#/practices/edit/${p.id}`, "Editar práctica", true),
       "PRÁCTICA ESSENCE",
     ) +
-    `<section class="panel"><h2>Descripción de la práctica</h2><p class="detail-description">${e(p.description)}</p><button id="expand-diagram" class="image-button" aria-label="Ampliar diagrama de la práctica"><img class="diagram-full" src="${e(p.image)}" alt="Diagrama Essence de ${e(p.name)}"></button><p class="help">Selecciona la imagen para ampliarla. ${e(p.imageSource || "")}</p>${sourceLinks(p.references, db.sources)}</section><section class="panel"><div class="panel-heading"><h2>Herramientas en esta práctica</h2>${link(`#/usages/new?practice=${p.id}`, "Registrar uso")}</div>${
+    `<section class="panel"><h2>Descripción de la práctica</h2><p class="detail-description">${e(p.description)}</p><button id="expand-diagram" class="image-button" aria-label="Ampliar diagrama de la práctica"><img class="diagram-full" src="${e(resourceURL(p.image))}" alt="Diagrama Essence de ${e(p.name)}"></button><p class="help">Selecciona la imagen para ampliarla. ${e(p.imageSource || "")}</p>${sourceLinks(p.references, db.sources)}</section><section class="panel"><div class="panel-heading"><h2>Herramientas en esta práctica</h2>${link(`#/usages/new?practice=${p.id}`, "Registrar uso")}</div>${
       usages.length
         ? usages
             .map((u) => {

@@ -1,4 +1,13 @@
+import { emptyDatabase } from "./catalogs.js";
+import {
+  ResourceStorage,
+  validateResources,
+  prepareResourceURLs,
+  activateResourceURLs,
+  releaseResourceURLs,
+} from "./resources.js";
 export const STORAGE_KEY = "devops-atlas:v1";
+export const EMPTY_KEY = "devops-atlas:empty";
 const CATEGORY_IDS = [
   "SCM",
   "DB",
@@ -78,6 +87,11 @@ export function validateDatabase(db) {
     unique(db[key], (r) => r.id, key);
   }
   object(db.meta, "Metadatos");
+  if (
+    db.meta.resourceBundle !== undefined &&
+    !/^[a-f0-9-]{36}$/.test(db.meta.resourceBundle)
+  )
+    fail("Identificador de recursos inválido.");
   for (const [key, expected] of [
     ["categories", CATEGORY_IDS],
     ["prices", PRICE_IDS],
@@ -180,6 +194,7 @@ export function validateDatabase(db) {
     (r) => `${r.toolId}/${r.practiceId}`,
     "Relación herramienta-práctica",
   );
+  if (db.resources !== undefined) validateResources(db.resources, db);
   return db;
 }
 export function parseDatabase(raw) {
@@ -192,14 +207,23 @@ export function parseDatabase(raw) {
   return validateDatabase(parsed);
 }
 export class Database {
-  constructor(storage = globalThis.localStorage) {
+  constructor(
+    storage = globalThis.localStorage,
+    media = new ResourceStorage(),
+  ) {
     this.storage = storage;
+    this.media = media;
     this.data = null;
     this.snapshot = null;
+    this.emptySnapshot = null;
+    this.resources = {};
+    this.busy = false;
+    this.cleanupWarning = "";
   }
   async init(seedURL = "data/database.json") {
     try {
       this.snapshot = this.storage.getItem(STORAGE_KEY);
+      this.emptySnapshot = this.storage.getItem(EMPTY_KEY);
     } catch {
       fail(
         "El navegador bloqueó la lectura del almacenamiento. Permite almacenamiento para este origen.",
@@ -207,12 +231,40 @@ export class Database {
     }
     if (this.snapshot !== null) {
       try {
-        this.data = parseDatabase(this.snapshot);
+        const parsed = parseDatabase(this.snapshot);
+        const resources = parsed.meta.resourceBundle
+          ? await this.media.read(parsed.meta.resourceBundle)
+          : {};
+        if (parsed.meta.resourceBundle && !resources)
+          fail(
+            "No se encontraron los archivos guardados. Restaura un respaldo completo.",
+          );
+        // Las ediciones pueden dejar recursos sin usar: se conservan hasta el próximo respaldo o vaciado.
+        if (parsed.meta.resourceBundle) {
+          const used = Object.fromEntries(
+            Object.entries(resources).filter(
+              ([path]) =>
+                parsed.tools.some((t) => t.logo === path) ||
+                parsed.practices.some((p) => p.image === path) ||
+                parsed.diagrams.some((d) => d.image === path) ||
+                parsed.sources.some((s) => s.file === path),
+            ),
+          );
+          validateResources(used, parsed);
+        }
+        activateResourceURLs(prepareResourceURLs(resources));
+        this.resources = resources;
+        this.data = parsed;
       } catch (e) {
         fail(
           `Los datos guardados no son válidos. Se conservaron sin cambios. ${e.message}`,
         );
       }
+      return this.data;
+    }
+    if (this.emptySnapshot !== null) {
+      this.data = emptyDatabase();
+      activateResourceURLs(new Map());
       return this.data;
     }
     const response = await fetch(seedURL);
@@ -233,10 +285,7 @@ export class Database {
       fail("No se pudo preparar la base de datos.");
     }
     try {
-      if (this.storage.getItem(STORAGE_KEY) !== this.snapshot)
-        fail(
-          "Los datos cambiaron en otra pestaña. Recarga la página antes de guardar para evitar sobrescribir cambios.",
-        );
+      this.assertCurrent();
       this.storage.setItem(STORAGE_KEY, serialized);
     } catch (e) {
       if (e instanceof DataError) throw e;
@@ -249,6 +298,8 @@ export class Database {
     return this.data;
   }
   mutate(change) {
+    if (this.busy)
+      fail("Espera a que termine la operación de gestión de datos.");
     if (!this.data) fail("La base todavía no está disponible.");
     const next = structuredClone(this.data);
     change(next);
@@ -259,9 +310,99 @@ export class Database {
     if (!this.data) fail("No hay una base válida para exportar.");
     return JSON.stringify(this.data, null, 2);
   }
-  restore(raw) {
+  assertCurrent() {
+    if (
+      this.storage.getItem(STORAGE_KEY) !== this.snapshot ||
+      this.storage.getItem(EMPTY_KEY) !== this.emptySnapshot
+    )
+      fail(
+        "Los datos cambiaron en otra pestaña. Recarga la página antes de guardar para evitar sobrescribir cambios.",
+      );
+  }
+  async removePreviousBundle(bundle) {
+    this.cleanupWarning = "";
+    if (!bundle) return;
+    try {
+      await this.media.remove(bundle);
+    } catch {
+      this.cleanupWarning =
+        "Los registros se actualizaron, pero el navegador no permitió eliminar los archivos anteriores de su almacenamiento.";
+    }
+  }
+  async restore(raw) {
+    if (this.busy)
+      fail("Espera a que termine la operación de gestión de datos.");
     const next = parseDatabase(raw);
-    return this.save(next);
+    this.assertCurrent();
+    const resources = next.resources || {};
+    if (next.meta.resourceBundle && !next.resources)
+      fail(
+        "Este archivo depende de recursos internos. Usa un respaldo descargado desde Gestión de datos.",
+      );
+    delete next.resources;
+    delete next.meta.resourceBundle;
+    const previous = this.data?.meta.resourceBundle;
+    const bundle = Object.keys(resources).length ? crypto.randomUUID() : null;
+    const urls = prepareResourceURLs(resources);
+    this.busy = true;
+    try {
+      if (bundle) {
+        await this.media.write(bundle, resources);
+        next.meta.resourceBundle = bundle;
+      }
+      this.save(next);
+    } catch (error) {
+      releaseResourceURLs(urls);
+      if (bundle) await this.media.remove(bundle).catch(() => {});
+      throw error;
+    } finally {
+      this.busy = false;
+    }
+    this.resources = resources;
+    activateResourceURLs(urls);
+    await this.removePreviousBundle(previous);
+    return this.data;
+  }
+  async flush() {
+    if (this.busy)
+      fail("Espera a que termine la operación de gestión de datos.");
+    this.assertCurrent();
+    this.busy = true;
+    try {
+      // Capturar los paquetes existentes también permite limpiar recursos huérfanos
+      // tras corrupción o un cierre inesperado. No se tocan importaciones posteriores.
+      const bundles = await this.media.list();
+      this.assertCurrent();
+      const marker = crypto.randomUUID();
+      try {
+        this.storage.setItem(EMPTY_KEY, marker);
+        this.storage.removeItem(STORAGE_KEY);
+      } catch {
+        // Si no se pudo quitar la base, deshacer el marcador conserva el estado anterior.
+        if (this.storage.getItem(EMPTY_KEY) === marker) {
+          if (this.emptySnapshot === null) this.storage.removeItem(EMPTY_KEY);
+          else this.storage.setItem(EMPTY_KEY, this.emptySnapshot);
+        }
+        fail(
+          "No se pudo vaciar la información. Los registros anteriores se conservaron.",
+        );
+      }
+      this.emptySnapshot = marker;
+      this.snapshot = null;
+      this.data = emptyDatabase();
+      this.resources = {};
+      activateResourceURLs(new Map());
+      this.cleanupWarning = "";
+      try {
+        await this.media.removeMany(bundles);
+      } catch {
+        this.cleanupWarning =
+          "El catálogo quedó vacío, pero no se pudieron eliminar sus archivos guardados. Vuelve a intentar Vaciar información para completar el borrado.";
+      }
+      return this.data;
+    } finally {
+      this.busy = false;
+    }
   }
 }
 export const newId = (prefix) => `${prefix}-${crypto.randomUUID()}`;

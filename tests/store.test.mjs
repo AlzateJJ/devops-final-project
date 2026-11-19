@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 import {
   Database,
   STORAGE_KEY,
+  EMPTY_KEY,
   validateDatabase,
   parseDatabase,
   validImage,
@@ -21,17 +22,27 @@ const inventory = JSON.parse(
 const clone = () => structuredClone(seed);
 class MemoryStorage {
   constructor(raw = null) {
+    this.items = new Map();
     this.raw = raw;
     this.fail = false;
   }
+  get raw() {
+    return this.getItem(STORAGE_KEY);
+  }
+  set raw(value) {
+    if (value === null) this.items.delete(STORAGE_KEY);
+    else this.items.set(STORAGE_KEY, value);
+  }
   getItem(key) {
-    assert.equal(key, STORAGE_KEY);
-    return this.raw;
+    return this.items.get(key) ?? null;
   }
   setItem(key, value) {
-    assert.equal(key, STORAGE_KEY);
     if (this.fail) throw new Error("QuotaExceeded");
-    this.raw = value;
+    this.items.set(key, value);
+  }
+  removeItem(key) {
+    if (this.failRemove === key) throw Error("blocked");
+    this.items.delete(key);
   }
 }
 async function setup() {
@@ -131,7 +142,7 @@ test("La recuperación permite restaurar explícitamente después de detectar co
   const memory = new MemoryStorage("{corrupto"),
     db = new Database(memory);
   await assert.rejects(() => db.init());
-  db.restore(JSON.stringify(seed));
+  await db.restore(JSON.stringify(seed));
   assert.equal(db.data.tools.length, 144);
 });
 test("No se ignora el bloqueo de lectura del navegador", async () => {
@@ -146,13 +157,13 @@ test("Exportar y restaurar conserva la estructura completa", async () => {
   const { db } = await setup();
   const raw = db.export();
   db.mutate((d) => (d.tools[0].name = "Cambio temporal"));
-  db.restore(raw);
+  await db.restore(raw);
   assert.deepEqual(db.data, seed);
 });
 test("Un respaldo inválido no altera el estado", async () => {
   const { db, memory } = await setup();
   const before = memory.raw;
-  assert.throws(() => db.restore("{mal json"), /JSON válido/);
+  await assert.rejects(() => db.restore("{mal json"), /JSON válido/);
   assert.equal(memory.raw, before);
 });
 test("Se rechazan nombres duplicados ignorando mayúsculas y acentos", () => {

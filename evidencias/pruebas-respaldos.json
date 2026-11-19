@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "date": "2026-11-19T12:18:59.756Z",
+  "checks": 19,
+  "results": [
+    "Gestión de datos muestra las tres tarjetas",
+    "Vaciar requiere confirmación explícita",
+    "Retirar la confirmación vuelve a deshabilitar el vaciado",
+    "El JSON incluye exactamente todos los archivos de los registros",
+    "El respaldo incluye los ocho PDF de referencia",
+    "Los logos SVG e ICO se incluyen como imágenes PNG seguras",
+    "Flush elimina los registros de localStorage y conserva datos ajenos",
+    "Después del vaciado y la recarga todos los contadores siguen en cero sin consultar la semilla",
+    "Se restaura el catálogo completo con los archivos originales bloqueados",
+    "Se decodifican los 163 logos y diagramas restaurados y se leen los ocho PDF",
+    "Los archivos restaurados se guardan en un único paquete de IndexedDB",
+    "Las fichas y las fuentes usan los archivos restaurados",
+    "Cerrar y reabrir Chrome conserva imágenes y PDF sin sus archivos originales",
+    "Exportar de nuevo recupera exactamente los registros y archivos del primer respaldo",
+    "Un respaldo sin uno de sus archivos se rechaza sin modificar el catálogo",
+    "El segundo flush también elimina los archivos importados de IndexedDB",
+    "El catálogo vacío también se puede respaldar",
+    "La plantilla vacía permite crear recursos propios",
+    "El ciclo completo termina sin excepciones de JavaScript"
+  ],
+  "backupBytes": 22181933,
+  "embeddedResources": 171,
+  "note": "Perfil aislado; recursos originales y semilla bloqueados después del vaciado."
+}

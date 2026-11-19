@@ -812,11 +812,26 @@ dialog > p {
 }
 .backup-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 24px;
 }
 .backup-grid .panel {
   margin: 0;
+}
+.backup-grid .help {
+  margin-top: 18px;
+}
+.danger-panel {
+  border-color: #d99b96;
+}
+button.danger {
+  background: #a63028;
+  border-color: #a63028;
+  color: #fff;
+}
+button.danger:hover:not(:disabled) {
+  background: #84251f;
+  border-color: #84251f;
 }
 .check-label {
   display: flex;

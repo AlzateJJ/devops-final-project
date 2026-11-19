@@ -4,7 +4,7 @@ Proyecto académico de Integración y Despliegue de Software. Responsable: Juan 
 
 Aplicación local HTML5, CSS y JavaScript con catálogo de herramientas, prácticas Essence y relaciones de uso. JSON y almacenamiento del navegador simulan la base de datos.
 
-Incluye **144 herramientas**, **14 prácticas**, **19 diagramas Essence** y **42 relaciones de uso**. Permite registrar y actualizar los tres tipos de registros, buscar, filtrar, ampliar diagramas y respaldar/restaurar la base.
+Incluye **144 herramientas**, **14 prácticas**, **19 diagramas Essence** y **42 relaciones de uso**. Permite registrar y actualizar los tres tipos de registros, buscar, filtrar, ampliar diagramas y gestionar los datos: descargar un JSON con registros, imágenes y PDF, restaurarlo o vaciar el catálogo para cargar recursos propios. El catálogo permanece vacío después de recargar hasta que el usuario agregue o restaure información.
 
 ## Abrir la aplicación
 
@@ -36,7 +36,7 @@ El almacenamiento está ligado al perfil y al origen del navegador. Exporta un r
 | Carpeta | Contenido |
 |---|---|
 | `app/` | HTML, CSS, módulos JavaScript y recursos locales |
-| `app/data/database.json` | Base inicial; mismo contrato que localStorage y respaldos |
+| `app/data/database.json` | Base inicial; contrato de registros compartido con localStorage y respaldos, que además incluyen los archivos |
 | `inventario/` | Inventario trazable, fuentes PDF y diagramas originales |
 | `planificacion/` | Tarjetas y registro de publicación con enlaces reales |
 | `docs/` | Diseño, guía, alcance y matriz de cumplimiento |
@@ -61,7 +61,7 @@ Con la aplicación servida en `http://127.0.0.1:8765/app/` y Chrome instalado:
 npm run test:e2e
 ```
 
-Se verificaron **24 casos de datos/persistencia** y **55 comprobaciones en Google Chrome 157**, con perfiles aislados, recarga, cierre/reapertura, restauración y pantallas de 375, 768 y 1440 píxeles. Los resultados están en `evidencias/`. La suite no utiliza el perfil personal del navegador.
+Se verificaron **35 casos de datos/persistencia** y **74 comprobaciones en Google Chrome 157**: 55 de los recorridos generales y 19 de gestión de datos. Incluyen recarga, cierre/reapertura, vaciado y restauración con los archivos originales bloqueados, y pantallas de 375, 768 y 1440 píxeles. Los resultados están en `evidencias/`. Las suites utilizan perfiles aislados, sin modificar el perfil personal del navegador.
 
 ## Generar la entrega
 

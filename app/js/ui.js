@@ -1,3 +1,4 @@
+import { resourceURL } from "./resources.js";
 export const $ = (selector, root = document) => root.querySelector(selector);
 export const escape = (value) =>
   String(value ?? "").replace(
@@ -57,7 +58,7 @@ export function sourceLinks(refs = [], sources = []) {
       .map((r) => {
         const s = sources.find((s) => s.id === r.source);
         return s
-          ? `<a href="${escape(s.file)}#page=${Number(r.page)}" target="_blank" rel="noopener">${escape(s.id)} · p. ${Number(r.page)}</a>`
+          ? `<a href="${escape(resourceURL(s.file))}#page=${Number(r.page)}" target="_blank" rel="noopener">${escape(s.id)} · p. ${Number(r.page)}</a>`
           : "";
       })
       .join("") +
@@ -66,7 +67,7 @@ export function sourceLinks(refs = [], sources = []) {
 }
 export function showImage(src, name, caption = "") {
   const dialog = $("#image-dialog");
-  $("#large-image").src = src;
+  $("#large-image").src = resourceURL(src);
   $("#large-image").alt = name;
   $("#image-title").textContent = name;
   $("#image-caption").textContent = caption;
@@ -136,4 +137,4 @@ export function bindImageInput(current) {
 export const formShell = (content) =>
   `<form id="record-form" class="panel form-panel"><div id="form-error" class="error" role="alert" tabindex="-1" hidden></div>${content}<div class="form-actions"><button class="primary" type="submit">Guardar</button><a class="button" id="cancel-form" href="#/home">Cancelar</a></div></form>`;
 export const imageField = (label, current = "") =>
-  `<div class="field full"><label for="image-file">${escape(label)}</label><input id="image-file" name="image" type="file" accept="image/png,image/jpeg,image/webp"><p class="help">PNG, JPEG o WebP · Máximo 1 MB. ${current ? "Si no eliges otro archivo, se conserva la imagen actual." : "Selecciona una imagen para completar el registro."}</p><img id="image-preview" class="preview" alt="Vista previa de la imagen" ${current ? `src="${escape(current)}"` : "hidden"}></div>`;
+  `<div class="field full"><label for="image-file">${escape(label)}</label><input id="image-file" name="image" type="file" accept="image/png,image/jpeg,image/webp"><p class="help">PNG, JPEG o WebP · Máximo 1 MB. ${current ? "Si no eliges otro archivo, se conserva la imagen actual." : "Selecciona una imagen para completar el registro."}</p><img id="image-preview" class="preview" alt="Vista previa de la imagen" ${current ? `src="${escape(resourceURL(current))}"` : "hidden"}></div>`;

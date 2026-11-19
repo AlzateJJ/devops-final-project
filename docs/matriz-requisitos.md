@@ -12,7 +12,7 @@ Fuente: `inventario/fuentes/supletorio.pdf`, página 1. Responsable: Juan José 
 | Incluir todos los diagramas Essence | 19 diagramas dentro de Prácticas: 14 en sus fichas y 5 de apoyo; 21 referencias de aparición | Tests de fuentes, cobertura de los 19 diagramas y ampliación de imágenes |
 | Registrar/actualizar usos por práctica con descripción cultural | `app/js/usages.js`, 42 ejemplos iniciales | Registro/edición de uso e integridad de referencias |
 | Simular base en almacenamiento interno de Chrome | `app/js/store.js`, clave `devops-atlas:v1` | Recarga y cierre/reapertura de Chrome con el mismo perfil |
-| JSON semejante a estructura persistida | Mismo contrato en semilla, localStorage y respaldo | Exportación/restauración con igualdad de datos |
+| JSON semejante a estructura persistida | Mismo contrato de entidades; respaldo con recursos embebidos y archivos restaurados en IndexedDB | Exportación/restauración con igualdad de registros y archivos |
 | Tarjetas de planificación/desarrollo | 42 tarjetas revisadas en el tablero indicado, lista Testing | `planificacion/trello-publicacion.json`: lectura de 42 títulos, descripciones y listas |
 | Logos y recursos necesarios | `app/assets/`, `inventario/fuentes/` | Chrome decodifica 144 logos y 19 diagramas; validación de archivos |
 
@@ -21,7 +21,8 @@ Fuente: `inventario/fuentes/supletorio.pdf`, página 1. Responsable: Juan José 
 | Apoyo | Verificación |
 |---|---|
 | Búsqueda por alias y filtros | Azure DevOps recupera VSTS; categoría Testing contiene 23 herramientas |
-| Respaldo y recuperación (utilidad adicional en Gestión de datos) | Archivo inválido conserva datos; confirmación explícita; recuperación de corrupción |
+| Respaldo completo y recuperación (utilidad adicional en Gestión de datos) | Un JSON con 171 recursos, incluidos ocho PDF; restauración con archivos originales bloqueados; persiste al reabrir Chrome |
+| Vaciar información (solicitud adicional del responsable) | Confirmación explícita; borra registros y archivos propios; no recarga la semilla ni borra datos ajenos; permite volver a crear y restaurar |
 | Validación | Nombres y pares duplicados, referencias inexistentes, imágenes no admitidas |
 | Escritura segura | Error de cuota conserva estado; otra pestaña impide sobrescribir cambios nuevos |
 | Texto seguro | Texto con HTML se muestra sin ejecutar código |
@@ -30,6 +31,6 @@ Fuente: `inventario/fuentes/supletorio.pdf`, página 1. Responsable: Juan José 
 
 ## Resultados
 
-`evidencias/pruebas-datos.xml`: 24 casos aprobados. `evidencias/pruebas-navegador.json`: 55 comprobaciones aprobadas en Google Chrome 157.0.8103.79. Las pruebas utilizan perfiles aislados; no borran datos personales del navegador.
+`evidencias/pruebas-datos.xml`: 35 casos aprobados. `evidencias/pruebas-navegador.json`: 55 comprobaciones aprobadas en Google Chrome 157.0.8103.79. `evidencias/pruebas-respaldos.json`: 19 comprobaciones adicionales de exportación, vaciado y restauración; incluye todos los recursos y prueba sin acceso a los originales. Las pruebas utilizan perfiles aislados; no borran datos personales del navegador.
 
 Las verificaciones automatizadas comprueban cobertura, integridad y comportamiento. La ejecución desde el ZIP extraído se registra en `evidencias/entrega-limpia.json`. No se ha realizado el envío a MinasLap.
