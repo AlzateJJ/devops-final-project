@@ -2,6 +2,7 @@ import { $, escape as e, intro, notify } from "./ui.js";
 import { parseDatabase } from "./store.js";
 import { createPortableBackup, checkImages } from "./portable.js";
 import { MAX_BACKUP_BYTES } from "./resources.js";
+import { openJSONGuide } from "./json-guide.js";
 export function downloadText(text, filename) {
   const url = URL.createObjectURL(
     new Blob([text], { type: "application/json;charset=utf-8" }),
@@ -20,7 +21,7 @@ export function renderBackup(store, recoveryMessage = "") {
     intro(
       "Tus datos, contigo.",
       "Descarga una copia completa, restaura tus recursos o comienza con un catálogo vacío.",
-      "",
+      '<button id="open-json-guide" type="button" aria-haspopup="dialog" aria-controls="json-guide">Ver guía del JSON</button>',
       "GESTIÓN DE DATOS",
     ) +
     (recoveryMessage
@@ -50,6 +51,8 @@ export function renderBackup(store, recoveryMessage = "") {
         <div id="flush-error" class="error" role="alert" tabindex="-1" hidden></div>
       </section>
     </div>`;
+  const guideButton = $("#open-json-guide");
+  guideButton.onclick = () => openJSONGuide(guideButton, downloadText);
   // Conservar referencias evita afectar otra página si se navega durante una descarga.
   const exportButton = $("#export-data"),
     exportStatus = $("#export-status"),

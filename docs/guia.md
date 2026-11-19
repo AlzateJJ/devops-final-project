@@ -49,6 +49,18 @@ La tercera tarjeta, **Vaciar información**, permite comenzar con una plantilla 
 
 El respaldo del catálogo inicial pesa aproximadamente 22 MB. Se aceptan archivos de hasta 100 MB. Los respaldos nuevos contienen todos sus recursos; los anteriores, incluido `app/data/database.json`, siguen siendo compatibles pero dependen de los archivos originales del proyecto. El JSON de respaldo contiene datos y recursos, no el código de la aplicación.
 
+### Preparar un JSON propio
+
+En la esquina superior de Gestión de datos, **Ver guía del JSON** abre la documentación sin perder el archivo seleccionado para restaurar. Se puede cerrar con Cerrar o Escape. Incluye los campos de cada colección, categorías y precios permitidos, vínculos entre IDs, nombres de archivos, límites y errores frecuentes.
+
+- **Descargar plantilla vacía:** obtiene un JSON válido con las colecciones vacías y los catálogos de opciones completos. Conserva sus campos y añade tus registros.
+- **Descargar ejemplo completo:** obtiene una herramienta, una práctica, un diagrama y una relación con imágenes de demostración incorporadas. Sustituye tanto los textos como las imágenes; estas imágenes solo ilustran el formato de importación.
+- **Ayuda: convertir un archivo a Base64:** convierte un PNG, JPEG, WebP o PDF de hasta 26 MB, en el navegador y sin enviarlo a un servidor. Copia todo el resultado, incluido el prefijo `data:`, como valor del archivo en `resources`.
+
+Para que un JSON propio funcione por sí solo, incluye en `resources` todos los archivos usados por sus registros, codificados en Base64. Sus claves coinciden con los valores de `logo`, `image` o `sources.file`; no necesitas crear esas carpetas en tu equipo. Los PDF son opcionales: si no usas fuentes, deja `sources: []` y omite `references` o déjalo vacío. La guía explica cómo añadirlos cuando sí los necesitas.
+
+Importar reemplaza el catálogo completo, incluso las colecciones vacías; no combina los registros y no exige vaciar antes. Los fragmentos con marcadores `BASE64_COMPLETO_…` de la documentación son ilustrativos y se deben completar; las dos descargas sí son archivos válidos listos para editar o importar.
+
 ## Recuperación y límites
 
 - **Base corrupta:** se muestra una pantalla de recuperación. Descarga los datos originales y restaura un respaldo válido. No se borra automáticamente la información dañada.
@@ -59,7 +71,7 @@ El respaldo del catálogo inicial pesa aproximadamente 22 MB. Se aceptan archivo
 - **Vaciado incompleto de archivos:** si el navegador no permite eliminar los archivos guardados, se informa el fallo. Vuelve a Gestión de datos y repite Vaciar información para completar el borrado.
 - **Servidor detenido:** vuelve a iniciar el proyecto. No se necesita internet para usar el catálogo; los enlaces a Trello, sitios oficiales y documentación externa sí lo requieren.
 
-Los límites de almacenamiento los determina el navegador. La validación impide guardar imágenes mayores de 1 MB individualmente, pero muchas imágenes pueden agotar la cuota acumulada. La aplicación informa el fallo sin confirmar un guardado que no ocurrió.
+Los límites de almacenamiento los determina el navegador. Los formularios de herramientas y prácticas admiten imágenes de hasta 1 MB; los respaldos completos tienen los límites indicados en la guía del JSON. Muchas imágenes pueden agotar la cuota acumulada. La aplicación informa el fallo sin confirmar un guardado que no ocurrió.
 
 ## Para revisar el proyecto
 

@@ -18,7 +18,7 @@
 | 3. Diseño | Contrato JSON, navegación y esquema preconceptual |
 | 4. Implementación | Seis operaciones, consulta, persistencia y respaldo |
 | 5. Contenido | Fichas, logos, prácticas, diagramas y usos iniciales |
-| 6. Verificación | 35 casos de datos y 74 comprobaciones en Chrome, incluidas exportación completa, vaciado y restauración |
+| 6. Verificación | 35 casos de datos y 91 comprobaciones en Chrome, incluidas exportación completa, vaciado, restauración y guía para JSON propio |
 | 7. Entrega | Guías, evidencias y ZIP con verificación desde copia extraída |
 
 Las tarjetas se crearon inicialmente en Backlog y, tras revisar sus criterios y evidencias, se trasladaron a Testing por solicitud del responsable. El trabajo de implementación y preparación está terminado y listo para revisión; no se ha marcado como aceptado en Done. La tarjeta de preparación del envío no acredita una entrega ya realizada en MinasLap. El responsable se escribió en cada descripción; la versión del MCP utilizada no permite asignar nativamente un miembro a una tarjeta.

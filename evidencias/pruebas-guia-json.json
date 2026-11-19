@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "date": "2026-11-19T12:37:06.901Z",
+  "checks": 17,
+  "results": [
+    "El botón abre una guía modal con nombre accesible",
+    "Las dos descargas cumplen el contrato real de importación",
+    "Convertir una imagen conserva exactamente su contenido",
+    "Copiar incluye el prefijo y todo el Base64",
+    "Si el navegador bloquea el portapapeles, se selecciona el contenido para copiar manualmente",
+    "Convertir un PDF conserva todos sus bytes y el prefijo correcto",
+    "Archivos dañados o con tipo incorrecto se rechazan sin dejar un resultado anterior",
+    "Leer la guía, descargar y convertir no altera el catálogo",
+    "Escape cierra la guía y devuelve el foco al botón",
+    "Guía completa sin desbordamiento horizontal a 375px",
+    "Guía completa sin desbordamiento horizontal a 768px",
+    "Guía completa sin desbordamiento horizontal a 1440px",
+    "Consultar la guía conserva el archivo seleccionado y su confirmación",
+    "Un JSON propio preparado según la guía restaura todas las entidades",
+    "La imagen y el PDF propios se recuperan sin archivos originales",
+    "La plantilla vacía descargada también se puede importar",
+    "Sin errores de JavaScript en el recorrido de la guía"
+  ],
+  "note": "Perfil aislado; portapapeles simulado, imágenes y PDF propios importados con los archivos originales bloqueados."
+}

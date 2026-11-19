@@ -23,6 +23,7 @@ Fuente: `inventario/fuentes/supletorio.pdf`, página 1. Responsable: Juan José 
 | Búsqueda por alias y filtros | Azure DevOps recupera VSTS; categoría Testing contiene 23 herramientas |
 | Respaldo completo y recuperación (utilidad adicional en Gestión de datos) | Un JSON con 171 recursos, incluidos ocho PDF; restauración con archivos originales bloqueados; persiste al reabrir Chrome |
 | Vaciar información (solicitud adicional del responsable) | Confirmación explícita; borra registros y archivos propios; no recarga la semilla ni borra datos ajenos; permite volver a crear y restaurar |
+| Guía para JSON propio (solicitud adicional del responsable) | Botón en Gestión de datos; plantilla y ejemplo importables; conversión local a Base64; importación de imágenes y PDF propios sin archivos originales; teclado y móvil |
 | Validación | Nombres y pares duplicados, referencias inexistentes, imágenes no admitidas |
 | Escritura segura | Error de cuota conserva estado; otra pestaña impide sobrescribir cambios nuevos |
 | Texto seguro | Texto con HTML se muestra sin ejecutar código |
@@ -31,6 +32,6 @@ Fuente: `inventario/fuentes/supletorio.pdf`, página 1. Responsable: Juan José 
 
 ## Resultados
 
-`evidencias/pruebas-datos.xml`: 35 casos aprobados. `evidencias/pruebas-navegador.json`: 55 comprobaciones aprobadas en Google Chrome 157.0.8103.79. `evidencias/pruebas-respaldos.json`: 19 comprobaciones adicionales de exportación, vaciado y restauración; incluye todos los recursos y prueba sin acceso a los originales. Las pruebas utilizan perfiles aislados; no borran datos personales del navegador.
+`evidencias/pruebas-datos.xml`: 35 casos aprobados. `evidencias/pruebas-navegador.json`: 55 comprobaciones aprobadas en Google Chrome 157.0.8103.79. `evidencias/pruebas-respaldos.json`: 19 comprobaciones de exportación, vaciado y restauración. `evidencias/pruebas-guia-json.json`: 17 comprobaciones de la guía, sus descargas, conversión Base64 e importación de archivos propios. Se verifica la restauración sin acceso a los archivos originales. Las pruebas utilizan perfiles aislados y un portapapeles simulado; no borran datos personales del navegador ni cambian el portapapeles del usuario.
 
 Las verificaciones automatizadas comprueban cobertura, integridad y comportamiento. La ejecución desde el ZIP extraído se registra en `evidencias/entrega-limpia.json`. No se ha realizado el envío a MinasLap.

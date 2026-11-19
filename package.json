@@ -6,7 +6,7 @@
   "description": "Catálogo académico local de herramientas, prácticas Essence y usos DevOps",
   "scripts": {
     "test": "node --test tests/store.test.mjs tests/backup.test.mjs",
-    "test:e2e": "node scripts/check_app.cjs && node scripts/check_backup.cjs",
+    "test:e2e": "node scripts/check_app.cjs && node scripts/check_backup.cjs && node scripts/check_json_guide.cjs",
     "serve": "node scripts/serve.cjs"
   },
   "devDependencies": {

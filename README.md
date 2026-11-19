@@ -61,7 +61,7 @@ Con la aplicación servida en `http://127.0.0.1:8765/app/` y Chrome instalado:
 npm run test:e2e
 ```
 
-Se verificaron **35 casos de datos/persistencia** y **74 comprobaciones en Google Chrome 157**: 55 de los recorridos generales y 19 de gestión de datos. Incluyen recarga, cierre/reapertura, vaciado y restauración con los archivos originales bloqueados, y pantallas de 375, 768 y 1440 píxeles. Los resultados están en `evidencias/`. Las suites utilizan perfiles aislados, sin modificar el perfil personal del navegador.
+Se verificaron **35 casos de datos/persistencia** y **91 comprobaciones en Google Chrome 157**: 55 de los recorridos generales, 19 de gestión de datos y 17 de la guía para preparar un JSON propio. Incluyen recarga, cierre/reapertura, vaciado, restauración con los archivos originales bloqueados, conversión de imágenes y PDF, y pantallas de 375, 768 y 1440 píxeles. Los resultados están en `evidencias/`. Las suites utilizan perfiles aislados, sin modificar el perfil personal ni el portapapeles del usuario.
 
 ## Generar la entrega
 
