@@ -40,7 +40,7 @@ function route(moveFocus = true) {
     return;
   }
   $("#breadcrumb").textContent = titles[section] || "Página";
-  document.title = `${titles[section] || "DevOps Atlas"} · DevOps Atlas`;
+  document.title = `${titles[section] || "Entrega Final DevOps"} · Entrega Final DevOps`;
   document.querySelectorAll("[data-nav]").forEach((a) => {
     if (a.dataset.nav === section) a.setAttribute("aria-current", "page");
     else a.removeAttribute("aria-current");

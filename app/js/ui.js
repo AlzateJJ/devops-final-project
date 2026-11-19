@@ -44,7 +44,7 @@ export function intro(
   title,
   description,
   actions = "",
-  eyebrow = "DEVOPS ATLAS",
+  eyebrow = "ENTREGA FINAL DEVOPS",
 ) {
   return `<div class="intro"><div><p class="eyebrow">${escape(eyebrow)}</p><h1>${escape(title)}</h1><p>${escape(description)}</p></div>${actions ? `<div class="actions">${actions}</div>` : ""}</div>`;
 }

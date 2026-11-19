@@ -87,7 +87,7 @@ server.on("error", (error) => {
 server.listen(port, "127.0.0.1", () => {
   const url = `http://127.0.0.1:${port}/app/`;
   console.log(
-    `DevOps Atlas: ${url}\nMantén esta ventana abierta. Ctrl+C detiene el servidor local.`,
+    `Entrega Final DevOps: ${url}\nMantén esta ventana abierta. Ctrl+C detiene el servidor local.`,
   );
   if (args.includes("--open") && process.platform === "win32")
     spawn("cmd", ["/c", "start", "", url], {

@@ -1,4 +1,4 @@
-# DevOps Atlas
+# Entrega Final DevOps
 
 Proyecto académico de Integración y Despliegue de Software. Responsable: Juan José Alzate.
 
