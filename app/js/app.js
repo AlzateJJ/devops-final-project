@@ -11,7 +11,7 @@ const titles = {
   tools: "Herramientas",
   practices: "Prácticas",
   usages: "Relaciones de uso",
-  backup: "Respaldo de datos",
+  backup: "Gestión de datos",
 };
 export function home(
   db = { tools: [], practices: [], diagrams: [], usages: [] },

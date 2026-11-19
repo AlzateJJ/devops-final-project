@@ -406,7 +406,7 @@ async function restore(file) {
     await page
       .locator("[data-nav]")
       .evaluateAll((links) => links.map((link) => link.dataset.nav)),
-    ["home", "tools", "practices", "usages"],
+    ["home", "tools", "practices", "usages", "backup"],
   );
   check(
     "La antigua dirección de diagramas abre Prácticas con el menú simplificado",

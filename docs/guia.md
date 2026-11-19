@@ -35,9 +35,9 @@ Las relaciones de uso son ejemplos elaborados para explicar colaboración, autom
 
 ## Respaldar y restaurar
 
-Esta utilidad es un apoyo adicional, no un requisito del taller. Por solicitud del responsable, no tiene una entrada en el menú principal. Para tareas de recuperación sigue disponible en la dirección `http://127.0.0.1:8765/app/#/backup`.
+Esta utilidad es un apoyo adicional, no un requisito del taller. Está disponible en el menú principal como «Gestión de datos» y en la dirección `http://127.0.0.1:8765/app/#/backup`.
 
-1. Abre esa dirección y selecciona Descargar respaldo JSON.
+1. Abre Gestión de datos y selecciona Descargar respaldo JSON.
 2. Conserva ese archivo junto con una copia completa del proyecto, que contiene las imágenes iniciales.
 3. Para recuperar datos, selecciona el JSON en Restaurar desde JSON.
 4. Comprueba las cantidades mostradas. La aplicación valida estructura, referencias e imágenes antes de permitir la restauración.
