@@ -12,7 +12,6 @@ import {
   formError,
   sourceLinks,
   showImage,
-  options,
 } from "./ui.js";
 import { newId } from "./store.js";
 const types = {
@@ -25,6 +24,7 @@ export function renderPractices(store, mode, id) {
   const db = store.data;
   if (mode === "new" || mode === "edit") return form(store, id);
   if (mode === "view") return detail(db, id);
+  const support = db.diagrams.filter((d) => !d.practiceId);
   $("#main").innerHTML =
     intro(
       "Prácticas que dan sentido al proceso.",
@@ -32,7 +32,15 @@ export function renderPractices(store, mode, id) {
       link("#/practices/new", "Registrar práctica", true),
       "PRÁCTICAS DEL CURSO",
     ) +
-    `<div class="toolbar"><div class="search"><label for="search">Buscar práctica</label><input id="search" type="search" placeholder="Nombre o descripción"></div></div><p class="result-count" id="result-count" aria-live="polite"></p><div class="grid" id="practice-grid"></div>`;
+    `<div class="toolbar"><div class="search"><label for="search">Buscar práctica</label><input id="search" type="search" placeholder="Nombre o descripción"></div></div><p class="result-count" id="result-count" aria-live="polite"></p><div class="grid" id="practice-grid"></div>` +
+    (support.length
+      ? `<section aria-labelledby="support-title"><div class="section-title"><h2 id="support-title">Material de apoyo Essence</h2></div><p class="muted">Estos ${support.length} diagramas del curso explican el proceso de pruebas, los conceptos y los símbolos utilizados en las prácticas. Selecciona una imagen para ampliarla.</p><div id="support-grid" class="grid">${support
+          .map(
+            (d) =>
+              `<article class="tool-card"><button class="image-button" data-support="${e(d.id)}" aria-label="Ampliar ${e(d.name)}"><img class="diagram-thumb" src="${e(d.image)}" alt="${e(d.name)}" loading="lazy"></button><div class="body"><span class="tag">${e(types[d.type] || "Material de apoyo")}</span><h3>${e(d.name)}</h3>${sourceLinks(d.references, db.sources)}</div><div class="card-actions"><button data-support="${e(d.id)}">Ampliar</button><span class="muted">Material de apoyo</span></div></article>`,
+          )
+          .join("")}</div></section>`
+      : "");
   function filter() {
     const q = norm($("#search").value),
       rows = db.practices.filter((p) =>
@@ -62,6 +70,19 @@ export function renderPractices(store, mode, id) {
       showImage(p.image, p.name);
     }
   };
+  if (support.length)
+    $("#support-grid").onclick = (event) => {
+      const button = event.target.closest("[data-support]");
+      if (!button) return;
+      const diagram = support.find((d) => d.id === button.dataset.support);
+      showImage(
+        diagram.image,
+        diagram.name,
+        (diagram.references || [])
+          .map((r) => `${r.source}, página ${r.page}`)
+          .join(" · "),
+      );
+    };
   filter();
 }
 function detail(db, id) {
@@ -164,53 +185,4 @@ function form(store, id) {
       button.disabled = false;
     }
   };
-}
-export function renderDiagrams(store) {
-  const db = store.data;
-  $("#main").innerHTML =
-    intro(
-      "El lenguaje visual de las prácticas.",
-      "Explora los diagramas de prácticas, el proceso de pruebas y los elementos de apoyo del núcleo Essence.",
-      "",
-      "BIBLIOTECA ESSENCE",
-    ) +
-    `<div class="toolbar"><div class="search"><label for="search">Buscar diagrama</label><input id="search" type="search" placeholder="Nombre del diagrama"></div><div class="filter"><label for="diagram-type">Tipo</label><select id="diagram-type">${options(
-      Object.entries(types).map(([id, name]) => ({ id, name })),
-      "",
-      "Todos los tipos",
-    )}</select></div></div><p class="result-count" id="result-count" aria-live="polite"></p><div id="diagram-grid" class="grid"></div>`;
-  function filter() {
-    const q = norm($("#search").value),
-      type = $("#diagram-type").value,
-      rows = db.diagrams.filter(
-        (d) =>
-          (!type || d.type === type) && norm(d.name + " " + d.id).includes(q),
-      );
-    $("#result-count").textContent =
-      `${rows.length} de ${db.diagrams.length} diagramas`;
-    $("#diagram-grid").innerHTML = rows.length
-      ? rows
-          .map(
-            (d) =>
-              `<article class="tool-card"><button class="image-button" data-image="${e(d.id)}" aria-label="Ampliar ${e(d.name)}"><img class="diagram-thumb" src="${e(d.image)}" alt="${e(d.name)}" loading="lazy"></button><div class="body"><span class="tag">${e(types[d.type])}</span><h2>${e(d.name)}</h2>${sourceLinks(d.references, db.sources)}</div><div class="card-actions"><button data-image="${e(d.id)}">Ampliar</button>${d.practiceId ? `<a href="#/practices/view/${e(d.practiceId)}">Ver práctica</a>` : '<span class="muted">Material de apoyo</span>'}</div></article>`,
-          )
-          .join("")
-      : empty("No hay coincidencias", "Prueba otro nombre o tipo de diagrama.");
-  }
-  $("#search").oninput = filter;
-  $("#diagram-type").onchange = filter;
-  $("#diagram-grid").onclick = (event) => {
-    const b = event.target.closest("[data-image]");
-    if (b) {
-      const d = db.diagrams.find((d) => d.id === b.dataset.image);
-      showImage(
-        d.image,
-        d.name,
-        (d.references || [])
-          .map((r) => `${r.source}, página ${r.page}`)
-          .join(" · "),
-      );
-    }
-  };
-  filter();
 }

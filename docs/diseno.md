@@ -34,7 +34,7 @@ La notación sigue la descripción de [Zapata, Tamayo y Arango, sección 2.3](ht
 
 ## Recorridos
 
-El esquema abre Registrar o Actualizar para cada entidad. Registrar abre un formulario vacío; Actualizar abre un catálogo con búsqueda y botones de edición. Los formularios tienen validaciones, previsualización de imagen cuando corresponde, confirmación de guardado y cancelación. Se puede consultar el catálogo sin editar. La galería Essence distingue prácticas y material de apoyo.
+El esquema abre Registrar o Actualizar para cada entidad. Registrar abre un formulario vacío; Actualizar abre un catálogo con búsqueda y botones de edición. Los formularios tienen validaciones, previsualización de imagen cuando corresponde, confirmación de guardado y cancelación. Se puede consultar el catálogo sin editar. La página Prácticas reúne los diagramas de sus fichas y, al final, los cinco diagramas de apoyo Essence. La antigua dirección de la galería redirige a Prácticas.
 
 ## Decisiones de contenido
 

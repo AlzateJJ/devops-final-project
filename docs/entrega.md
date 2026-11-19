@@ -18,7 +18,7 @@
 | 3. Diseño | Contrato JSON, navegación y esquema preconceptual |
 | 4. Implementación | Seis operaciones, consulta, persistencia y respaldo |
 | 5. Contenido | Fichas, logos, prácticas, diagramas y usos iniciales |
-| 6. Verificación | 24 casos de datos y 53 comprobaciones en Chrome |
+| 6. Verificación | 24 casos de datos y 55 comprobaciones en Chrome |
 | 7. Entrega | Guías, evidencias y ZIP con verificación desde copia extraída |
 
 Las tarjetas permanecen en Backlog según lo solicitado. La lista no se utilizó para simular avance. La evidencia real de desarrollo está en Git, las pruebas y esta documentación. El responsable se escribió en cada descripción; la versión del MCP utilizada no permite asignar nativamente un miembro a una tarjeta.
@@ -36,7 +36,7 @@ El paquete no incluye `node_modules`, perfiles de Chrome, archivos temporales ni
 3. Registrar y editar una herramienta y una práctica con imagen.
 4. Relacionarlas mediante un uso que explique el aporte a cultura DevOps; editar el uso.
 5. Recargar para demostrar persistencia.
-6. Mostrar los 19 diagramas y distinguir prácticas de material de apoyo.
+6. Mostrar en Prácticas los 14 diagramas de sus fichas y los 5 de «Material de apoyo Essence».
 7. Mostrar el tablero y revisar el historial y las evidencias.
 
 ## Envío pendiente del estudiante

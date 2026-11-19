@@ -29,7 +29,7 @@ Los formularios aceptan imágenes PNG, JPEG o WebP de hasta 1 MB. La vista previ
 
 En Herramientas puedes buscar por nombre, alias, descripción o ID y filtrar por categoría. La ficha muestra su función, las prácticas relacionadas, el modelo de precio registrado, la referencia histórica y sus fuentes.
 
-En Prácticas puedes consultar su descripción, ampliar el diagrama y revisar usos concretos de herramientas. La biblioteca Diagramas Essence incluye las 14 prácticas y 5 diagramas de apoyo: proceso detallado de pruebas, alphas, espacios de actividad, competencias y notación. Escape cierra la ampliación.
+En Prácticas puedes consultar su descripción, ampliar el diagrama y revisar usos concretos de herramientas. Cada una de las 14 prácticas incluye su diagrama. Al final de la misma página, «Material de apoyo Essence» reúne los otros 5 diagramas: proceso detallado de pruebas, alphas, espacios de actividad, competencias y notación. Así se conservan los 19 diagramas del curso sin una sección independiente en el menú. Escape cierra la ampliación.
 
 Las relaciones de uso son ejemplos elaborados para explicar colaboración, automatización, retroalimentación y trazabilidad. No son integraciones que esta aplicación ejecute con los productos catalogados. Las prácticas académicas de conceptualización y certificación simulada conservan su sentido educativo.
 

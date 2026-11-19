@@ -401,20 +401,52 @@ async function restore(file) {
     "La recuperación explícita restaura una base válida",
     (await db()).tools.length === 144,
   );
-  await go("diagrams", "El lenguaje visual de las prácticas.");
-  check(
-    "La galería contiene 19 diagramas",
-    (await page.locator(".tool-card").count()) === 19,
+  await go("diagrams", "Prácticas que dan sentido al proceso.");
+  assert.deepEqual(
+    await page
+      .locator("[data-nav]")
+      .evaluateAll((links) => links.map((link) => link.dataset.nav)),
+    ["home", "tools", "practices", "usages"],
   );
-  await page.locator("#diagram-type").selectOption("practica");
   check(
-    "La galería distingue los 14 diagramas de prácticas",
-    (await page.locator(".tool-card").count()) === 14,
+    "La antigua dirección de diagramas abre Prácticas con el menú simplificado",
+    page.url().endsWith("#/practices"),
   );
-  await page
-    .getByRole("button", { name: "Ampliar", exact: true })
-    .first()
-    .click();
+  assert.deepEqual(
+    (
+      await page
+        .locator(".diagram-thumb")
+        .evaluateAll((images) =>
+          images.map((image) => image.getAttribute("src")),
+        )
+    ).sort(),
+    seed.diagrams.map((diagram) => diagram.image).sort(),
+  );
+  check("Prácticas conserva exactamente los 19 diagramas del curso");
+  check(
+    "Las 14 prácticas incluyen su diagrama en la ficha",
+    (await page.locator("#practice-grid .diagram-thumb").count()) === 14,
+  );
+  check(
+    "Los cinco diagramas de apoyo están disponibles dentro de Prácticas",
+    (await page.locator("#support-grid .tool-card").count()) === 5,
+  );
+  for (const diagram of seed.diagrams.filter((d) => !d.practiceId)) {
+    await page.locator(`[data-support="${diagram.id}"]`).first().click();
+    assert.equal(
+      await page.locator("#large-image").getAttribute("src"),
+      diagram.image,
+    );
+    assert.equal(
+      await page.locator("#image-title").textContent(),
+      diagram.name,
+    );
+    assert.ok(
+      (await page.locator("#image-caption").textContent()).includes("página"),
+    );
+    await page.keyboard.press("Escape");
+  }
+  await page.locator("#practice-grid [data-image]").first().click();
   check(
     "El diagrama se abre en un diálogo accesible",
     await page.getByRole("dialog").isVisible(),

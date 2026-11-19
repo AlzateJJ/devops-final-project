@@ -61,7 +61,7 @@ Con la aplicación servida en `http://127.0.0.1:8765/app/` y Chrome instalado:
 npm run test:e2e
 ```
 
-Se verificaron **24 casos de datos/persistencia** y **53 comprobaciones en Google Chrome 157**, con perfiles aislados, recarga, cierre/reapertura, restauración y pantallas de 375, 768 y 1440 píxeles. Los resultados están en `evidencias/`. La suite no utiliza el perfil personal del navegador.
+Se verificaron **24 casos de datos/persistencia** y **55 comprobaciones en Google Chrome 157**, con perfiles aislados, recarga, cierre/reapertura, restauración y pantallas de 375, 768 y 1440 píxeles. Los resultados están en `evidencias/`. La suite no utiliza el perfil personal del navegador.
 
 ## Generar la entrega
 

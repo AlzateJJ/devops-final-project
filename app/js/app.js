@@ -1,7 +1,7 @@
 import { $, escape, intro, link, notify } from "./ui.js";
 import { Database, STORAGE_KEY } from "./store.js";
 import { renderTools } from "./tools.js";
-import { renderPractices, renderDiagrams } from "./practices.js";
+import { renderPractices } from "./practices.js";
 import { renderUsages } from "./usages.js";
 import { renderBackup } from "./backup.js";
 const store = new Database();
@@ -11,7 +11,6 @@ const titles = {
   tools: "Herramientas",
   practices: "Prácticas",
   usages: "Relaciones de uso",
-  diagrams: "Diagramas Essence",
   backup: "Respaldo de datos",
 };
 export function home(
@@ -36,6 +35,10 @@ function route(moveFocus = true) {
   const [section = "home", mode, id] = (
     location.hash.slice(2).split("?")[0] || "home"
   ).split("/");
+  if (section === "diagrams") {
+    location.replace("#/practices");
+    return;
+  }
   $("#breadcrumb").textContent = titles[section] || "Página";
   document.title = `${titles[section] || "DevOps Atlas"} · DevOps Atlas`;
   document.querySelectorAll("[data-nav]").forEach((a) => {
@@ -47,7 +50,6 @@ function route(moveFocus = true) {
   if (section === "home") $("#main").innerHTML = home(store.data);
   else if (section === "tools") renderTools(store, mode, id);
   else if (section === "practices") renderPractices(store, mode, id);
-  else if (section === "diagrams") renderDiagrams(store);
   else if (section === "usages") renderUsages(store, mode, id);
   else if (section === "backup") renderBackup(store);
   else
