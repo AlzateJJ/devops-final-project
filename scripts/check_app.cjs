@@ -515,29 +515,23 @@ async function restore(file) {
     ...seed.tools.map((t) => t.logo),
     ...seed.diagrams.map((d) => d.image),
   ];
-  const invalid = await page.evaluate(
-    async (assets) => {
-      const result = await Promise.all(
-        assets.map(
-          (src) =>
-            new Promise((resolve) => {
-              const i = new Image();
-              i.onload = () => resolve(null);
-              i.onerror = () => resolve(src);
-              i.src = src;
-            }),
-        ),
-      );
-      return result.filter(Boolean);
-    },
-    assets.map(
-      (src) =>
-        new URL(
-          src,
-          base.startsWith("file:") ? new URL("app/", base).href : base,
-        ).href,
-    ),
-  );
+  const invalid = await page.evaluate(async (assets) => {
+    const result = await Promise.all(
+      assets.map(
+        (src) =>
+          new Promise((resolve) => {
+            const i = new Image();
+            i.onload = () => resolve(null);
+            i.onerror = () => resolve(src);
+            // La entrega mínima incorpora las imágenes y no incluye sus archivos sueltos.
+            i.src =
+              window.__DEVOPS_INITIAL_DATA__?.resources?.[src] ||
+              new URL(src, location.href).href;
+          }),
+      ),
+    );
+    return result.filter(Boolean);
+  }, assets);
   check("Chrome decodifica los 144 logos y 19 diagramas", invalid.length === 0);
   assert.deepEqual(errors, []);
   check("Sin excepciones de JavaScript en los recorridos probados");

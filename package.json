@@ -6,6 +6,7 @@
   "description": "Catálogo académico local de herramientas, prácticas Essence y usos DevOps",
   "scripts": {
     "build:offline": "node scripts/build_offline.cjs",
+    "build:minimal": "node scripts/build_minimal.cjs",
     "test:offline": "node scripts/check_offline.cjs",
     "test": "node --test tests/store.test.mjs tests/backup.test.mjs",
     "test:e2e": "node scripts/check_app.cjs && node scripts/check_backup.cjs && node scripts/check_json_guide.cjs",
