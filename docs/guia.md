@@ -35,7 +35,9 @@ Las relaciones de uso son ejemplos elaborados para explicar colaboración, autom
 
 ## Respaldar y restaurar
 
-1. Abre Respaldo de datos y selecciona Descargar respaldo JSON.
+Esta utilidad es un apoyo adicional, no un requisito del taller. Por solicitud del responsable, no tiene una entrada en el menú principal. Para tareas de recuperación sigue disponible en la dirección `http://127.0.0.1:8765/app/#/backup`.
+
+1. Abre esa dirección y selecciona Descargar respaldo JSON.
 2. Conserva ese archivo junto con una copia completa del proyecto, que contiene las imágenes iniciales.
 3. Para recuperar datos, selecciona el JSON en Restaurar desde JSON.
 4. Comprueba las cantidades mostradas. La aplicación valida estructura, referencias e imágenes antes de permitir la restauración.
@@ -58,4 +60,4 @@ Los límites de almacenamiento los determina el navegador. La validación impide
 
 La planificación publicada está en el [tablero de Trello](https://trello.com/b/5CSrY3pF/devops-tools-project). Las 42 tarjetas permanecen en Backlog por solicitud del responsable. La descripción contiene «Responsable Principal: Juan José Alzate». El MCP utilizado no ofrece asignación nativa de miembros a tarjetas, por lo que no se simuló esa asignación.
 
-Las evidencias se encuentran en `evidencias/` y la matriz relaciona los requisitos con los archivos y pruebas. El historial Git contiene 12 commits separados por etapas. La entrega a MinasLap se realiza con el ZIP final y el enlace al tablero; no se ha enviado automáticamente a la plataforma.
+Las evidencias se encuentran en `evidencias/` y la matriz relaciona los requisitos con los archivos y pruebas. El historial Git conserva los 12 commits iniciales separados por etapas y los ajustes posteriores. La entrega a MinasLap se realiza con el ZIP final y el enlace al tablero; no se ha enviado automáticamente a la plataforma.

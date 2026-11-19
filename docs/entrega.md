@@ -7,7 +7,7 @@
 - Logos, diagramas y referencias a las ocho presentaciones.
 - [42 tarjetas en Backlog](https://trello.com/b/5CSrY3pF/devops-tools-project), con responsable, descripción, aceptación, terminado y dependencias.
 - Guía, diseño, matriz de cumplimiento, pruebas y capturas.
-- Historial local de 12 commits. No se creó ni publicó un repositorio remoto.
+- Historial con 12 commits de desarrollo inicial y ajustes posteriores, publicado en [GitHub](https://github.com/AlzateJJ/devops-final-project).
 
 ## Siete fases
 
@@ -37,7 +37,7 @@ El paquete no incluye `node_modules`, perfiles de Chrome, archivos temporales ni
 4. Relacionarlas mediante un uso que explique el aporte a cultura DevOps; editar el uso.
 5. Recargar para demostrar persistencia.
 6. Mostrar los 19 diagramas y distinguir prácticas de material de apoyo.
-7. Exportar/restaurar un respaldo, mostrar el tablero y revisar el historial y las evidencias.
+7. Mostrar el tablero y revisar el historial y las evidencias.
 
 ## Envío pendiente del estudiante
 

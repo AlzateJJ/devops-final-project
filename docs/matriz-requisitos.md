@@ -21,7 +21,7 @@ Fuente: `inventario/fuentes/supletorio.pdf`, página 1. Responsable: Juan José 
 | Apoyo | Verificación |
 |---|---|
 | Búsqueda por alias y filtros | Azure DevOps recupera VSTS; categoría Testing contiene 23 herramientas |
-| Respaldo y recuperación | Archivo inválido conserva datos; confirmación explícita; recuperación de corrupción |
+| Respaldo y recuperación (utilidad adicional sin entrada en el menú) | Archivo inválido conserva datos; confirmación explícita; recuperación de corrupción |
 | Validación | Nombres y pares duplicados, referencias inexistentes, imágenes no admitidas |
 | Escritura segura | Error de cuota conserva estado; otra pestaña impide sobrescribir cambios nuevos |
 | Texto seguro | Texto con HTML se muestra sin ejecutar código |
