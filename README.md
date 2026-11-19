@@ -26,8 +26,8 @@ Abre `http://127.0.0.1:8765/app/`. No abras `app/index.html` directamente con `f
 - [Diseño y fases](docs/diseno.md).
 - [Matriz de requisitos y evidencias](docs/matriz-requisitos.md).
 - [Preparación de entrega](docs/entrega.md).
-- [Backlog revisable](planificacion/backlog.html).
-- [Tablero real de Trello](https://trello.com/b/5CSrY3pF/devops-tools-project): **42 tarjetas creadas y verificadas en Backlog**. Juan José Alzate aparece como responsable en cada descripción.
+- [Planificación revisable](planificacion/backlog.html).
+- [Tablero real de Trello](https://trello.com/b/5CSrY3pF/devops-tools-project): **42 tarjetas revisadas y verificadas en Testing**. Juan José Alzate aparece como responsable en cada descripción. La preparación está terminada; el envío académico sigue pendiente del estudiante.
 
 El almacenamiento está ligado al perfil y al origen del navegador. Exporta un respaldo antes de cambiar de equipo, borrar datos del navegador o usar otra dirección/puerto. No hay una base de datos remota ni sincronización entre equipos.
 

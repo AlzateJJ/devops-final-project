@@ -237,7 +237,8 @@ test("El backlog tiene 42 tarjetas, dependencias válidas y cobertura exacta", (
   assert.equal(b.tarjetas.length, 42);
   assert.equal(new Set(b.tarjetas.map((c) => c.id)).size, 42);
   for (const c of b.tarjetas) {
-    assert.equal(c.lista_destino, "Backlog");
+    assert.equal(c.lista_destino, "Testing");
+    assert.equal(c.trello.idList, b.lista_id);
     assert.equal(c.responsable_principal, "Juan José Alzate");
     assert.ok(c.criterios_aceptacion.length >= 3);
     for (const dep of c.dependencias)

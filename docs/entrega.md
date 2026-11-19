@@ -5,7 +5,7 @@
 - Aplicación funcional: `app/`.
 - Base JSON: 144 herramientas, 14 prácticas, 19 diagramas y 42 relaciones de uso.
 - Logos, diagramas y referencias a las ocho presentaciones.
-- [42 tarjetas en Backlog](https://trello.com/b/5CSrY3pF/devops-tools-project), con responsable, descripción, aceptación, terminado y dependencias.
+- [42 tarjetas en Testing](https://trello.com/b/5CSrY3pF/devops-tools-project), con responsable, descripción, aceptación, terminado, dependencias y pautas de revisión.
 - Guía, diseño, matriz de cumplimiento, pruebas y capturas.
 - Historial con 12 commits de desarrollo inicial y ajustes posteriores, publicado en [GitHub](https://github.com/AlzateJJ/devops-final-project).
 
@@ -14,14 +14,24 @@
 | Fase | Resultado |
 |---|---|
 | 1. Inventario | Catálogo trazable y fuentes por página |
-| 2. Planificación | 42 tarjetas publicadas mediante MCP y verificadas en Backlog |
+| 2. Planificación | 42 tarjetas revisadas mediante MCP y verificadas en Testing |
 | 3. Diseño | Contrato JSON, navegación y esquema preconceptual |
 | 4. Implementación | Seis operaciones, consulta, persistencia y respaldo |
 | 5. Contenido | Fichas, logos, prácticas, diagramas y usos iniciales |
 | 6. Verificación | 24 casos de datos y 55 comprobaciones en Chrome |
 | 7. Entrega | Guías, evidencias y ZIP con verificación desde copia extraída |
 
-Las tarjetas permanecen en Backlog según lo solicitado. La lista no se utilizó para simular avance. La evidencia real de desarrollo está en Git, las pruebas y esta documentación. El responsable se escribió en cada descripción; la versión del MCP utilizada no permite asignar nativamente un miembro a una tarjeta.
+Las tarjetas se crearon inicialmente en Backlog y, tras revisar sus criterios y evidencias, se trasladaron a Testing por solicitud del responsable. El trabajo de implementación y preparación está terminado y listo para revisión; no se ha marcado como aceptado en Done. La tarjeta de preparación del envío no acredita una entrega ya realizada en MinasLap. El responsable se escribió en cada descripción; la versión del MCP utilizada no permite asignar nativamente un miembro a una tarjeta.
+
+## Qué entregar al profesor
+
+El enunciado exige tarjetas de Trello y los archivos HTML5, CSS, JSON y recursos necesarios para ejecutar el sistema. La entrega práctica consiste en:
+
+1. **ZIP completo del proyecto:** incluye HTML, CSS, JavaScript, JSON, logos, diagramas, guías y demás archivos necesarios. Adjunta `entrega/devops-atlas-entrega.zip` en MinasLap; un enlace a la web publicada por sí solo no contiene la entrega de archivos solicitada.
+2. **Enlace al tablero de Trello:** https://trello.com/b/5CSrY3pF/devops-tools-project. Comprueba que el profesor pueda acceder al tablero.
+3. **Enlaces complementarios:** el repositorio https://github.com/AlzateJJ/devops-final-project y la web de GitHub Pages si ya está publicada. Facilitan revisar el código y demostrar la aplicación, pero no sustituyen los archivos exigidos.
+
+El PDF no exige un informe escrito separado, un video ni una presentación adicional. Revisa también los campos e instrucciones de la actividad en MinasLap por si el profesor añadió indicaciones allí.
 
 ## Paquete
 

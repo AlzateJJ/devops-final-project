@@ -13,7 +13,7 @@ Fuente: `inventario/fuentes/supletorio.pdf`, página 1. Responsable: Juan José 
 | Registrar/actualizar usos por práctica con descripción cultural | `app/js/usages.js`, 42 ejemplos iniciales | Registro/edición de uso e integridad de referencias |
 | Simular base en almacenamiento interno de Chrome | `app/js/store.js`, clave `devops-atlas:v1` | Recarga y cierre/reapertura de Chrome con el mismo perfil |
 | JSON semejante a estructura persistida | Mismo contrato en semilla, localStorage y respaldo | Exportación/restauración con igualdad de datos |
-| Tarjetas de planificación/desarrollo | 42 tarjetas en el tablero indicado, lista Backlog | `planificacion/trello-publicacion.json`: lectura de 42 títulos y descripciones |
+| Tarjetas de planificación/desarrollo | 42 tarjetas revisadas en el tablero indicado, lista Testing | `planificacion/trello-publicacion.json`: lectura de 42 títulos, descripciones y listas |
 | Logos y recursos necesarios | `app/assets/`, `inventario/fuentes/` | Chrome decodifica 144 logos y 19 diagramas; validación de archivos |
 
 ## Apoyos añadidos

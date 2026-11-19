@@ -91,7 +91,7 @@ let server, browser;
       "Arranque con Node.js sin instalar dependencias",
       "Base inicial 144/14/19/42",
       "Recursos locales responden HTTP 200",
-      "Backlog contiene 42 enlaces reales; búsqueda y filtro funcionan",
+      "Planificación contiene 42 enlaces reales; búsqueda y filtro funcionan",
       "Sin errores de JavaScript",
       "Directorio .git no se sirve",
     ],

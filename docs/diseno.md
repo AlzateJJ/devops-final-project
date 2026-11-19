@@ -5,7 +5,7 @@ Responsable: Juan José Alzate. Fuente de requisitos: `inventario/fuentes/suplet
 ## Siete fases
 
 1. Inventariar fuentes: 144 herramientas del alcance exigido, 14 prácticas, 19 diagramas únicos y 21 apariciones. Las otras 55 menciones permanecen en el inventario trazable.
-2. Planificar: 42 tarjetas en `planificacion/trello-backlog.json`, destinadas al Backlog de https://trello.com/b/5CSrY3pF/devops-tools-project.
+2. Planificar: 42 tarjetas en `planificacion/trello-backlog.json`, creadas inicialmente en Backlog y trasladadas a Testing tras revisar la implementación en https://trello.com/b/5CSrY3pF/devops-tools-project.
 3. Diseñar: modelo, esquema preconceptual y recorridos de usuario.
 4. Implementar: navegación, registro y actualización de herramientas, prácticas y usos; almacenamiento local y respaldos.
 5. Completar contenido: descripciones, logos, diagramas, usos y semilla JSON.

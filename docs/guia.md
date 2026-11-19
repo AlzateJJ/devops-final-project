@@ -58,6 +58,6 @@ Los límites de almacenamiento los determina el navegador. La validación impide
 
 ## Para revisar el proyecto
 
-La planificación publicada está en el [tablero de Trello](https://trello.com/b/5CSrY3pF/devops-tools-project). Las 42 tarjetas permanecen en Backlog por solicitud del responsable. La descripción contiene «Responsable Principal: Juan José Alzate». El MCP utilizado no ofrece asignación nativa de miembros a tarjetas, por lo que no se simuló esa asignación.
+La planificación publicada está en el [tablero de Trello](https://trello.com/b/5CSrY3pF/devops-tools-project). Las 42 tarjetas se revisaron y trasladaron de Backlog a Testing por solicitud del responsable. Incluyen evidencia actualizada e indicaciones de revisión. La descripción contiene «Responsable Principal: Juan José Alzate». El MCP utilizado no ofrece asignación nativa de miembros a tarjetas, por lo que no se simuló esa asignación. La tarjeta final acredita la preparación del paquete; el envío a MinasLap sigue pendiente del estudiante.
 
 Las evidencias se encuentran en `evidencias/` y la matriz relaciona los requisitos con los archivos y pruebas. El historial Git conserva los 12 commits iniciales separados por etapas y los ajustes posteriores. La entrega a MinasLap se realiza con el ZIP final y el enlace al tablero; no se ha enviado automáticamente a la plataforma.

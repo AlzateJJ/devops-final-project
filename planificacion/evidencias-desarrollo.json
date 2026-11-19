@@ -9,7 +9,7 @@
   },
   {
     "id": "DEVOPS-003",
-    "evidencia": "42 tarjetas creadas mediante MCP y verificadas por lectura en Backlog. Registro de URLs e IDs: planificacion/trello-publicacion.json. El responsable figura en las descripciones; la herramienta disponible no permite asignación nativa de miembros a tarjetas."
+    "evidencia": "42 tarjetas publicadas mediante MCP, revisadas frente a sus criterios y preparadas para Testing. El responsable continúa indicado en la descripción. El envío académico no está realizado."
   },
   {
     "id": "DEVOPS-004",
@@ -21,7 +21,7 @@
   },
   {
     "id": "DEVOPS-006",
-    "evidencia": "Pantallas y recorridos implementados en app/index.html, app/styles.css y los módulos de formularios. Evidencias visuales en evidencias/."
+    "evidencia": "Interfaz Entrega Final DevOps con cuatro secciones: Esquema del sistema, Herramientas, Prácticas y Relaciones de uso. Los 19 diagramas están dentro de Prácticas; el respaldo no aparece en el menú."
   },
   {
     "id": "DEVOPS-007",
@@ -33,7 +33,7 @@
   },
   {
     "id": "DEVOPS-009",
-    "evidencia": "Respaldo y recuperación implementados en app/js/backup.js. Se comprobó exportación/restauración exacta, validación y confirmación de reemplazo."
+    "evidencia": "Respaldo y recuperación implementados y probados en app/js/backup.js. Es una utilidad adicional oculta en el menú por solicitud del responsable; sigue accesible en #/backup y en recuperación de errores."
   },
   {
     "id": "DEVOPS-010",
@@ -97,7 +97,7 @@
   },
   {
     "id": "DEVOPS-025",
-    "evidencia": "19 diagramas únicos cargados en app/assets/diagramas y catalogados en la base; 21 referencias a apariciones en las diapositivas. Galería con ampliación."
+    "evidencia": "Los 19 diagramas únicos y sus 21 referencias se conservan. Dentro de Prácticas hay 14 diagramas en fichas y cinco de material de apoyo; todos se pueden ampliar."
   },
   {
     "id": "DEVOPS-026",
@@ -125,7 +125,7 @@
   },
   {
     "id": "DEVOPS-032",
-    "evidencia": "Edición de prácticas y biblioteca Essence implementadas, con filtros, fuentes y ampliación de imagen. Escape cierra el diálogo."
+    "evidencia": "Edición de prácticas y diagramas integrada en app/js/practices.js. Se conservan IDs, referencias, imágenes y relaciones. Los 19 diagramas se consultan desde Prácticas; #/diagrams redirige allí."
   },
   {
     "id": "DEVOPS-033",
@@ -137,7 +137,7 @@
   },
   {
     "id": "DEVOPS-035",
-    "evidencia": "Verificados seis recorridos de pantalla a 375, 768 y 1440 px sin desbordamiento. Corregido el foco inicial para permitir saltar al contenido."
+    "evidencia": "Diseño y controles revisados en escritorio y móvil; pruebas de tamaños, foco, mensajes, diálogo y textos alternativos. Las capturas actualizadas muestran Entrega Final DevOps."
   },
   {
     "id": "DEVOPS-036",
@@ -145,7 +145,7 @@
   },
   {
     "id": "DEVOPS-037",
-    "evidencia": "53 comprobaciones en Google Chrome 157 aprobadas: seis operaciones, persistencia, reapertura y restauración. Reporte: evidencias/pruebas-navegador.json."
+    "evidencia": "55 comprobaciones aprobadas en Google Chrome 157: seis operaciones desde el esquema, persistencia, cierre/reapertura, validaciones, recuperación y los 19 diagramas integrados en Prácticas. Reporte: evidencias/pruebas-navegador.json."
   },
   {
     "id": "DEVOPS-038",
@@ -153,18 +153,18 @@
   },
   {
     "id": "DEVOPS-039",
-    "evidencia": "Copia extraída verificada con servidor Node y perfil Chrome limpio; 171 recursos respondieron correctamente. Reporte: evidencias/entrega-limpia.json."
+    "evidencia": "Copia extraída del paquete actual verificada en Google Chrome 157: 251 archivos con SHA-256 coincidente, 171 recursos HTTP 200 y ningún error de JavaScript. Reporte: evidencias/entrega-limpia.json."
   },
   {
     "id": "DEVOPS-040",
-    "evidencia": "Guías completadas en README.md y docs/guia.md. Incluyen arranque, seis operaciones, respaldo, recuperación y límites del almacenamiento."
+    "evidencia": "README.md, docs/guia.md y docs/entrega.md describen Entrega Final DevOps, el arranque, las seis operaciones, los diagramas integrados, la persistencia y los entregables del enunciado."
   },
   {
     "id": "DEVOPS-041",
-    "evidencia": "Paquete preparado en entrega/devops-atlas-entrega.zip. El generador incluye manifiesto SHA-256 e historial y excluye dependencias instaladas y perfiles de pruebas."
+    "evidencia": "ZIP completo generado y verificado desde una carpeta extraída: entrega/devops-atlas-entrega.zip. Incluye código, JSON, imágenes, fuentes, guías, planificación, pruebas, manifiesto SHA-256 e historial."
   },
   {
     "id": "DEVOPS-042",
-    "evidencia": "Aplicación y paquete verificados; matriz de cumplimiento en docs/matriz-requisitos.md y guía de entrega en docs/entrega.md. Pendiente del estudiante: revisar la actividad y realizar el envío a MinasLap. No se ha enviado automáticamente."
+    "evidencia": "Revisión y preparación de la entrega completadas. El ZIP contiene los archivos exigidos y se dispone del enlace al tablero. Pendiente del estudiante: revisar la actividad de MinasLap, adjuntar el paquete y los enlaces y confirmar el envío. No se ha realizado la entrega académica."
   }
 ]
