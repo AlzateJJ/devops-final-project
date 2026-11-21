@@ -33,7 +33,7 @@ export function home(
       : "") +
     `<div class="stats"><div class="stat"><b>${db.tools.length}</b><span>Herramientas</span></div><div class="stat"><b>${db.practices.length}</b><span>Prácticas</span></div><div class="stat"><b>${db.diagrams.length}</b><span>Diagramas en Prácticas</span></div><div class="stat"><b>${db.usages.length}</b><span>Relaciones de uso</span></div></div>
  ${renderSchema()}
- <div class="section-title"><h2>Un catálogo para aprender y construir</h2>${link("#/tools", "Explorar herramientas")}</div><p class="muted">Encuentra herramientas por categoría, consulta las prácticas del curso y descubre cómo se relacionan con la colaboración, la automatización y la retroalimentación continua.</p><div class="info">Los 120 modelos de precio de la tabla se conservan como referencia histórica. Para las 24 herramientas adicionales, la ficha incluye la fuente y fecha de su clasificación. Las marcas del curso se mantienen para facilitar su revisión.</div>`
+ <div class="section-title"><h2>Un catálogo para aprender y construir</h2>${link("#/tools", "Explorar herramientas")}</div><p class="muted">Encuentra herramientas por categoría, consulta las prácticas del curso y descubre cómo se relacionan con la colaboración, la automatización y la retroalimentación continua.</p><div class="info">Los modelos de precio transcritos del curso son una referencia histórica. Las herramientas con clasificación adicional incluyen su fuente y fecha en la ficha.</div>`
   );
 }
 function route(moveFocus = true) {

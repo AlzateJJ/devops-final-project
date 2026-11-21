@@ -117,6 +117,24 @@ export function validateDatabase(db) {
       )
     )
       fail("Ruta de fuente no permitida.");
+    if (s.pageMap !== undefined) {
+      object(s.pageMap, "Mapa de páginas del extracto");
+      const entries = Object.entries(s.pageMap);
+      if (
+        !entries.length ||
+        entries.length > 10000 ||
+        entries.some(
+          ([original, page]) =>
+            !/^[1-9][0-9]{0,4}$/.test(original) ||
+            Number(original) > 10000 ||
+            !Number.isInteger(page) ||
+            page < 1 ||
+            page > entries.length,
+        ) ||
+        new Set(entries.map(([, page]) => page)).size !== entries.length
+      )
+        fail("Mapa de páginas del extracto inválido.");
+    }
   }
   function refs(value) {
     if (value === undefined) return;
@@ -130,6 +148,9 @@ export function validateDatabase(db) {
         r.page > 10000
       )
         fail("Referencia de fuente o página inválida.");
+      const source = db.sources.find((s) => s.id === r.source);
+      if (source.pageMap && !Object.hasOwn(source.pageMap, r.page))
+        fail("La página citada no está incluida en el extracto PDF.");
     }
   }
   for (const t of db.tools) {

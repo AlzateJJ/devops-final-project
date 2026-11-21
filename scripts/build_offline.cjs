@@ -6,12 +6,9 @@ const { chromium } = require("playwright");
 const root = path.resolve(__dirname, "..");
 const output = path.join(root, "entrega", "navegador");
 
-async function buildOffline() {
+async function createPortableSeed(seed, overrides = {}) {
   const { resourcePaths } = await import(
     pathToFileURL(path.join(root, "app/js/resources.js")).href
-  );
-  const seed = JSON.parse(
-    await fs.readFile(path.join(root, "app/data/database.json"), "utf8"),
   );
   const { validateDatabase } = await import(
     pathToFileURL(path.join(root, "app/js/store.js")).href
@@ -28,6 +25,10 @@ async function buildOffline() {
     ".pdf": "application/pdf",
   };
   for (const resource of resourcePaths(seed)) {
+    if (Object.hasOwn(overrides, resource)) {
+      rawResources[resource] = overrides[resource];
+      continue;
+    }
     const data = await fs.readFile(path.resolve(root, "app", resource));
     rawResources[resource] =
       `data:${mimes[path.extname(resource)]};base64,${data.toString("base64")}`;
@@ -74,6 +75,14 @@ async function buildOffline() {
   } finally {
     await browser.close();
   }
+  return portable;
+}
+
+async function buildOffline() {
+  const seed = JSON.parse(
+    await fs.readFile(path.join(root, "app/data/database.json"), "utf8"),
+  );
+  const portable = await createPortableSeed(seed);
   // La carpeta generada también se puede abrir antes de empaquetar el ZIP.
   for (const folder of ["app", "inventario", "planificacion"])
     await fs.cp(path.join(root, folder), path.join(output, folder), {
@@ -120,11 +129,11 @@ async function buildOffline() {
   );
   return {
     output,
-    resources: Object.keys(rawResources).length,
+    resources: Object.keys(JSON.parse(portable).resources).length,
     catalogBytes: Buffer.byteLength(portable),
   };
 }
-module.exports = { buildOffline };
+module.exports = { buildOffline, createPortableSeed };
 if (require.main === module)
   buildOffline()
     .then((report) => console.log(JSON.stringify(report)))

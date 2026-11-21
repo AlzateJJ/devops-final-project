@@ -7,8 +7,10 @@
   "scripts": {
     "build:offline": "node scripts/build_offline.cjs",
     "build:minimal": "node scripts/build_minimal.cjs",
+    "build:sample": "node scripts/build_sample.cjs",
     "test:offline": "node scripts/check_offline.cjs",
-    "test": "node --test tests/store.test.mjs tests/backup.test.mjs",
+    "test:sample": "node scripts/check_sample.cjs",
+    "test": "node --test tests/store.test.mjs tests/backup.test.mjs tests/sample.test.mjs",
     "test:e2e": "node scripts/check_app.cjs && node scripts/check_backup.cjs && node scripts/check_json_guide.cjs",
     "serve": "node scripts/serve.cjs"
   },

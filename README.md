@@ -81,3 +81,19 @@ python scripts/package_project.py
 ```
 
 Genera `entrega/devops-atlas-entrega.zip`, un manifiesto SHA-256 y el historial de commits. El empaquetador prepara los archivos de apertura directa automáticamente. El ZIP contiene lo necesario para ejecutar y revisar el proyecto; no incluye dependencias instaladas, perfiles de pruebas ni credenciales.
+
+### Muestra para archivos de menos de 5 MB
+
+La muestra conserva tres prácticas (monitoreo, comunicación colaborativa y pruebas automatizadas), sus nueve herramientas, nueve relaciones y tres diagramas. La base completa del repositorio permanece intacta. Los PDF de la muestra incluyen todas las páginas citadas por esas fichas; `sources[].pageMap` relaciona el número de página original con su posición en el extracto, para conservar las citas y abrir la página correcta.
+
+El generador requiere además Python con `pypdf`. Estas dependencias se usan únicamente al construir la entrega:
+
+```sh
+python -m pip install pypdf
+npm run build:sample
+npm run test:sample
+```
+
+Si Python está fuera del PATH, usa `npm run build:sample -- --python "ruta/al/python.exe"`. Se generan `index.html`, `styles.css`, `app.js` y `Datos-DevOps.json` en `entrega/muestra/`. El generador comprueba que el JavaScript y el JSON pesan menos de 5.000.000 bytes cada uno. Empaqueta **solo los tres archivos de la aplicación** en el ZIP y entrega el JSON por separado, para evitar duplicar los recursos en el archivo comprimido. Para abrir la aplicación, extrae todo el ZIP y abre `index.html`; el JSON independiente permite restaurar la misma muestra desde Gestión de datos.
+
+`npm run test:sample -- "carpeta extraída" "ruta/al/Datos-DevOps.json"` comprueba el paquete real sin servidor ni conexión: imágenes, enlaces a PDF, búsqueda y filtros, creación y edición, persistencia, vaciado y restauración/exportación exacta. Los tres casos adicionales de `tests/sample.test.mjs` elevan a 42 las pruebas de datos y persistencia.

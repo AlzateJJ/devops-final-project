@@ -57,8 +57,9 @@ export function sourceLinks(refs = [], sources = []) {
     refs
       .map((r) => {
         const s = sources.find((s) => s.id === r.source);
+        const page = s?.pageMap?.[r.page] ?? r.page;
         return s
-          ? `<a href="${escape(resourceURL(s.file))}#page=${Number(r.page)}" target="_blank" rel="noopener">${escape(s.id)} · p. ${Number(r.page)}</a>`
+          ? `<a href="${escape(resourceURL(s.file))}#page=${Number(page)}" target="_blank" rel="noopener">${escape(s.id)} · p. ${Number(r.page)}${s.pageMap ? " (extracto)" : ""}</a>`
           : "";
       })
       .join("") +
